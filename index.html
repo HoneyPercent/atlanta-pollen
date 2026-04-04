@@ -416,6 +416,52 @@ h3 {
 .hero-forecast .forecast-icon svg { width: 16px; height: 16px; }
 .hero-forecast strong { color: var(--severity-extreme); }
 
+/* Tomorrow's forecast */
+.hero-tomorrow {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+  box-shadow: 0 1px 8px rgba(45, 80, 22, 0.04);
+  text-align: center;
+  animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+.tomorrow-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+.tomorrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.tomorrow-count {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--forest-700);
+}
+.tomorrow-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+}
+.tomorrow-cause {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
 /* Season progress ring */
 .progress-ring-wrapper {
   display: flex;
@@ -947,6 +993,15 @@ footer .footer-tagline {
       <span><strong>~5 more extreme days</strong> likely this spring</span>
     </div>
 
+    <div class="hero-tomorrow" id="heroTomorrow" hidden>
+      <div class="tomorrow-label">Tomorrow's forecast</div>
+      <div class="tomorrow-row">
+        <span class="tomorrow-count" id="tomorrowCount">--</span>
+        <span class="tomorrow-badge" id="tomorrowBadge"></span>
+        <span class="tomorrow-cause" id="tomorrowCause"></span>
+      </div>
+    </div>
+
     <div class="progress-ring-wrapper">
       <div class="progress-ring" role="img" aria-label="Season 17% complete">
         <svg width="80" height="80" viewBox="0 0 80 80">
@@ -1278,6 +1333,43 @@ function renderHero(d) {
   if (metaSpan && d.season) {
     metaSpan.textContent = d.season.cumulative_burden.toLocaleString() + ' cumulative grains so far. Historically, ' + Math.round(d.season.season_progress_pct) + '% of the season\u2019s total pollen has fallen by this date.';
   }
+
+  // Tomorrow's forecast
+  var tmrw = d.tomorrow;
+  var tmrwCard = document.getElementById('heroTomorrow');
+  if (tmrwCard && tmrw && tmrw.forecast && tmrw.forecast.count != null) {
+    tmrwCard.hidden = false;
+    var tmrwCount = document.getElementById('tomorrowCount');
+    var tmrwBadge = document.getElementById('tomorrowBadge');
+    var tmrwCause = document.getElementById('tomorrowCause');
+
+    if (tmrwCount) tmrwCount.textContent = tmrw.forecast.count.toLocaleString();
+
+    if (tmrwBadge) {
+      var sev = tmrw.forecast.severity || 'moderate';
+      tmrwBadge.textContent = sev.toUpperCase();
+      var sevColors = { extreme: ['#B91C1C','#FEE2E2'], high: ['#D97706','#FEF3C7'], moderate: ['#CA8A04','#FEF9C3'], low: ['#15803D','#DCFCE7'] };
+      var colors = sevColors[sev] || sevColors.moderate;
+      tmrwBadge.style.background = colors[1];
+      tmrwBadge.style.color = colors[0];
+      tmrwBadge.style.border = '1px solid ' + colors[0] + '22';
+    }
+
+    if (tmrwCause && tmrw.weather_forecast) {
+      var wx = tmrw.weather_forecast;
+      var regime = wx.regime || '';
+      var regimeLabels = {
+        hot_windy: 'Hot & windy \u2014 pollen dispersal likely',
+        hot_calm: 'Hot & calm \u2014 pollen stays airborne',
+        warm_windy: 'Warm & breezy \u2014 moderate dispersal',
+        warm_calm: 'Warm & calm',
+        cool: 'Cool temps \u2014 lower release',
+        drizzle: 'Light rain \u2014 partial washout',
+        rainy: 'Rain expected \u2014 washout likely'
+      };
+      tmrwCause.textContent = regimeLabels[regime] || '';
+    }
+  }
 }
 
 function animateCount(target) {
@@ -1355,19 +1447,48 @@ function renderRecentChart(history) {
       labels: data.map(function(d) {
         return new Date(d.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
       }),
-      datasets: [{
-        data: data.map(function(d) { return d.count; }),
-        backgroundColor: data.map(function(d) { return severityColors[d.severity] || '#999'; }),
-        borderRadius: 3, borderSkipped: false, barPercentage: 0.82, categoryPercentage: 0.88
-      }]
+      datasets: [
+        {
+          label: 'Observed',
+          data: data.map(function(d) { return d.count; }),
+          backgroundColor: data.map(function(d) { return severityColors[d.severity] || '#999'; }),
+          borderRadius: 3, borderSkipped: false, barPercentage: 0.82, categoryPercentage: 0.88,
+          order: 2
+        },
+        {
+          label: 'V8 Prediction',
+          type: 'line',
+          data: data.map(function(d) { return d.predicted; }),
+          borderColor: 'rgba(45,80,22,0.5)',
+          borderWidth: 1.5,
+          borderDash: [4, 3],
+          pointBackgroundColor: 'rgba(45,80,22,0.7)',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 1,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          fill: false,
+          tension: 0.3,
+          order: 1
+        }
+      ]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
       plugins: {
+        legend: {
+          display: true, position: 'top', align: 'end',
+          labels: { usePointStyle: true, padding: 12, font: { size: 10 }, filter: function(item) { return item.text !== undefined; } }
+        },
         tooltip: {
           callbacks: {
             title: function(items) { return data[items[0].dataIndex].date; },
-            label: function(item) { var d = data[item.dataIndex]; return d.count.toLocaleString() + ' grains/m\u00B3 (' + (d.severity || '?') + ')'; }
+            label: function(item) {
+              var d = data[item.dataIndex];
+              if (item.datasetIndex === 0) return 'Observed: ' + d.count.toLocaleString() + ' grains/m\u00B3 (' + (d.severity || '?') + ')';
+              if (item.datasetIndex === 1 && d.predicted != null) return 'Predicted: ' + d.predicted.toLocaleString() + ' grains/m\u00B3';
+              return '';
+            }
           }
         },
         annotation: {
