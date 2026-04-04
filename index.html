@@ -166,7 +166,7 @@ h3 {
 }
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ h3 {
   padding: 0.25em 0.75em;
   border-radius: 6px;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -334,7 +334,7 @@ h3 {
 }
 .hero-brand {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -429,7 +429,7 @@ h3 {
 }
 .tomorrow-label {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -450,7 +450,7 @@ h3 {
 }
 .tomorrow-badge {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -530,7 +530,7 @@ h3 {
   align-items: center;
   gap: 0.4rem;
   color: var(--text-muted);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-family: var(--font-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -660,7 +660,7 @@ h3 {
 .range-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-family: var(--font-mono);
   color: var(--text-muted);
 }
@@ -706,7 +706,7 @@ h3 {
 .feature-item:last-child { border-bottom: none; }
 .feature-name {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   text-align: right;
   white-space: nowrap;
@@ -729,7 +729,7 @@ h3 {
 .feature-bar-fill.negative { background: var(--peach-500); }
 .feature-weight {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   text-align: right;
 }
@@ -744,7 +744,7 @@ h3 {
 }
 .horizon-card .horizon-range {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -784,7 +784,7 @@ h3 {
 }
 .limitation-tag {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   padding: 0.3em 0.75em;
   border-radius: 100px;
   border: 1px solid var(--border-subtle);
@@ -823,7 +823,7 @@ footer a {
 footer a:hover { color: var(--forest-700); text-decoration: underline; }
 footer .footer-sources {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   margin-top: 0.5rem;
   letter-spacing: 0.02em;
 }
@@ -918,7 +918,7 @@ footer .footer-tagline {
   padding: 0.5rem 1rem;
   text-align: center;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.02em;
   animation: slideDown 0.4s ease;
 }
@@ -940,7 +940,7 @@ footer .footer-tagline {
   .stats-strip { grid-template-columns: repeat(2, 1fr); }
   .hero-forecast { font-size: 0.85rem; padding: 0.5rem 1.2rem 0.5rem 0.75rem; }
   .severity-legend { flex-wrap: wrap; gap: 0.5rem; }
-  .section-label { font-size: 0.62rem; }
+  .section-label { font-size: 0.75rem; }
   h2 { font-size: 1.5rem; }
   .decade-bars { max-width: 100%; }
 }
@@ -1524,7 +1524,7 @@ function renderRecentChart(history) {
     legend.textContent = '';
     [{ label: 'Extreme (1500+)', color: '#B91C1C' }, { label: 'High (500\u20131499)', color: '#D97706' },
      { label: 'Moderate (100\u2013499)', color: '#CA8A04' }, { label: 'Low (<100)', color: '#15803D' }].forEach(function(item) {
-      var wrap = el('div', {style: {display:'flex',alignItems:'center',gap:'5px',fontSize:'0.68rem',fontFamily:'var(--font-mono)',color:'var(--text-muted)'}});
+      var wrap = el('div', {style: {display:'flex',alignItems:'center',gap:'5px',fontSize:'0.75rem',fontFamily:'var(--font-mono)',color:'var(--text-muted)'}});
       wrap.appendChild(el('span', {style: {width:'8px',height:'8px',borderRadius:'2px',background:item.color,flexShrink:'0'}}));
       wrap.appendChild(el('span', {textContent: item.label}));
       legend.appendChild(wrap);
@@ -1660,8 +1660,8 @@ function buildDecadeCard(season) {
     var bar = el('div', {className: 'decade-bar', style: {height:'0%'}});
     bar.dataset.pct = pct;
     bar.style.background = 'var(--gold-500)';
-    bar.appendChild(el('span', {textContent: Math.round(d.value/1000)+'K', style: {position:'absolute',top:'-18px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.6rem',fontWeight:'500',color:'rgba(250,245,235,0.6)',whiteSpace:'nowrap'}}));
-    bar.appendChild(el('span', {textContent: d.label, style: {position:'absolute',bottom:'-20px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.6rem',color:'rgba(250,245,235,0.4)',whiteSpace:'nowrap'}}));
+    bar.appendChild(el('span', {textContent: Math.round(d.value/1000)+'K', style: {position:'absolute',top:'-18px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.75rem',fontWeight:'500',color:'rgba(250,245,235,0.6)',whiteSpace:'nowrap'}}));
+    bar.appendChild(el('span', {textContent: d.label, style: {position:'absolute',bottom:'-20px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.75rem',color:'rgba(250,245,235,0.4)',whiteSpace:'nowrap'}}));
     barsContainer.appendChild(bar);
   });
   card.appendChild(barsContainer);
