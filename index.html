@@ -102,8 +102,8 @@ body {
   font-family: var(--font-body);
   color: var(--text-primary);
   background: var(--surface-primary);
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.65;
+  font-size: 1.0625rem;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -119,6 +119,60 @@ img { max-width: 100%; display: block; }
   z-index: 0;
   opacity: 0.022;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L30 60 M0 30 Q15 25 30 30 Q45 35 60 30 M0 15 Q20 10 30 15 M30 15 Q40 20 60 15 M0 45 Q20 40 30 45 M30 45 Q40 50 60 45' stroke='%232D5016' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════
+   SITE NAV (matches andrewkstein.com)
+   ═══════════════════════════════════════════════ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.85rem 0;
+  transition: box-shadow 0.3s ease;
+}
+.site-nav.scrolled { box-shadow: 0 2px 12px rgba(44, 30, 10, 0.08); }
+.site-nav__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.site-nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.site-nav__links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+}
+.site-nav__links a:hover { color: var(--ink); }
+.site-nav__links a.active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom: 2px solid var(--gold-500);
+}
+@media (max-width: 600px) {
+  .site-nav__links { gap: 1rem; }
+  .site-nav__links a { font-size: 0.8rem; }
+  .site-nav__logo { font-size: 1rem; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -803,40 +857,37 @@ footer {
   z-index: 1;
   padding: 3rem 0 2.5rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.85rem;
+  color: rgba(250,245,235,0.7);
   line-height: 1.7;
-}
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 15%;
-  right: 15%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--forest-300), var(--gold-400), var(--forest-300), transparent);
-  opacity: 0.4;
+  background: #1a3a4a;
 }
 footer a {
-  color: var(--forest-600);
+  color: rgba(250,245,235,0.9);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
-footer a:hover { color: var(--forest-700); text-decoration: underline; }
+footer a:hover { color: #fff; text-decoration: underline; }
 footer .footer-sources {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   margin-top: 0.5rem;
   letter-spacing: 0.02em;
+  color: rgba(250,245,235,0.45);
 }
 footer .footer-tagline {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-style: italic;
-  color: var(--text-secondary);
+  color: rgba(250,245,235,0.85);
   margin-bottom: 0.5rem;
 }
+footer .footer-nav {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+}
+footer .footer-nav a { margin: 0 0.75rem; }
 
 /* ═══════════════════════════════════════════════
    SCROLL REVEAL
@@ -971,6 +1022,19 @@ footer .footer-tagline {
 </style>
 </head>
 <body>
+
+<!-- Site nav (matches andrewkstein.com) -->
+<nav class="site-nav" id="siteNav">
+  <div class="site-nav__inner">
+    <a href="https://andrewkstein.com" class="site-nav__logo">Andrew K. Stein</a>
+    <ul class="site-nav__links">
+      <li><a href="https://andrewkstein.com">Home</a></li>
+      <li><a href="https://andrewkstein.com/how-i-work.html">AI Consulting</a></li>
+      <li><a href="https://andrewkstein.com/facilitation.html">Facilitation</a></li>
+      <li><a href="https://andrewkstein.com/projects.html" class="active">Projects</a></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="texture-overlay" aria-hidden="true"></div>
 
@@ -1199,9 +1263,15 @@ footer .footer-tagline {
 <footer>
   <div class="container">
     <div class="footer-tagline">The pollen forecast Atlanta deserves.</div>
-    Built by <a href="https://andrewkstein.com" target="_blank" rel="noopener">Andrew Stein</a>
+    Built by <a href="https://andrewkstein.com">Andrew K. Stein</a>
     <div class="footer-sources" id="footerSources">
       Data: Atlanta Allergy &amp; Asthma + Open-Meteo | Model: 44-feature linear regression on 35 years of daily observations
+    </div>
+    <div class="footer-nav">
+      <a href="https://andrewkstein.com">Home</a>
+      <a href="https://andrewkstein.com/how-i-work.html">AI Consulting</a>
+      <a href="https://andrewkstein.com/facilitation.html">Facilitation</a>
+      <a href="https://andrewkstein.com/projects.html">Projects</a>
     </div>
   </div>
 </footer>
@@ -1940,12 +2010,15 @@ function initNavDots() {
 
 function initScrollCue() {
   var scrolled = false;
+  var nav = document.getElementById('siteNav');
   window.addEventListener('scroll', function() {
     if (!scrolled && window.scrollY > 100) {
       scrolled = true;
       var cue = document.querySelector('.scroll-cue');
       if (cue) cue.style.opacity = '0';
     }
+    // Nav shadow on scroll
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 }
 </script>
