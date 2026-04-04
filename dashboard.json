@@ -1,0 +1,656 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-04T13:44:34.895133-04:00",
+    "data_status": "observation_posted",
+    "stale_hours": 0
+  },
+  "today": {
+    "date": "2026-04-04",
+    "doy": 94,
+    "is_weekend": true,
+    "observation": {
+      "count": 1141,
+      "severity": "high",
+      "contributors": "OAK, SYCAMORE, MULBERRY, PINE"
+    },
+    "observation_status": "posted",
+    "forecast": {
+      "count": 862,
+      "severity": "high",
+      "data_source": "observation"
+    },
+    "climatology": {
+      "doy": 94,
+      "n_years": 27,
+      "mean": 2100,
+      "median": 1080,
+      "p10": 143,
+      "p25": 453,
+      "p75": 3302,
+      "p90": 5616,
+      "p95": 5987,
+      "max": 6981,
+      "percentile_rank": 75
+    },
+    "weather": {
+      "temp_max": 78.4,
+      "temp_min": 65.1,
+      "temp_mean": 70.7,
+      "precipitation": 0.0,
+      "wind_max": 11.6,
+      "solar_radiation": 12.94,
+      "regime": "hot_windy"
+    }
+  },
+  "tomorrow": {
+    "date": "2026-04-05",
+    "doy": 95,
+    "forecast": {
+      "count": 575,
+      "severity": "high"
+    },
+    "climatology": {
+      "doy": 95,
+      "median": 1020.5,
+      "p75": 2293,
+      "p90": 4557
+    },
+    "weather_forecast": {
+      "temp_max": 68.2,
+      "temp_min": 50.5,
+      "temp_mean": 63.0,
+      "precipitation": 0.016,
+      "wind_max": 13.4,
+      "regime": "warm_windy"
+    }
+  },
+  "season": {
+    "as_of_date": "2026-04-04",
+    "as_of_doy": 94,
+    "cumulative_burden": 35890,
+    "extreme_days_ytd": 7,
+    "high_days_ytd": 14,
+    "gdd_cumulative": 312,
+    "season_progress_pct": 20.7,
+    "remaining_extreme_days": {
+      "weighted_avg": 4.0,
+      "min": 2,
+      "max": 10
+    },
+    "estimated_season_end": {
+      "date": "2026-05-06",
+      "doy_weighted_avg": 126,
+      "doy_min": 118,
+      "doy_max": 144
+    },
+    "analog_years": [
+      {
+        "year": 2012,
+        "similarity": 0.816,
+        "remaining_extreme_days": 2,
+        "last_extreme_doy": 88,
+        "total_season_burden": 62018
+      },
+      {
+        "year": 2023,
+        "similarity": 0.676,
+        "remaining_extreme_days": 6,
+        "last_extreme_doy": 111,
+        "total_season_burden": 58397
+      },
+      {
+        "year": 2016,
+        "similarity": 0.181,
+        "remaining_extreme_days": 6,
+        "last_extreme_doy": 94,
+        "total_season_burden": 52108
+      },
+      {
+        "year": 2011,
+        "similarity": 0,
+        "remaining_extreme_days": 4,
+        "last_extreme_doy": 100,
+        "total_season_burden": 38833
+      },
+      {
+        "year": 2017,
+        "similarity": 0,
+        "remaining_extreme_days": 10,
+        "last_extreme_doy": 103,
+        "total_season_burden": 50948
+      }
+    ],
+    "decade_trend": {
+      "1990s": 22107,
+      "2000s": 30651,
+      "2010s": 51593,
+      "2020s": 71037
+    }
+  },
+  "recent_history": [
+    {
+      "date": "2026-01-28",
+      "count": 5,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-01-29",
+      "count": 2,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-01-30",
+      "count": 1,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-02",
+      "count": 2,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-03",
+      "count": 7,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-04",
+      "count": 5,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-05",
+      "count": 1,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-06",
+      "count": 3,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-09",
+      "count": 34,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-10",
+      "count": 67,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-11",
+      "count": 156,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-12",
+      "count": 43,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-13",
+      "count": 9,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-16",
+      "count": 4,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-17",
+      "count": 107,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-18",
+      "count": 189,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-19",
+      "count": 162,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-20",
+      "count": 557,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-23",
+      "count": 112,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-24",
+      "count": 33,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-25",
+      "count": 13,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-26",
+      "count": 58,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-02-27",
+      "count": 4,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-02",
+      "count": 166,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-03",
+      "count": 862,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-04",
+      "count": 49,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-05",
+      "count": 69,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-06",
+      "count": 177,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-09",
+      "count": 3,
+      "severity": "low",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-10",
+      "count": 39,
+      "severity": "medium",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-11",
+      "count": 527,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-12",
+      "count": 3226,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-13",
+      "count": 512,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-16",
+      "count": 4241,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-17",
+      "count": 464,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-18",
+      "count": 736,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-19",
+      "count": 234,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-20",
+      "count": 245,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-21",
+      "count": 996,
+      "severity": "high",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-22",
+      "count": 2792,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-23",
+      "count": 6563,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-24",
+      "count": 5902,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-25",
+      "count": 3279,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-03-26",
+      "count": 2008,
+      "severity": "extreme",
+      "predicted": null
+    },
+    {
+      "date": "2026-04-04",
+      "count": 1141,
+      "severity": "high",
+      "predicted": 862
+    }
+  ],
+  "current_year_scurve": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      17
+    ],
+    [
+      8,
+      26
+    ],
+    [
+      9,
+      35
+    ],
+    [
+      12,
+      45
+    ],
+    [
+      13,
+      46
+    ],
+    [
+      14,
+      52
+    ],
+    [
+      15,
+      59
+    ],
+    [
+      16,
+      63
+    ],
+    [
+      19,
+      69
+    ],
+    [
+      20,
+      71
+    ],
+    [
+      21,
+      73
+    ],
+    [
+      22,
+      80
+    ],
+    [
+      23,
+      81
+    ],
+    [
+      27,
+      85
+    ],
+    [
+      28,
+      90
+    ],
+    [
+      29,
+      92
+    ],
+    [
+      30,
+      93
+    ],
+    [
+      33,
+      95
+    ],
+    [
+      34,
+      102
+    ],
+    [
+      35,
+      107
+    ],
+    [
+      36,
+      108
+    ],
+    [
+      37,
+      111
+    ],
+    [
+      40,
+      145
+    ],
+    [
+      41,
+      212
+    ],
+    [
+      42,
+      368
+    ],
+    [
+      43,
+      411
+    ],
+    [
+      44,
+      420
+    ],
+    [
+      47,
+      424
+    ],
+    [
+      48,
+      531
+    ],
+    [
+      49,
+      720
+    ],
+    [
+      50,
+      882
+    ],
+    [
+      51,
+      1439
+    ],
+    [
+      54,
+      1551
+    ],
+    [
+      55,
+      1584
+    ],
+    [
+      56,
+      1597
+    ],
+    [
+      57,
+      1655
+    ],
+    [
+      58,
+      1659
+    ],
+    [
+      61,
+      1825
+    ],
+    [
+      62,
+      2687
+    ],
+    [
+      63,
+      2736
+    ],
+    [
+      64,
+      2805
+    ],
+    [
+      65,
+      2982
+    ],
+    [
+      68,
+      2985
+    ],
+    [
+      69,
+      3024
+    ],
+    [
+      70,
+      3551
+    ],
+    [
+      71,
+      6777
+    ],
+    [
+      72,
+      7289
+    ],
+    [
+      75,
+      11530
+    ],
+    [
+      76,
+      11994
+    ],
+    [
+      77,
+      12730
+    ],
+    [
+      78,
+      12964
+    ],
+    [
+      79,
+      13209
+    ],
+    [
+      80,
+      14205
+    ],
+    [
+      81,
+      16997
+    ],
+    [
+      82,
+      23560
+    ],
+    [
+      83,
+      29462
+    ],
+    [
+      84,
+      32741
+    ],
+    [
+      85,
+      34749
+    ],
+    [
+      94,
+      35890
+    ]
+  ]
+}

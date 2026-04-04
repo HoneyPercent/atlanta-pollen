@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlanta Pollen Tracker — Today's Count, Season Forecast & 35 Years of Data</title>
+<meta name="description" content="Atlanta's pollen count today vs. 35-year history. Machine learning forecast with honest uncertainty ranges. How many bad days are left this spring?">
+<meta property="og:title" content="Atlanta Pollen Tracker">
+<meta property="og:description" content="Today's count, season forecast, and 35 years of data. The pollen forecast Atlanta deserves.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://andrewkstein.com/pollen">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atlanta Pollen Tracker">
+<meta name="twitter:description" content="How many bad pollen days are left this spring? ML-powered forecast with honest uncertainty.">
+<meta name="theme-color" content="#2D5016">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════════════ */
+:root {
+  /* Forest palette */
+  --forest-900: #0F1F08;
+  --forest-800: #1A2E0A;
+  --forest-700: #2D5016;
+  --forest-600: #3A6B1E;
+  --forest-500: #4A8528;
+  --forest-400: #6AAB3D;
+  --forest-300: #8BC460;
+  --forest-200: #B5DB94;
+  --forest-100: #DAF0C4;
+  --forest-50:  #F0F9E8;
+
+  /* Warm accents */
+  --gold-600: #B8922E;
+  --gold-500: #D4A843;
+  --gold-400: #E0BE6A;
+  --gold-300: #EBCF8B;
+  --gold-200: #F5E4BA;
+  --gold-100: #FBF3E0;
+  --peach-500: #E8845C;
+  --peach-400: #F09E7E;
+  --peach-300: #F5B9A0;
+
+  /* Severity */
+  --severity-extreme: #B91C1C;
+  --severity-extreme-bg: #FEE2E2;
+  --severity-high: #D97706;
+  --severity-high-bg: #FEF3C7;
+  --severity-moderate: #CA8A04;
+  --severity-moderate-bg: #FEF9C3;
+  --severity-low: #15803D;
+  --severity-low-bg: #DCFCE7;
+
+  /* Neutrals */
+  --cream: #FAF5EB;
+  --sand: #F0E8D8;
+  --stone: #E0D5C3;
+  --bark: #6B5C4D;
+  --charcoal: #3D3529;
+  --ink: #1C1710;
+
+  /* Surfaces */
+  --surface-primary: var(--cream);
+  --surface-secondary: var(--sand);
+  --surface-card: #FFFFFF;
+  --surface-dark: var(--forest-800);
+  --text-primary: var(--ink);
+  --text-secondary: var(--bark);
+  --text-muted: #9A8E7F;
+  --text-on-dark: var(--cream);
+
+  /* Borders */
+  --border-subtle: rgba(107, 92, 77, 0.12);
+  --border-card: rgba(107, 92, 77, 0.15);
+
+  /* Typography scale */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-pad: clamp(3rem, 6vw, 5rem);
+  --card-pad: clamp(1.25rem, 3vw, 2rem);
+  --card-radius: 12px;
+  --gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--surface-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+
+/* ═══════════════════════════════════════════════
+   LEAF VEIN TEXTURE (SVG background pattern)
+   ═══════════════════════════════════════════════ */
+.texture-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L30 60 M0 30 Q15 25 30 30 Q45 35 60 30 M0 15 Q20 10 30 15 M30 15 Q40 20 60 15 M0 45 Q20 40 30 45 M30 45 Q40 50 60 45' stroke='%232D5016' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════ */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+section {
+  position: relative;
+  z-index: 1;
+  padding: var(--section-pad) 0;
+}
+.section-sand {
+  background: var(--surface-secondary);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+.section-sand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-300), transparent);
+  opacity: 0.5;
+}
+.section-dark {
+  background: linear-gradient(170deg, var(--forest-900) 0%, var(--forest-800) 60%, #1F3A0F 100%);
+  color: var(--text-on-dark);
+}
+.section-dark .text-secondary { color: rgba(250, 245, 235, 0.65); }
+
+/* ═══════════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════════ */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; }
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 0.25em;
+}
+h3 {
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  margin-bottom: 0.5em;
+}
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--gold-500);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.section-dark .section-label { color: var(--gold-400); }
+.section-dark .section-label::before { background: var(--gold-400); }
+
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.font-mono { font-family: var(--font-mono); }
+
+/* ═══════════════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════════════ */
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+  padding: var(--card-pad);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 30px rgba(45, 80, 22, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(45, 80, 22, 0.15);
+}
+.section-dark .card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+  border-left: 3px solid rgba(224, 190, 106, 0.3);
+}
+.section-dark .card:hover {
+  background: rgba(255,255,255,0.07);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  border-left-color: var(--gold-400);
+}
+
+/* ═══════════════════════════════════════════════
+   SEVERITY BADGES
+   ═══════════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.25em 0.75em;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge--extreme {
+  background: var(--severity-extreme);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(185, 28, 28, 0.3), 0 0 0 3px rgba(185, 28, 28, 0.08);
+}
+.badge--high {
+  background: var(--severity-high);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(217, 119, 6, 0.3), 0 0 0 3px rgba(217, 119, 6, 0.08);
+}
+.badge--moderate { background: var(--severity-moderate); color: #fff; }
+.badge--low { background: var(--severity-low); color: #fff; }
+
+/* Pulsing dot for live-ness */
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+/* ═══════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════ */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmospheric gradient — layered for depth */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 70% at 50% 0%, rgba(45, 80, 22, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(45, 80, 22, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 60%, rgba(212, 168, 67, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 80%, rgba(232, 132, 92, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Subtle grain texture overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+
+/* Floating pollen particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--gold-400);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-up linear infinite;
+}
+@keyframes float-up {
+  0% { transform: translateY(100vh) translateX(0) scale(0.5); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.15; }
+  100% { transform: translateY(-10vh) translateX(40px) scale(1.2); opacity: 0; }
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 720px;
+  animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-brand {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest-600);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.hero-brand svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+.hero-count {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--forest-800);
+  margin-bottom: 0.15em;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 30px rgba(45, 80, 22, 0.08);
+  position: relative;
+}
+.hero-count .unit {
+  font-size: 0.3em;
+  font-weight: 400;
+  color: var(--text-secondary);
+  vertical-align: baseline;
+  margin-left: 0.2em;
+  letter-spacing: 0.02em;
+  font-family: var(--font-mono);
+}
+.hero-date {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+.hero-date time {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.hero-forecast {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(185, 28, 28, 0.12);
+  border-radius: 100px;
+  padding: 0.7rem 1.75rem 0.7rem 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 20px rgba(185, 28, 28, 0.06), 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.hero-forecast:hover {
+  box-shadow: 0 6px 28px rgba(185, 28, 28, 0.1), 0 1px 4px rgba(0,0,0,0.04);
+  transform: translateY(-1px);
+}
+.hero .hero-forecast {
+  animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+.hero .progress-ring-wrapper {
+  animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
+.hero-forecast .forecast-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--severity-extreme-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-forecast .forecast-icon svg { width: 16px; height: 16px; }
+.hero-forecast strong { color: var(--severity-extreme); }
+
+/* Season progress ring */
+.progress-ring-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+.progress-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+.progress-ring svg { transform: rotate(-90deg); }
+.progress-ring .ring-bg {
+  fill: none;
+  stroke: var(--stone);
+  stroke-width: 6;
+}
+.progress-ring .ring-fill {
+  fill: none;
+  stroke: url(#ringGradient);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 226.2;
+  stroke-dashoffset: 226.2;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 3px rgba(74, 133, 40, 0.3));
+}
+.progress-ring .ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--forest-700);
+}
+.progress-meta {
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.progress-meta strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+/* Scroll indicator */
+.scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: bob 2s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+}
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+.scroll-cue svg { width: 20px; height: 20px; opacity: 0.5; }
+
+/* ═══════════════════════════════════════════════
+   STATS STRIP
+   ═══════════════════════════════════════════════ */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  margin-top: 2rem;
+}
+.stat-card {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--forest-400), transparent);
+  border-radius: 1px;
+  opacity: 0.5;
+}
+.stat-card .stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest-700);
+  line-height: 1.1;
+}
+.stat-card .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  line-height: 1.3;
+}
+.section-dark .stat-card .stat-value { color: var(--gold-400); }
+.section-dark .stat-card .stat-label { color: rgba(250,245,235,0.6); }
+
+/* ═══════════════════════════════════════════════
+   CHART CONTAINERS
+   ═══════════════════════════════════════════════ */
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  background: var(--surface-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+  padding: 1.5rem 1.25rem 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(45, 80, 22, 0.04);
+}
+.section-dark .chart-wrap {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+.chart-wrap canvas { max-height: 420px; }
+
+/* ═══════════════════════════════════════════════
+   CONTEXT CALLOUT
+   ═══════════════════════════════════════════════ */
+.callout {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--card-radius);
+  border-left: 4px solid var(--gold-500);
+  background: var(--gold-100);
+  margin-top: 1.5rem;
+}
+.callout-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--gold-500);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.callout-icon svg { width: 18px; height: 18px; color: #fff; }
+
+/* ═══════════════════════════════════════════════
+   RANGE INDICATOR
+   ═══════════════════════════════════════════════ */
+.range-bar {
+  position: relative;
+  height: 8px;
+  background: var(--stone);
+  border-radius: 4px;
+  margin: 0.75rem 0 0.5rem;
+}
+.section-dark .range-bar { background: rgba(255,255,255,0.1); }
+.range-bar .range-fill {
+  position: absolute;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--forest-400), var(--severity-high));
+}
+.range-bar .range-marker {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: var(--forest-700);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.section-dark .range-bar .range-marker { background: var(--gold-400); }
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+.section-dark .range-labels { color: rgba(250,245,235,0.45); }
+
+/* ═══════════════════════════════════════════════
+   GRID LAYOUTS
+   ═══════════════════════════════════════════════ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+.grid-2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gap);
+}
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-2-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   FEATURE IMPORTANCE BARS
+   ═══════════════════════════════════════════════ */
+.feature-list { list-style: none; }
+.feature-item {
+  display: grid;
+  grid-template-columns: 140px 1fr 50px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+}
+.feature-item:last-child { border-bottom: none; }
+.feature-name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.feature-bar-track {
+  height: 10px;
+  background: var(--sand);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.feature-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: var(--forest-500);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feature-bar-fill.negative { background: var(--peach-500); }
+.feature-weight {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════════════
+   HORIZON CARDS
+   ═══════════════════════════════════════════════ */
+.horizon-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.horizon-card .horizon-range {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.horizon-card .horizon-method {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.horizon-card .horizon-confidence {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.confidence-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 0.6rem;
+}
+.confidence-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--stone);
+}
+.confidence-dot.filled { background: var(--forest-500); }
+
+/* ═══════════════════════════════════════════════
+   LIMITATIONS
+   ═══════════════════════════════════════════════ */
+.limitations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.limitation-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.3em 0.75em;
+  border-radius: 100px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════ */
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0 2.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--forest-300), var(--gold-400), var(--forest-300), transparent);
+  opacity: 0.4;
+}
+footer a {
+  color: var(--forest-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+footer a:hover { color: var(--forest-700); text-decoration: underline; }
+footer .footer-sources {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+footer .footer-tagline {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* ═══════════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════════════
+   DECADE TREND MINI VIZ
+   ═══════════════════════════════════════════════ */
+.decade-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  height: 120px;
+  margin-top: 1rem;
+  padding-bottom: 30px;
+  max-width: 500px;
+}
+.decade-bar {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 0;
+  background: var(--forest-500);
+}
+.section-dark .decade-bar {
+  background: linear-gradient(to top, var(--gold-600), var(--gold-400));
+}
+
+/* ═══════════════════════════════════════════════
+   NAV DOT INDICATOR
+   ═══════════════════════════════════════════════ */
+.nav-dots {
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--stone);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.nav-dot:hover { background: var(--forest-400); transform: scale(1.4); }
+.nav-dot.active { background: var(--forest-700); transform: scale(1.3); }
+@media (max-width: 768px) { .nav-dots { display: none; } }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════
+   FRESHNESS BANNER
+   ═══════════════════════════════════════════════ */
+.freshness-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  animation: slideDown 0.4s ease;
+}
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+.freshness-weekend { background: var(--sand); color: var(--bark); border-bottom: 1px solid var(--stone); }
+.freshness-pending { background: var(--gold-100); color: var(--gold-600); border-bottom: 1px solid var(--gold-300); }
+.freshness-stale { background: #FEF3C7; color: #92400E; border-bottom: 1px solid #F59E0B; }
+.freshness-error { background: var(--severity-extreme-bg); color: var(--severity-extreme); border-bottom: 1px solid rgba(185,28,28,0.2); }
+
+@media (max-width: 600px) {
+  .hero-count { font-size: clamp(2.8rem, 14vw, 4.5rem); }
+  .progress-ring-wrapper { flex-direction: column; text-align: center; }
+  .progress-meta { text-align: center; }
+  .feature-item { grid-template-columns: 100px 1fr 40px; }
+  .callout { flex-direction: column; }
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .hero-forecast { font-size: 0.85rem; padding: 0.5rem 1.2rem 0.5rem 0.75rem; }
+  .severity-legend { flex-wrap: wrap; gap: 0.5rem; }
+  .section-label { font-size: 0.62rem; }
+  h2 { font-size: 1.5rem; }
+  .decade-bars { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="texture-overlay" aria-hidden="true"></div>
+
+<!-- Freshness banner -->
+<div id="freshnessBanner" class="freshness-banner" hidden></div>
+
+<!-- Nav dots -->
+<nav class="nav-dots" aria-label="Section navigation">
+  <button class="nav-dot active" data-section="hero" title="Today's count"></button>
+  <button class="nav-dot" data-section="history" title="Recent history"></button>
+  <button class="nav-dot" data-section="season" title="Season progress"></button>
+  <button class="nav-dot" data-section="model" title="The model"></button>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     LAYER 1: THE ANSWER
+     ═══════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-particles" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <div class="hero-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-3.8 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+      Atlanta Pollen Tracker
+    </div>
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:2rem; font-family:var(--font-body); letter-spacing:0.02em;">
+      35 years of data + machine learning
+    </p>
+
+    <div class="badge badge--extreme" style="font-size:0.8rem; margin-bottom:1.5rem;">
+      Extreme
+    </div>
+
+    <div class="hero-count" aria-label="Current pollen count: 2,008 grains per cubic meter">
+      <span id="heroCount">0</span><span class="unit">grains/m&sup3;</span>
+    </div>
+
+    <p class="hero-date">
+      Last measured <time datetime="2026-03-26">March 26, 2026</time>
+    </p>
+
+    <div class="hero-forecast">
+      <div class="forecast-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round">
+          <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        </svg>
+      </div>
+      <span><strong>~5 more extreme days</strong> likely this spring</span>
+    </div>
+
+    <div class="progress-ring-wrapper">
+      <div class="progress-ring" role="img" aria-label="Season 17% complete">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <defs>
+            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#4A8528"/>
+              <stop offset="100%" stop-color="#D4A843"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-bg" cx="40" cy="40" r="36"/>
+          <circle class="ring-fill" cx="40" cy="40" r="36" id="progressRing"/>
+        </svg>
+        <div class="ring-label">17%</div>
+      </div>
+      <div class="progress-meta">
+        <strong>Season is just getting started</strong>
+        <span class="text-secondary">
+          32,741 cumulative grains so far.
+          Historically, only 17% of the season's
+          total pollen has fallen by this date.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Explore</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LAYER 2: RECENT HISTORY + CONTEXT
+     ═══════════════════════════════════════════ -->
+<section class="section-sand" id="history">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Recent History</div>
+      <h2>This Spring So Far</h2>
+      <p class="text-secondary" style="max-width:580px; margin-bottom:2rem;">
+        Daily pollen counts from Atlanta Allergy &amp; Asthma's certified counting station.
+        Bars colored by severity threshold.
+      </p>
+    </div>
+
+    <div class="chart-wrap reveal reveal-delay-1">
+      <div id="severityLegend" style="display:flex; gap:1rem; justify-content:flex-end; margin-bottom:0.5rem; flex-wrap:wrap;"></div>
+      <canvas id="recentChart" height="340"></canvas>
+    </div>
+
+    <div class="callout reveal reveal-delay-2">
+      <div class="callout-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+        </svg>
+      </div>
+      <div class="callout-body">
+        <h4>How unusual is this?</h4>
+        <p>
+          The latest count of <strong>2,008</strong> is nearly <strong>2x the historical average</strong>
+          for this date (mean 1,095, median 334 over 29 years). 2026 is tracking as a
+          well-above-average season &mdash; already in the 83rd percentile of total burden by day 85.
+        </p>
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-3">
+      <div class="card stat-card">
+        <div class="stat-value">7</div>
+        <div class="stat-label">Extreme days this season</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">14,801</div>
+        <div class="stat-label">All-time worst day<br>Mar 29, 2025</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">+3.9%</div>
+        <div class="stat-label">Annual increase<br>in pollen counts</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">35</div>
+        <div class="stat-label">Years of data<br>1992 &ndash; 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LAYER 3: SEASON PROGRESS
+     ═══════════════════════════════════════════ -->
+<section class="section-dark" id="season">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Season Progress</div>
+      <h2>When Does It End?</h2>
+      <p class="text-secondary" style="max-width:600px; margin-bottom:2rem;">
+        The S-curve tracks cumulative pollen burden through the season.
+        The shaded band shows where 80% of historical years fell. 2026's bold line
+        shows where we are now.
+      </p>
+    </div>
+
+    <div class="chart-wrap reveal reveal-delay-1">
+      <canvas id="scurveChart" height="340"></canvas>
+    </div>
+
+    <div class="grid-2" style="margin-top:var(--gap);">
+      <div class="card reveal reveal-delay-2" id="remainingCard"></div>
+      <div class="card reveal reveal-delay-3" id="seasonEndCard"></div>
+    </div>
+
+    <div class="card reveal reveal-delay-4" style="margin-top:var(--gap);" id="decadeCard"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LAYER 4: HOW WE PREDICT THIS
+     ═══════════════════════════════════════════ -->
+<section id="model">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">How We Predict This</div>
+      <h2>The Model</h2>
+      <p class="text-secondary" style="max-width:600px; margin-bottom:2rem;">
+        A 44-feature linear regression trained on 35 years of daily observations.
+        Not a black box &mdash; here's exactly what drives the forecast.
+      </p>
+    </div>
+
+    <div class="grid-2-1">
+      <div class="card reveal reveal-delay-1">
+        <h3>What Drives the Prediction</h3>
+        <p class="text-secondary" style="font-size:0.82rem; margin-bottom:1rem;">
+          Top 8 features by weight magnitude in the V8 model. Green bars push the count up; coral bars push it down.
+        </p>
+        <ul class="feature-list" id="featureList"></ul>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:var(--gap);">
+        <div class="card stat-card reveal reveal-delay-2">
+          <div class="stat-value" style="color:var(--forest-600);">85.8%</div>
+          <div class="stat-label">Bad-day accuracy<br><small class="text-muted">(count &ge; 90 threshold)</small></div>
+        </div>
+        <div class="card stat-card reveal reveal-delay-3">
+          <div class="stat-value" style="color:var(--forest-600);">91%</div>
+          <div class="stat-label">Recall &mdash; catches 9 of 10<br>bad days before they hit</div>
+        </div>
+        <div class="card stat-card reveal reveal-delay-4">
+          <div class="stat-value" style="color:var(--forest-600);">44</div>
+          <div class="stat-label">Features including weather,<br>persistence, seasonality</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forecast horizons -->
+    <div class="grid-3 reveal" style="margin-top:var(--gap);" id="horizonGrid"></div>
+
+    <!-- Data sources + limitations -->
+    <div class="grid-2 reveal" style="margin-top:var(--gap);" id="sourcesGrid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-tagline">The pollen forecast Atlanta deserves.</div>
+    Built by <a href="https://andrewkstein.com" target="_blank" rel="noopener">Andrew Stein</a>
+    <div class="footer-sources" id="footerSources">
+      Data: Atlanta Allergy &amp; Asthma + Open-Meteo | Model: 44-feature linear regression on 35 years of daily observations
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════
+// SAFE DOM BUILDER UTILITY
+// ═══════════════════════════════════════════
+function el(tag, attrs, children) {
+  var e = document.createElement(tag);
+  if (attrs) {
+    Object.entries(attrs).forEach(function(pair) {
+      var k = pair[0], v = pair[1];
+      if (k === 'style' && typeof v === 'object') Object.assign(e.style, v);
+      else if (k === 'className') e.className = v;
+      else if (k === 'textContent') e.textContent = v;
+      else e.setAttribute(k, v);
+    });
+  }
+  if (children) {
+    (Array.isArray(children) ? children : [children]).forEach(function(c) {
+      if (typeof c === 'string') e.appendChild(document.createTextNode(c));
+      else if (c) e.appendChild(c);
+    });
+  }
+  return e;
+}
+
+// ═══════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════
+var severityColors = { extreme: '#B91C1C', high: '#D97706', moderate: '#CA8A04', medium: '#CA8A04', low: '#15803D' };
+
+var featureLabels = [
+  { name: "Yesterday's count", weight: 0.50, positive: true },
+  { name: "5-day peak", weight: 0.48, positive: true },
+  { name: "2 days ago count", weight: 0.42, positive: true },
+  { name: "Late-season temp", weight: 0.34, positive: false },
+  { name: "Day of year", weight: 0.27, positive: true },
+  { name: "GDD threshold", weight: 0.25, positive: true },
+  { name: "5-day temp trend", weight: 0.19, positive: true },
+  { name: "Yesterday's rain", weight: 0.19, positive: false }
+];
+
+// ═══════════════════════════════════════════
+// DATA LOADER
+// ═══════════════════════════════════════════
+var dash = null;
+
+function loadDashboard() {
+  var cacheBust = Date.now();
+  fetch('dashboard.json?v=' + cacheBust)
+    .then(function(resp) {
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      return resp.json();
+    })
+    .then(function(data) {
+      dash = data;
+      renderAll(data);
+    })
+    .catch(function(err) {
+      console.error('Dashboard load failed:', err);
+      showErrorState();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initParticles();
+  initScrollReveal();
+  initNavDots();
+  initScrollCue();
+  loadDashboard();
+});
+
+// ═══════════════════════════════════════════
+// RENDER ALL
+// ═══════════════════════════════════════════
+function renderAll(d) {
+  renderHero(d);
+  renderFreshness(d._meta);
+  renderRecentChart(d.recent_history || []);
+  renderCallout(d);
+  renderStats(d);
+  buildRemainingCard(d.season);
+  buildSeasonEndCard(d.season);
+  buildDecadeCard(d.season);
+  buildHorizonCards();
+  buildSources();
+  buildFeatures();
+  renderScurveChart(d);
+  renderFooter(d._meta);
+}
+
+// ═══════════════════════════════════════════
+// HERO
+// ═══════════════════════════════════════════
+function renderHero(d) {
+  var today = d.today || {};
+  var obs = today.observation;
+  var count = obs ? obs.count : (today.forecast ? today.forecast.count : null);
+  var severity = obs ? obs.severity : (today.forecast ? today.forecast.severity : null);
+
+  // Badge
+  var badge = document.querySelector('.badge');
+  if (badge && severity) {
+    badge.className = 'badge badge--' + severity;
+    badge.textContent = severity.toUpperCase();
+    badge.style.fontSize = '0.8rem';
+    badge.style.marginBottom = '1.5rem';
+  }
+
+  // Count animation
+  animateCount(count || 0);
+
+  // Date
+  var dateEl = document.querySelector('.hero-date');
+  if (dateEl) {
+    var dt = today.date || '';
+    var parts = dt.split('-');
+    var formatted = parts.length === 3 ? new Date(dt + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : dt;
+    var statusText = today.observation_status === 'posted' ? 'Last measured ' : 'Forecast for ';
+    dateEl.textContent = statusText + formatted;
+  }
+
+  // Forecast pill
+  var forecastEl = document.querySelector('.hero-forecast span');
+  if (forecastEl && d.season) {
+    var remaining = d.season.remaining_extreme_days;
+    var avg = remaining ? Math.round(remaining.weighted_avg) : '?';
+    forecastEl.textContent = '';
+    var strong = document.createElement('strong');
+    strong.textContent = '~' + avg + ' more extreme days';
+    forecastEl.appendChild(strong);
+    forecastEl.appendChild(document.createTextNode(' likely this spring'));
+  }
+
+  // Progress ring
+  var pct = d.season ? d.season.season_progress_pct / 100 : 0.17;
+  var ringLabel = document.querySelector('.ring-label');
+  if (ringLabel) ringLabel.textContent = Math.round(pct * 100) + '%';
+  setTimeout(function() {
+    var ring = document.getElementById('progressRing');
+    if (ring) ring.style.strokeDashoffset = 226.2 * (1 - pct);
+  }, 500);
+
+  // Progress meta
+  var metaStrong = document.querySelector('.progress-meta strong');
+  var metaSpan = document.querySelector('.progress-meta .text-secondary');
+  if (metaStrong && d.season) {
+    var progPct = Math.round(d.season.season_progress_pct);
+    if (progPct < 30) metaStrong.textContent = 'Season is just getting started';
+    else if (progPct < 60) metaStrong.textContent = 'Mid-season — peak may be behind us';
+    else if (progPct < 85) metaStrong.textContent = 'Season is winding down';
+    else metaStrong.textContent = 'Season is nearly over';
+  }
+  if (metaSpan && d.season) {
+    metaSpan.textContent = d.season.cumulative_burden.toLocaleString() + ' cumulative grains so far. Historically, ' + Math.round(d.season.season_progress_pct) + '% of the season\u2019s total pollen has fallen by this date.';
+  }
+}
+
+function animateCount(target) {
+  var countEl = document.getElementById('heroCount');
+  if (!countEl) return;
+  var duration = 1800;
+  var start = performance.now();
+  function update(now) {
+    var elapsed = now - start;
+    var progress = Math.min(elapsed / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    countEl.textContent = Math.round(eased * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  setTimeout(function() { requestAnimationFrame(update); }, 300);
+}
+
+// ═══════════════════════════════════════════
+// FRESHNESS BANNER
+// ═══════════════════════════════════════════
+function renderFreshness(meta) {
+  var banner = document.getElementById('freshnessBanner');
+  if (!banner || !meta) return;
+  var status = meta.data_status;
+  var staleHours = meta.stale_hours || 0;
+
+  if (status === 'observation_posted' && staleHours < 4) { banner.hidden = true; return; }
+
+  banner.hidden = false;
+  if (status === 'weekend_no_data') {
+    banner.textContent = 'Weekend \u2014 Atlanta Allergy doesn\u2019t count on weekends. Showing latest observation.';
+    banner.className = 'freshness-banner freshness-weekend';
+  } else if (status === 'awaiting_observation') {
+    banner.textContent = 'Today\u2019s count not posted yet \u2014 check back after 11am. Showing model forecast.';
+    banner.className = 'freshness-banner freshness-pending';
+  } else if (status === 'scraper_error') {
+    banner.textContent = 'Data source may have changed. Showing latest available data.';
+    banner.className = 'freshness-banner freshness-error';
+  } else if (staleHours >= 24) {
+    banner.textContent = 'Last updated ' + staleHours + ' hours ago.';
+    banner.className = 'freshness-banner freshness-stale';
+  }
+}
+
+function showErrorState() {
+  var banner = document.getElementById('freshnessBanner');
+  if (banner) {
+    banner.hidden = false;
+    banner.textContent = 'Could not load today\u2019s data. The page may be temporarily unavailable.';
+    banner.className = 'freshness-banner freshness-error';
+  }
+}
+
+// ═══════════════════════════════════════════
+// RECENT CHART
+// ═══════════════════════════════════════════
+function renderRecentChart(history) {
+  var ctx = document.getElementById('recentChart');
+  if (!ctx) return;
+
+  // Filter to entries with counts
+  var data = history.filter(function(d) { return d.count != null; });
+
+  Chart.defaults.font.family = "'DM Sans', sans-serif";
+  Chart.defaults.font.size = 12;
+  Chart.defaults.color = '#6B5C4D';
+  Chart.defaults.plugins.legend.display = false;
+  Chart.defaults.plugins.tooltip.backgroundColor = '#1C1710';
+  Chart.defaults.plugins.tooltip.cornerRadius = 8;
+  Chart.defaults.plugins.tooltip.padding = 10;
+
+  new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: data.map(function(d) {
+        return new Date(d.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }),
+      datasets: [{
+        data: data.map(function(d) { return d.count; }),
+        backgroundColor: data.map(function(d) { return severityColors[d.severity] || '#999'; }),
+        borderRadius: 3, borderSkipped: false, barPercentage: 0.82, categoryPercentage: 0.88
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: function(items) { return data[items[0].dataIndex].date; },
+            label: function(item) { var d = data[item.dataIndex]; return d.count.toLocaleString() + ' grains/m\u00B3 (' + (d.severity || '?') + ')'; }
+          }
+        },
+        annotation: {
+          annotations: {
+            extremeLine: { type: 'line', yMin: 1500, yMax: 1500, borderColor: 'rgba(185,28,28,0.25)', borderWidth: 1, borderDash: [6,4],
+              label: { display: true, content: 'EXTREME', position: 'start', backgroundColor: 'rgba(185,28,28,0.08)', color: '#B91C1C', font: { family: "'JetBrains Mono',monospace", size: 8, weight: '500' }, padding: {x:4,y:2}, borderRadius: 3 } },
+            highLine: { type: 'line', yMin: 500, yMax: 500, borderColor: 'rgba(217,119,6,0.2)', borderWidth: 1, borderDash: [6,4],
+              label: { display: true, content: 'HIGH', position: 'start', backgroundColor: 'rgba(217,119,6,0.08)', color: '#D97706', font: { family: "'JetBrains Mono',monospace", size: 8, weight: '500' }, padding: {x:4,y:2}, borderRadius: 3 } },
+            modLine: { type: 'line', yMin: 100, yMax: 100, borderColor: 'rgba(202,138,4,0.18)', borderWidth: 1, borderDash: [6,4],
+              label: { display: true, content: 'MODERATE', position: 'start', backgroundColor: 'rgba(202,138,4,0.08)', color: '#CA8A04', font: { family: "'JetBrains Mono',monospace", size: 8, weight: '500' }, padding: {x:4,y:2}, borderRadius: 3 } }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxRotation: 45, font: { size: 10 }, callback: function(val, idx) { return idx % 3 === 0 ? this.getLabelForValue(val) : ''; } } },
+        y: { type: 'logarithmic', min: 1, ticks: { callback: function(v) { if ([1,10,100,500,1500,5000].indexOf(v) !== -1) return v >= 1000 ? (v/1000).toFixed(0) + 'K' : v; return ''; }, autoSkip: false },
+          title: { display: true, text: 'grains/m\u00B3 (log scale)', font: { size: 10, family: "'JetBrains Mono', monospace" }, color: '#9A8E7F' } }
+      }
+    }
+  });
+
+  // Severity legend
+  var legend = document.getElementById('severityLegend');
+  if (legend) {
+    legend.textContent = '';
+    [{ label: 'Extreme (1500+)', color: '#B91C1C' }, { label: 'High (500\u20131499)', color: '#D97706' },
+     { label: 'Moderate (100\u2013499)', color: '#CA8A04' }, { label: 'Low (<100)', color: '#15803D' }].forEach(function(item) {
+      var wrap = el('div', {style: {display:'flex',alignItems:'center',gap:'5px',fontSize:'0.68rem',fontFamily:'var(--font-mono)',color:'var(--text-muted)'}});
+      wrap.appendChild(el('span', {style: {width:'8px',height:'8px',borderRadius:'2px',background:item.color,flexShrink:'0'}}));
+      wrap.appendChild(el('span', {textContent: item.label}));
+      legend.appendChild(wrap);
+    });
+  }
+}
+
+// ═══════════════════════════════════════════
+// CALLOUT
+// ═══════════════════════════════════════════
+function renderCallout(d) {
+  var body = document.querySelector('.callout-body');
+  if (!body || !d.today) return;
+  var obs = d.today.observation;
+  var clim = d.today.climatology || {};
+  var count = obs ? obs.count : null;
+  var mean = clim.mean || 0;
+  var median = clim.median || 0;
+  var nYears = clim.n_years || 29;
+
+  body.textContent = '';
+  body.appendChild(el('h4', {textContent: 'How unusual is this?'}));
+  var p = el('p');
+  if (count && mean > 0) {
+    var ratio = (count / mean).toFixed(1);
+    p.textContent = 'The latest count of ' + count.toLocaleString() + ' is ' + ratio + '\u00D7 the historical average for this date (mean ' + mean.toLocaleString() + ', median ' + median.toLocaleString() + ' over ' + nYears + ' years).';
+  } else {
+    p.textContent = 'Historical average for this date: mean ' + mean.toLocaleString() + ', median ' + median.toLocaleString() + '.';
+  }
+  body.appendChild(p);
+}
+
+// ═══════════════════════════════════════════
+// STATS
+// ═══════════════════════════════════════════
+function renderStats(d) {
+  var strip = document.querySelector('.stats-strip');
+  if (!strip || !d.season) return;
+  strip.textContent = '';
+  var stats = [
+    { value: d.season.extreme_days_ytd || 0, label: 'Extreme days this season' },
+    { value: '14,801', label: 'All-time worst day\nMar 29, 2025' },
+    { value: '+3.9%', label: 'Annual increase\nin pollen counts' },
+    { value: '35', label: 'Years of data\n1992 \u2013 2026' }
+  ];
+  stats.forEach(function(s) {
+    var card = el('div', {className: 'card stat-card'});
+    card.appendChild(el('div', {className: 'stat-value', textContent: String(s.value)}));
+    var labelDiv = el('div', {className: 'stat-label'});
+    s.label.split('\n').forEach(function(line, i) {
+      if (i > 0) labelDiv.appendChild(document.createElement('br'));
+      labelDiv.appendChild(document.createTextNode(line));
+    });
+    card.appendChild(labelDiv);
+    strip.appendChild(card);
+  });
+}
+
+// ═══════════════════════════════════════════
+// SEASON CARDS (dark section)
+// ═══════════════════════════════════════════
+function buildRemainingCard(season) {
+  var card = document.getElementById('remainingCard');
+  if (!card || !season) return;
+  card.textContent = '';
+  var rem = season.remaining_extreme_days || {};
+  card.appendChild(el('h3', {textContent: 'Remaining Extreme Days'}));
+  var row = el('div', {style: {display:'flex',alignItems:'baseline',gap:'0.5rem',marginBottom:'0.5rem'}});
+  row.appendChild(el('span', {textContent: '~' + Math.round(rem.weighted_avg || 0), style: {fontFamily:'var(--font-display)',fontSize:'2rem',fontWeight:'700',color:'var(--gold-400)'}}));
+  row.appendChild(el('span', {className: 'text-secondary', textContent: 'extreme days remaining', style: {fontSize:'0.85rem'}}));
+  card.appendChild(row);
+  var rangeBar = el('div', {className: 'range-bar'});
+  rangeBar.appendChild(el('div', {className: 'range-fill', style: {left:'0',width:'100%'}}));
+  var pct = rem.max > rem.min ? ((rem.weighted_avg - rem.min) / (rem.max - rem.min) * 100) : 50;
+  rangeBar.appendChild(el('div', {className: 'range-marker', style: {left: pct + '%'}}));
+  card.appendChild(rangeBar);
+  var labels = el('div', {className: 'range-labels'});
+  labels.appendChild(el('span', {textContent: (rem.min || 0) + ' (best)'}));
+  labels.appendChild(el('span', {textContent: (rem.weighted_avg || 0).toFixed(1) + ' avg'}));
+  labels.appendChild(el('span', {textContent: (rem.max || 0) + ' (worst)'}));
+  card.appendChild(labels);
+}
+
+function buildSeasonEndCard(season) {
+  var card = document.getElementById('seasonEndCard');
+  if (!card || !season) return;
+  card.textContent = '';
+  var est = season.estimated_season_end || {};
+  card.appendChild(el('h3', {textContent: 'Season End Estimate'}));
+  var row = el('div', {style: {display:'flex',alignItems:'baseline',gap:'0.5rem',marginBottom:'0.5rem'}});
+  var endDate = est.date ? new Date(est.date + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'}) : 'May 8';
+  row.appendChild(el('span', {textContent: endDate, style: {fontFamily:'var(--font-display)',fontSize:'2rem',fontWeight:'700',color:'var(--gold-400)'}}));
+  row.appendChild(el('span', {className: 'text-secondary', textContent: 'estimated last day >100', style: {fontSize:'0.85rem'}}));
+  card.appendChild(row);
+  var rangeBar = el('div', {className: 'range-bar'});
+  rangeBar.appendChild(el('div', {className: 'range-fill', style: {left:'0',width:'100%'}}));
+  rangeBar.appendChild(el('div', {className: 'range-marker', style: {left:'38%'}}));
+  card.appendChild(rangeBar);
+  var minDoy = est.doy_min || 118, maxDoy = est.doy_max || 145;
+  function doyStr(d) { return new Date(2026, 0, d).toLocaleDateString('en-US', {month:'short',day:'numeric'}); }
+  var labels = el('div', {className: 'range-labels'});
+  labels.appendChild(el('span', {textContent: doyStr(minDoy)}));
+  labels.appendChild(el('span', {textContent: endDate}));
+  labels.appendChild(el('span', {textContent: doyStr(maxDoy)}));
+  card.appendChild(labels);
+}
+
+function buildDecadeCard(season) {
+  var card = document.getElementById('decadeCard');
+  if (!card || !season) return;
+  card.textContent = '';
+  card.appendChild(el('h3', {textContent: 'Pollen Seasons Are Getting Worse'}));
+  card.appendChild(el('p', {className: 'text-secondary', textContent: 'Average total season burden by decade, in grains/m\u00B3.', style: {fontSize:'0.85rem',marginBottom:'0.5rem'}}));
+  var trend = season.decade_trend || {};
+  var decades = [
+    {label:'1990s', value: trend['1990s'] || 22107},
+    {label:'2000s', value: trend['2000s'] || 30651},
+    {label:'2010s', value: trend['2010s'] || 51593},
+    {label:'2020s', value: trend['2020s'] || 71037}
+  ];
+  var maxVal = Math.max.apply(null, decades.map(function(d){return d.value;}));
+  var barsContainer = el('div', {className: 'decade-bars'});
+  decades.forEach(function(d) {
+    var pct = Math.round(d.value / maxVal * 100);
+    var bar = el('div', {className: 'decade-bar', style: {height:'0%'}});
+    bar.dataset.pct = pct;
+    bar.style.background = 'var(--gold-500)';
+    bar.appendChild(el('span', {textContent: Math.round(d.value/1000)+'K', style: {position:'absolute',top:'-18px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.6rem',fontWeight:'500',color:'rgba(250,245,235,0.6)',whiteSpace:'nowrap'}}));
+    bar.appendChild(el('span', {textContent: d.label, style: {position:'absolute',bottom:'-20px',left:'50%',transform:'translateX(-50%)',fontFamily:'var(--font-mono)',fontSize:'0.6rem',color:'rgba(250,245,235,0.4)',whiteSpace:'nowrap'}}));
+    barsContainer.appendChild(bar);
+  });
+  card.appendChild(barsContainer);
+}
+
+// ═══════════════════════════════════════════
+// HORIZON + SOURCES + FEATURES (static)
+// ═══════════════════════════════════════════
+function buildHorizonCards() {
+  var grid = document.getElementById('horizonGrid');
+  if (!grid) return;
+  grid.textContent = '';
+  [{range:'Days 1\u20133',method:'Weather Model',desc:'V8 regression on forecast weather + yesterday\u2019s count',filled:4},
+   {range:'Days 4\u20137',method:'Blended',desc:'Weather model fades out, analog-year signal fades in',filled:3},
+   {range:'Days 8\u201314',method:'Analog + Climatology',desc:'Historical season patterns from the 5 most similar years',filled:2}
+  ].forEach(function(h) {
+    var card = el('div', {className: 'card horizon-card'});
+    card.appendChild(el('div', {className: 'horizon-range', textContent: h.range}));
+    card.appendChild(el('div', {className: 'horizon-method', textContent: h.method}));
+    card.appendChild(el('div', {className: 'horizon-confidence', textContent: h.desc}));
+    var dots = el('div', {className: 'confidence-dots'});
+    for (var i = 0; i < 5; i++) dots.appendChild(el('span', {className: 'confidence-dot' + (i < h.filled ? ' filled' : '')}));
+    card.appendChild(dots);
+    grid.appendChild(card);
+  });
+}
+
+function buildSources() {
+  var grid = document.getElementById('sourcesGrid');
+  if (!grid) return;
+  grid.textContent = '';
+  var srcCard = el('div', {className: 'card'});
+  srcCard.appendChild(el('h3', {textContent: 'Data Sources'}));
+  var srcList = el('div', {style: {fontSize:'0.85rem',lineHeight:'1.8'}});
+  [['Observed pollen','Atlanta Allergy & Asthma, the only NAB-certified station in Atlanta'],
+   ['Weather','Open-Meteo (actuals + 14-day forecast, no API key required)'],
+   ['Training data','4,549 observation days across 35 spring seasons']
+  ].forEach(function(s) {
+    var row = el('div');
+    row.appendChild(el('strong', {textContent: s[0]}));
+    row.appendChild(document.createTextNode(' \u2014 ' + s[1]));
+    srcList.appendChild(row);
+  });
+  srcCard.appendChild(srcList);
+  grid.appendChild(srcCard);
+
+  var limCard = el('div', {className: 'card'});
+  limCard.appendChild(el('h3', {textContent: 'Honest Limitations'}));
+  limCard.appendChild(el('p', {className: 'text-secondary', textContent: 'No model is perfect. Here\u2019s what to keep in mind:', style: {fontSize:'0.82rem',marginBottom:'0.75rem'}}));
+  var limWrap = el('div', {className: 'limitations'});
+  ['Weekend & holiday data gaps','Single counting station','Linear model (no tree ensembles yet)','Total count only, not per-species','24-hour average, not real-time'].forEach(function(t) {
+    limWrap.appendChild(el('span', {className: 'limitation-tag', textContent: t}));
+  });
+  limCard.appendChild(limWrap);
+  grid.appendChild(limCard);
+}
+
+function buildFeatures() {
+  var list = document.getElementById('featureList');
+  if (!list) return;
+  list.textContent = '';
+  var maxWeight = Math.max.apply(null, featureLabels.map(function(f){return f.weight;}));
+  featureLabels.forEach(function(f) {
+    var pct = (f.weight / maxWeight * 100).toFixed(0);
+    var li = el('li', {className: 'feature-item'}, [
+      el('span', {className: 'feature-name', textContent: f.name}),
+      el('div', {className: 'feature-bar-track'}, [
+        (function() { var fill = el('div', {className: 'feature-bar-fill' + (f.positive ? '' : ' negative')}); fill.style.width = '0%'; fill.dataset.width = pct + '%'; return fill; })()
+      ]),
+      el('span', {className: 'feature-weight', textContent: (f.positive ? '+' : '\u2212') + f.weight.toFixed(2)})
+    ]);
+    list.appendChild(li);
+  });
+}
+
+// ═══════════════════════════════════════════
+// S-CURVE CHART
+// ═══════════════════════════════════════════
+function renderScurveChart(d) {
+  var ctx = document.getElementById('scurveChart');
+  if (!ctx) return;
+
+  // Build approximate historical envelope
+  var envelope = [];
+  for (var doy = 1; doy <= 170; doy++) {
+    var t = Math.max(0, (doy - 30) / 120);
+    var sigmoid = 1 / (1 + Math.exp(-10 * (t - 0.45)));
+    var maxBurden = 55000;
+    envelope.push({ doy: doy, p10: sigmoid * maxBurden * 0.5, median: sigmoid * maxBurden, p90: sigmoid * maxBurden * 1.7 });
+  }
+
+  var envDoys = envelope.map(function(e) { return e.doy; });
+
+  // Current year S-curve from dashboard
+  var yearCurve = d.current_year_scurve || [];
+
+  function interpolateCurve(pts, doy) {
+    for (var i = 0; i < pts.length - 1; i++) {
+      if (doy >= pts[i][0] && doy <= pts[i+1][0]) {
+        var t = (doy - pts[i][0]) / (pts[i+1][0] - pts[i][0]);
+        return pts[i][1] + t * (pts[i+1][1] - pts[i][1]);
+      }
+    }
+    if (pts.length > 0 && doy > pts[pts.length-1][0]) return null;
+    return doy < (pts[0] ? pts[0][0] : 999) ? 0 : null;
+  }
+
+  function doyToLabel(d) {
+    return new Date(2026, 0, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+
+  var currentDoy = d.today ? d.today.doy : 94;
+
+  new Chart(ctx.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: envDoys,
+      datasets: [
+        { data: envelope.map(function(e){return e.p90;}), fill: false, borderColor: 'transparent', pointRadius: 0, order: 10 },
+        { data: envelope.map(function(e){return e.p10;}), fill: '-1', backgroundColor: 'rgba(139,196,96,0.12)', borderColor: 'transparent', pointRadius: 0, order: 9 },
+        { label: 'Historical Median', data: envelope.map(function(e){return e.median;}), borderColor: 'rgba(139,196,96,0.35)', borderDash: [6,4], borderWidth: 1.5, pointRadius: 0, fill: false, order: 5 },
+        { label: '2026 (this year)', data: envDoys.map(function(d) { return interpolateCurve(yearCurve, d); }), borderColor: '#4A8528', borderWidth: 3.5, pointRadius: 0, fill: true, tension: 0.3, order: 1,
+          backgroundColor: function(context) {
+            var chart = context.chart; var c = chart.ctx; var area = chart.chartArea;
+            if (!area) return 'rgba(74,133,40,0.1)';
+            var gradient = c.createLinearGradient(0, area.top, 0, area.bottom);
+            gradient.addColorStop(0, 'rgba(74,133,40,0.25)'); gradient.addColorStop(0.5, 'rgba(74,133,40,0.08)'); gradient.addColorStop(1, 'rgba(74,133,40,0.01)');
+            return gradient;
+          }
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: true, position: 'top', align: 'end', labels: { usePointStyle: true, pointStyle: 'line', padding: 16, font: { size: 11 }, filter: function(item) { return item.text && item.text.indexOf('dataset') !== 0; } } },
+        tooltip: { filter: function(item) { return item.raw != null; }, callbacks: { title: function(items) { return doyToLabel(items[0].label); } } },
+        annotation: { annotations: { youAreHere: { type: 'line', xMin: currentDoy, xMax: currentDoy, borderColor: '#D4A843', borderWidth: 2, borderDash: [4,4],
+          label: { display: true, content: 'YOU ARE HERE', position: 'start', backgroundColor: '#D4A843', color: '#1C1710', font: { family: "'JetBrains Mono',monospace", size: 9, weight: '600' }, padding: {x:6,y:3}, borderRadius: 4 } } } }
+      },
+      scales: {
+        x: { type: 'linear', min: 20, max: 160, ticks: { stepSize: 15, callback: function(v) { return doyToLabel(v); }, font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' },
+          title: { display: true, text: 'Date', font: { size: 10, family: "'JetBrains Mono',monospace" }, color: 'rgba(250,245,235,0.35)' } },
+        y: { beginAtZero: true, ticks: { callback: function(v) { return v >= 1000 ? (v/1000).toFixed(0) + 'K' : v; }, maxTicksLimit: 7, color: 'rgba(250,245,235,0.4)' }, grid: { color: 'rgba(255,255,255,0.04)' },
+          title: { display: true, text: 'Cumulative grains/m\u00B3', font: { size: 10, family: "'JetBrains Mono',monospace" }, color: 'rgba(250,245,235,0.35)' } }
+      }
+    }
+  });
+}
+
+// ═══════════════════════════════════════════
+// FOOTER
+// ═══════════════════════════════════════════
+function renderFooter(meta) {
+  var footerSrc = document.getElementById('footerSources');
+  if (!footerSrc || !meta) return;
+  var genAt = meta.generated_at ? new Date(meta.generated_at).toLocaleDateString('en-US', {month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}) : '';
+  footerSrc.textContent = 'Data: Atlanta Allergy & Asthma + Open-Meteo | Model: 44-feature linear regression on 35 years | Last updated: ' + genAt;
+}
+
+// ═══════════════════════════════════════════
+// PARTICLES
+// ═══════════════════════════════════════════
+function initParticles() {
+  var container = document.querySelector('.hero-particles');
+  if (!container) return;
+  for (var i = 0; i < 25; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (8 + Math.random() * 12) + 's';
+    p.style.animationDelay = Math.random() * 10 + 's';
+    p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+    container.appendChild(p);
+  }
+}
+
+// ═══════════════════════════════════════════
+// SCROLL REVEAL + NAV DOTS
+// ═══════════════════════════════════════════
+function initScrollReveal() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.querySelectorAll('.feature-bar-fill').forEach(function(bar) {
+          setTimeout(function() { bar.style.width = bar.dataset.width; }, 100);
+        });
+        entry.target.querySelectorAll('.decade-bar').forEach(function(bar, i) {
+          setTimeout(function() { bar.style.height = bar.dataset.pct + '%'; }, 150 * i);
+        });
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+}
+
+function initNavDots() {
+  var sections = ['hero', 'history', 'season', 'model'];
+  var dots = document.querySelectorAll('.nav-dot');
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.id;
+        dots.forEach(function(d) { d.classList.toggle('active', d.dataset.section === id); });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(function(id) { var s = document.getElementById(id); if (s) sectionObserver.observe(s); });
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() { var s = document.getElementById(dot.dataset.section); if (s) s.scrollIntoView({ behavior: 'smooth' }); });
+  });
+}
+
+function initScrollCue() {
+  var scrolled = false;
+  window.addEventListener('scroll', function() {
+    if (!scrolled && window.scrollY > 100) {
+      scrolled = true;
+      var cue = document.querySelector('.scroll-cue');
+      if (cue) cue.style.opacity = '0';
+    }
+  }, { passive: true });
+}
+</script>
+
+</body>
+</html>

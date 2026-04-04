@@ -1,0 +1,90 @@
+{
+  "target_year": 2026,
+  "target_doy": 84,
+  "target_date": "2026-03-25",
+  "target_burden": 32741,
+  "analog_years": [
+    {
+      "year": 2023,
+      "burden_at_doy": 27117,
+      "total_season_burden": 58397,
+      "pct_done_at_doy": 46.4,
+      "remaining_extreme_days": 6,
+      "remaining_high_days": 18,
+      "remaining_over100_days": 37,
+      "last_extreme_doy": 111,
+      "last_over100_doy": 130,
+      "similarity": 0.828
+    },
+    {
+      "year": 2012,
+      "burden_at_doy": 43971,
+      "total_season_burden": 62018,
+      "pct_done_at_doy": 70.9,
+      "remaining_extreme_days": 2,
+      "remaining_high_days": 11,
+      "remaining_over100_days": 26,
+      "last_extreme_doy": 88,
+      "last_over100_doy": 118,
+      "similarity": 0.657
+    },
+    {
+      "year": 2016,
+      "burden_at_doy": 19734,
+      "total_season_burden": 52108,
+      "pct_done_at_doy": 37.9,
+      "remaining_extreme_days": 6,
+      "remaining_high_days": 19,
+      "remaining_over100_days": 37,
+      "last_extreme_doy": 94,
+      "last_over100_doy": 144,
+      "similarity": 0.603
+    },
+    {
+      "year": 2011,
+      "burden_at_doy": 15984,
+      "total_season_burden": 38833,
+      "pct_done_at_doy": 41.2,
+      "remaining_extreme_days": 4,
+      "remaining_high_days": 12,
+      "remaining_over100_days": 24,
+      "last_extreme_doy": 100,
+      "last_over100_doy": 124,
+      "similarity": 0.488
+    },
+    {
+      "year": 2017,
+      "burden_at_doy": 12590,
+      "total_season_burden": 50948,
+      "pct_done_at_doy": 24.7,
+      "remaining_extreme_days": 10,
+      "remaining_high_days": 21,
+      "remaining_over100_days": 35,
+      "last_extreme_doy": 103,
+      "last_over100_doy": 124,
+      "similarity": 0.385
+    }
+  ],
+  "projection": {
+    "remaining_extreme_days": {
+      "weighted_avg": 5.3,
+      "min": 2,
+      "max": 10
+    },
+    "remaining_over100_days": {
+      "weighted_avg": 32.2,
+      "min": 24,
+      "max": 37
+    },
+    "estimated_season_end_doy": {
+      "weighted_avg": 128,
+      "min": 118,
+      "max": 144
+    },
+    "estimated_last_extreme_doy": {
+      "weighted_avg": 100,
+      "min": 88,
+      "max": 111
+    }
+  }
+}

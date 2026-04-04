@@ -1,0 +1,69 @@
+{
+  "target_year": 2026,
+  "target_doy": 84,
+  "target_date": "2026-03-25",
+  "cumulative_burden": 32741,
+  "latest_count": 3279,
+  "historical_pct_done_at_doy": {
+    "mean": 17.0,
+    "median": 11.5,
+    "recent_mean": 18.9
+  },
+  "projected_total_burden": {
+    "from_historical_avg": 193053,
+    "from_recent_avg": 173060
+  },
+  "remaining_extreme_by_pct": {
+    "25": {
+      "avg_extreme_remaining": 5.7,
+      "max_extreme_remaining": 14,
+      "median_extreme_remaining": 5.0
+    },
+    "50": {
+      "avg_extreme_remaining": 3.2,
+      "max_extreme_remaining": 9,
+      "median_extreme_remaining": 3.0
+    },
+    "60": {
+      "avg_extreme_remaining": 2.1,
+      "max_extreme_remaining": 6,
+      "median_extreme_remaining": 1.5
+    },
+    "70": {
+      "avg_extreme_remaining": 1.4,
+      "max_extreme_remaining": 5,
+      "median_extreme_remaining": 1.0
+    },
+    "75": {
+      "avg_extreme_remaining": 1.0,
+      "max_extreme_remaining": 4,
+      "median_extreme_remaining": 0.0
+    },
+    "80": {
+      "avg_extreme_remaining": 0.6,
+      "max_extreme_remaining": 3,
+      "median_extreme_remaining": 0.0
+    },
+    "85": {
+      "avg_extreme_remaining": 0.3,
+      "max_extreme_remaining": 2,
+      "median_extreme_remaining": 0.0
+    },
+    "90": {
+      "avg_extreme_remaining": 0.1,
+      "max_extreme_remaining": 2,
+      "median_extreme_remaining": 0.0
+    },
+    "95": {
+      "avg_extreme_remaining": 0,
+      "max_extreme_remaining": 0,
+      "median_extreme_remaining": 0.0
+    }
+  },
+  "season_trend": {
+    "1990s_avg_total": 22107,
+    "2000s_avg_total": 30651,
+    "2010s_avg_total": 51593,
+    "2020s_avg_total": 71037
+  }
+}
