@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-04-04T13:44:34.895133-04:00",
+    "generated_at": "2026-04-04T14:58:27.941654-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,7 +15,7 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 862,
+      "count": 675,
       "severity": "high",
       "data_source": "observation"
     },
@@ -33,12 +33,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 78.4,
+      "temp_max": 78.8,
       "temp_min": 65.1,
-      "temp_mean": 70.7,
+      "temp_mean": 70.9,
       "precipitation": 0.0,
-      "wind_max": 11.6,
-      "solar_radiation": 12.94,
+      "wind_max": 11.5,
+      "solar_radiation": 12.33,
       "regime": "hot_windy"
     }
   },
@@ -46,7 +46,7 @@
     "date": "2026-04-05",
     "doy": 95,
     "forecast": {
-      "count": 575,
+      "count": 600,
       "severity": "high"
     },
     "climatology": {
@@ -56,51 +56,51 @@
       "p90": 4557
     },
     "weather_forecast": {
-      "temp_max": 68.2,
+      "temp_max": 69.4,
       "temp_min": 50.5,
       "temp_mean": 63.0,
-      "precipitation": 0.016,
+      "precipitation": 0.056,
       "wind_max": 13.4,
-      "regime": "warm_windy"
+      "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-04-04",
     "as_of_doy": 94,
-    "cumulative_burden": 35890,
+    "cumulative_burden": 37031,
     "extreme_days_ytd": 7,
-    "high_days_ytd": 14,
-    "gdd_cumulative": 312,
-    "season_progress_pct": 20.7,
+    "high_days_ytd": 15,
+    "gdd_cumulative": 332.7,
+    "season_progress_pct": 21.4,
     "remaining_extreme_days": {
-      "weighted_avg": 4.0,
+      "weighted_avg": 3.9,
       "min": 2,
       "max": 10
     },
     "estimated_season_end": {
-      "date": "2026-05-06",
-      "doy_weighted_avg": 126,
+      "date": "2026-05-05",
+      "doy_weighted_avg": 125,
       "doy_min": 118,
       "doy_max": 144
     },
     "analog_years": [
       {
         "year": 2012,
-        "similarity": 0.816,
+        "similarity": 0.842,
         "remaining_extreme_days": 2,
         "last_extreme_doy": 88,
         "total_season_burden": 62018
       },
       {
         "year": 2023,
-        "similarity": 0.676,
+        "similarity": 0.634,
         "remaining_extreme_days": 6,
         "last_extreme_doy": 111,
         "total_season_burden": 58397
       },
       {
         "year": 2016,
-        "similarity": 0.181,
+        "similarity": 0.123,
         "remaining_extreme_days": 6,
         "last_extreme_doy": 94,
         "total_season_burden": 52108
@@ -396,7 +396,7 @@
       "date": "2026-04-04",
       "count": 1141,
       "severity": "high",
-      "predicted": 862
+      "predicted": 675
     }
   ],
   "current_year_scurve": [
@@ -650,7 +650,7 @@
     ],
     [
       94,
-      35890
+      37031
     ]
   ]
 }
