@@ -17,6 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away-subtle.css">
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
 <style>
 /* ═══════════════════════════════════════════════
@@ -932,65 +935,25 @@ footer .footer-tagline {
 .freshness-error { background: var(--severity-extreme-bg); color: var(--severity-extreme); border-bottom: 1px solid rgba(185,28,28,0.2); }
 
 /* ═══════════════════════════════════════════════
-   TOOLTIPS
+   TOOLTIPS (Tippy.js)
    ═══════════════════════════════════════════════ */
-.has-tooltip {
-  position: relative;
+.has-tip {
   cursor: help;
   border-bottom: 1px dotted currentColor;
 }
-.has-tooltip .tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
+.tippy-box[data-theme~='pollen'] {
   background: var(--ink);
   color: var(--cream);
   font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.45;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  width: max-content;
-  max-width: 260px;
-  z-index: 50;
-  pointer-events: none;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: left;
-  white-space: normal;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  padding: 0.25rem 0.25rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 280px;
 }
-.has-tooltip .tooltip-text::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: var(--ink);
-}
-.has-tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-/* On mobile, tooltips go below instead */
-@media (max-width: 600px) {
-  .has-tooltip .tooltip-text {
-    bottom: auto;
-    top: calc(100% + 8px);
-    max-width: 200px;
-  }
-  .has-tooltip .tooltip-text::after {
-    top: auto;
-    bottom: 100%;
-    border-top-color: transparent;
-    border-bottom-color: var(--ink);
-  }
-}
+.tippy-box[data-theme~='pollen'] .tippy-arrow { color: var(--ink); }
+.tippy-box[data-theme~='pollen'] .tippy-content { padding: 0.5rem 0.65rem; }
 
 @media (max-width: 600px) {
   .hero-count { font-size: clamp(2.8rem, 14vw, 4.5rem); }
@@ -1209,15 +1172,15 @@ footer .footer-tagline {
       <div style="display:flex; flex-direction:column; gap:var(--gap);">
         <div class="card stat-card reveal reveal-delay-2">
           <div class="stat-value" style="color:var(--forest-600);">85.8%</div>
-          <div class="stat-label"><span class="has-tooltip">Bad-day accuracy<span class="tooltip-text">When the model predicts a &ldquo;bad day&rdquo; (pollen count &ge; 90 grains/m&sup3;, roughly where allergy symptoms start), it&rsquo;s correct 85.8% of the time. Tested on 11 years of held-out data.</span></span><br><small class="text-muted">(count &ge; 90 threshold)</small></div>
+          <div class="stat-label"><span class="has-tip" data-tippy-content="When the model predicts a 'bad day' (pollen count &ge; 90 grains/m&sup3;, roughly where allergy symptoms start), it's correct 85.8% of the time. Tested on 11 years of held-out data.">Bad-day accuracy</span><br><small class="text-muted">(count &ge; 90 threshold)</small></div>
         </div>
         <div class="card stat-card reveal reveal-delay-3">
           <div class="stat-value" style="color:var(--forest-600);">91%</div>
-          <div class="stat-label"><span class="has-tooltip">Recall<span class="tooltip-text">Of all actual bad pollen days, the model correctly flagged 91% of them in advance. It misses about 1 in 10 bad days.</span></span> &mdash; catches 9 of 10<br>bad days before they hit</div>
+          <div class="stat-label"><span class="has-tip" data-tippy-content="Of all actual bad pollen days, the model correctly flagged 91% of them in advance. It misses about 1 in 10 bad days.">Recall</span> &mdash; catches 9 of 10<br>bad days before they hit</div>
         </div>
         <div class="card stat-card reveal reveal-delay-4">
           <div class="stat-value" style="color:var(--forest-600);">44</div>
-          <div class="stat-label"><span class="has-tooltip">Features<span class="tooltip-text">The model uses 44 input variables: yesterday&rsquo;s count, temperature, rain, wind, growing degree days, time of year, weather regime classifications, and more. Each is weighted based on how well it predicted pollen in 35 years of training data.</span></span> including weather,<br>persistence, seasonality</div>
+          <div class="stat-label"><span class="has-tip" data-tippy-content="The model uses 44 input variables: yesterday's count, temperature, rain, wind, growing degree days, time of year, weather regime classifications, and more. Each is weighted based on how well it predicted pollen in 35 years of training data.">Features</span> including weather,<br>persistence, seasonality</div>
         </div>
       </div>
     </div>
@@ -1330,6 +1293,20 @@ function renderAll(d) {
   buildFeatures();
   renderScurveChart(d);
   renderFooter(d._meta);
+
+  // Initialize Tippy tooltips on all elements with data-tippy-content
+  if (typeof tippy !== 'undefined') {
+    tippy('.has-tip', {
+      theme: 'pollen',
+      animation: 'shift-away-subtle',
+      placement: 'top',
+      arrow: true,
+      touch: ['hold', 500],
+      maxWidth: 280,
+      interactive: false,
+      appendTo: document.body
+    });
+  }
 }
 
 // ═══════════════════════════════════════════
@@ -1804,10 +1781,9 @@ function buildFeatures() {
     var pct = (f.weight / maxWeight * 100).toFixed(0);
     var nameSpan = el('span', {className: 'feature-name'});
     if (f.tip) {
-      var tipWrap = el('span', {className: 'has-tooltip'});
-      tipWrap.appendChild(document.createTextNode(f.name));
-      tipWrap.appendChild(el('span', {className: 'tooltip-text', textContent: f.tip}));
-      nameSpan.appendChild(tipWrap);
+      var tipEl = el('span', {className: 'has-tip', textContent: f.name});
+      tipEl.setAttribute('data-tippy-content', f.tip);
+      nameSpan.appendChild(tipEl);
     } else {
       nameSpan.textContent = f.name;
     }
