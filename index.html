@@ -458,8 +458,11 @@ h3 {
   border-radius: 4px;
 }
 .tomorrow-cause {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
+  line-height: 1.45;
+  text-align: left;
+  max-width: 520px;
 }
 
 /* Season progress ring */
@@ -1355,19 +1358,24 @@ function renderHero(d) {
       tmrwBadge.style.border = '1px solid ' + colors[0] + '22';
     }
 
-    if (tmrwCause && tmrw.weather_forecast) {
-      var wx = tmrw.weather_forecast;
-      var regime = wx.regime || '';
-      var regimeLabels = {
-        hot_windy: 'Hot & windy \u2014 pollen dispersal likely',
-        hot_calm: 'Hot & calm \u2014 pollen stays airborne',
-        warm_windy: 'Warm & breezy \u2014 moderate dispersal',
-        warm_calm: 'Warm & calm',
-        cool: 'Cool temps \u2014 lower release',
-        drizzle: 'Light rain \u2014 partial washout',
-        rainy: 'Rain expected \u2014 washout likely'
-      };
-      tmrwCause.textContent = regimeLabels[regime] || '';
+    if (tmrwCause) {
+      // Use the full causal explanation from the pipeline if available
+      var explanation = tmrw.forecast.explanation || '';
+      if (explanation) {
+        tmrwCause.textContent = explanation;
+      } else if (tmrw.weather_forecast) {
+        var regime = tmrw.weather_forecast.regime || '';
+        var regimeLabels = {
+          hot_windy: 'Hot & windy \u2014 pollen dispersal likely',
+          hot_calm: 'Hot & calm \u2014 pollen stays airborne',
+          warm_windy: 'Warm & breezy \u2014 moderate dispersal',
+          warm_calm: 'Warm & calm',
+          cool: 'Cool temps \u2014 lower release',
+          drizzle: 'Light rain \u2014 partial washout',
+          rainy: 'Rain expected \u2014 washout likely'
+        };
+        tmrwCause.textContent = regimeLabels[regime] || '';
+      }
     }
   }
 }
@@ -1547,6 +1555,14 @@ function renderCallout(d) {
     p.textContent = 'Historical average for this date: mean ' + mean.toLocaleString() + ', median ' + median.toLocaleString() + '.';
   }
   body.appendChild(p);
+
+  // Today's causal explanation from the model
+  var todayExpl = d.today.forecast ? d.today.forecast.explanation : '';
+  if (todayExpl) {
+    var expl = el('p', {style: {marginTop:'0.5rem', fontSize:'0.82rem', fontStyle:'italic', color:'var(--bark)'}});
+    expl.textContent = todayExpl;
+    body.appendChild(expl);
+  }
 }
 
 // ═══════════════════════════════════════════
@@ -1680,15 +1696,30 @@ function buildSources() {
   var srcCard = el('div', {className: 'card'});
   srcCard.appendChild(el('h3', {textContent: 'Data Sources'}));
   var srcList = el('div', {style: {fontSize:'0.85rem',lineHeight:'1.8'}});
-  [['Observed pollen','Atlanta Allergy & Asthma, the only NAB-certified station in Atlanta'],
-   ['Weather','Open-Meteo (actuals + 14-day forecast, no API key required)'],
-   ['Training data','4,549 observation days across 35 spring seasons']
-  ].forEach(function(s) {
+  var sources = [
+    {label: 'Observed pollen', desc: 'Atlanta Allergy & Asthma', url: 'https://www.atlantaallergy.com/pollen_counts', detail: ', the only NAB-certified station in Atlanta'},
+    {label: 'Weather', desc: 'Open-Meteo', url: 'https://open-meteo.com/', detail: ' (actuals + 14-day forecast, free API)'},
+    {label: 'Training data', desc: '4,549 observation days across 35 spring seasons', url: null, detail: ''}
+  ];
+  sources.forEach(function(s) {
     var row = el('div');
-    row.appendChild(el('strong', {textContent: s[0]}));
-    row.appendChild(document.createTextNode(' \u2014 ' + s[1]));
+    row.appendChild(el('strong', {textContent: s.label}));
+    row.appendChild(document.createTextNode(' \u2014 '));
+    if (s.url) {
+      var a = el('a', {href: s.url, target: '_blank', rel: 'noopener', textContent: s.desc, style: {color:'var(--forest-600)', textDecoration:'none', fontWeight:'500'}});
+      row.appendChild(a);
+    } else {
+      row.appendChild(document.createTextNode(s.desc));
+    }
+    if (s.detail) row.appendChild(document.createTextNode(s.detail));
     srcList.appendChild(row);
   });
+  // Georgia Tech acknowledgment
+  var ack = el('div', {style: {marginTop:'0.75rem', paddingTop:'0.75rem', borderTop:'1px solid var(--border-subtle)', fontSize:'0.78rem', color:'var(--text-muted)'}});
+  ack.appendChild(document.createTextNode('Inspired by prior work from '));
+  ack.appendChild(el('a', {href: 'https://github.com/tomasbruna/pollen-predictions', target: '_blank', rel: 'noopener', textContent: 'Georgia Tech BMED 6700', style: {color:'var(--forest-600)', textDecoration:'none'}}));
+  ack.appendChild(document.createTextNode(' (Bruna et al.), which independently validated many of the same modeling approaches using Atlanta Allergy data.'));
+  srcList.appendChild(ack);
   srcCard.appendChild(srcList);
   grid.appendChild(srcCard);
 

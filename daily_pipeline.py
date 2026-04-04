@@ -384,21 +384,143 @@ def assemble_v8_features(today_weather, yesterday_weather, history, prev_dashboa
 
 
 def score_v8(features, weights_data):
-    """Score a 44-feature vector using V8 weights. Returns predicted count."""
+    """Score a 44-feature vector using V8 weights.
+    Returns (predicted_count, contributions) where contributions is a list of
+    (feature_name, contribution, direction) sorted by |contribution|.
+    """
     if features is None:
-        return None
+        return None, []
 
+    names = weights_data["feature_names"]
     means = weights_data["means"]
     stds = weights_data["stds"]
     w = weights_data["weights"]
     bias = weights_data["bias"]
 
-    # Standardize and dot-product
-    z = [(features[i] - means[i]) / stds[i] if stds[i] > 0 else 0
-         for i in range(len(features))]
+    # Standardize and compute per-feature contributions
+    contributions = []
+    z = []
+    for i in range(len(features)):
+        zi = (features[i] - means[i]) / stds[i] if stds[i] > 0 else 0
+        z.append(zi)
+        contrib = w[i] * zi
+        contributions.append((names[i], contrib))
+
     log_pred = bias + sum(w[i] * z[i] for i in range(len(w)))
     predicted_count = max(0, math.exp(log_pred) - 1)
-    return round(predicted_count)
+
+    # Sort by absolute contribution
+    contributions.sort(key=lambda x: -abs(x[1]))
+
+    return round(predicted_count), contributions
+
+
+# Human-readable labels for features
+FEATURE_LABELS = {
+    "prev_log_count": "yesterday's count",
+    "prev2_log_count": "the day before's count",
+    "d1_d2_diff": "the day-over-day trend",
+    "pollen_5d_max": "the 5-day peak",
+    "pollen_5d_trend": "the recent pollen trend",
+    "temp_mean": "today's temperature",
+    "temp_above_50": "warmth above 50\u00b0F",
+    "temp_anomaly": "unusually warm temperatures",
+    "temp_5d_trend": "the warming trend",
+    "temp_min": "the overnight low",
+    "warm_night": "a warm overnight low (above 55\u00b0F)",
+    "temp_x_early": "early-season warmth",
+    "temp_x_late": "late-season warmth",
+    "temp_stability": "temperature stability",
+    "wind_dir_ns": "the wind direction",
+    "solar_radiation": "solar radiation",
+    "precip_yesterday": "yesterday's rain",
+    "precip_2day_sum": "recent rainfall",
+    "precip_5d_total": "rain over the past 5 days",
+    "dry_days_5d": "dry conditions",
+    "rain_then_dry": "post-rain drying",
+    "wind_max": "wind speed",
+    "gdd_daily": "growing degree days",
+    "gdd_armed": "accumulated heat",
+    "doy_sin": "time of year",
+    "doy_cos": "time of year",
+    "season_progress": "how far into the season we are",
+    "year_trend": "the long-term trend in pollen",
+    "yest_was_rainy": "yesterday's rain",
+    "yest_was_dry_warm": "yesterday being dry and warm",
+    "today_hot_windy": "hot and windy conditions",
+    "today_hot_calm": "hot and calm conditions",
+    "today_warm_windy": "warm and breezy conditions",
+    "today_warm_calm": "warm and calm conditions",
+    "today_cool": "cool temperatures",
+    "today_drizzle": "drizzle",
+    "today_rainy": "rain today",
+    "yest_hot_windy": "yesterday being hot and windy",
+    "yest_hot_calm": "yesterday being hot and calm",
+    "yest_warm_windy": "yesterday being warm and breezy",
+    "yest_warm_calm": "yesterday being warm and calm",
+    "yest_cool": "yesterday being cool",
+    "yest_drizzle": "yesterday's drizzle",
+    "yest_rainy": "yesterday's rain",
+}
+
+
+def build_causal_explanation(contributions, predicted_count, actual_count=None, weather=None):
+    """Build a human-readable causal explanation from feature contributions."""
+    if not contributions:
+        return ""
+
+    # Get top 3 positive and top 1 negative contributors (skip near-zero)
+    pushers_up = [(n, c) for n, c in contributions if c > 0.05][:3]
+    pushers_down = [(n, c) for n, c in contributions if c < -0.05][:2]
+
+    parts = []
+
+    # Lead with the weather context
+    if weather:
+        temp = weather.get("temp_mean")
+        precip = weather.get("precipitation", 0)
+        wind = weather.get("wind_max")
+        pieces = []
+        if temp is not None:
+            pieces.append(f"{temp:.0f}\u00b0F")
+        if wind is not None:
+            pieces.append(f"winds up to {wind:.0f} mph")
+        if precip and precip > 0.05:
+            pieces.append(f"{precip:.1f}\" of rain")
+        elif precip is not None:
+            pieces.append("no rain")
+        if pieces:
+            parts.append("With " + ", ".join(pieces) + ".")
+
+    # Main drivers
+    if pushers_up:
+        driver_labels = [FEATURE_LABELS.get(n, n) for n, _ in pushers_up]
+        # Deduplicate (e.g., two "yesterday's rain" features)
+        seen = set()
+        unique = []
+        for lbl in driver_labels:
+            if lbl not in seen:
+                seen.add(lbl)
+                unique.append(lbl)
+        if len(unique) == 1:
+            parts.append(f"The biggest factor pushing counts up: {unique[0]}.")
+        else:
+            parts.append(f"Key factors pushing counts up: {', '.join(unique[:-1])} and {unique[-1]}.")
+
+    if pushers_down:
+        down_labels = list(dict.fromkeys(FEATURE_LABELS.get(n, n) for n, _ in pushers_down))
+        parts.append(f"Working against that: {', '.join(down_labels)}.")
+
+    # Compare to actual if available
+    if actual_count is not None and predicted_count is not None:
+        diff = actual_count - predicted_count
+        pct = abs(diff) / predicted_count * 100 if predicted_count > 0 else 0
+        if pct > 30 and diff > 0:
+            parts.append(f"The actual count came in {pct:.0f}% higher than the model expected \u2014 a sign of factors beyond what weather alone explains.")
+        elif pct > 30 and diff < 0:
+            parts.append(f"The actual count came in {pct:.0f}% lower than predicted \u2014 possibly localized rain or wind patterns.")
+
+    return " ".join(parts)
 
 
 # ───────────────────────────────────────────────
@@ -489,31 +611,36 @@ def compute_season(obs, prev_dashboard, target_date):
         gdd_daily = max(0, temp_mean - 50)
     gdd_cumulative = prev_gdd + gdd_daily
 
-    # Season progress percentage
-    ref = load_season_progress_ref()
-    avg_total = ref.get("projected_total_burden", {}).get("from_recent_avg", 173060)
-    progress_pct = round(cumulative_burden / avg_total * 100, 1) if avg_total > 0 else 0
-
     # Analog projection (use cached data, re-weight by current burden)
+    ref = load_season_progress_ref()
     analog_data = load_analog_data()
     analog_years = []
     remaining_extreme_list = []
     season_end_list = []
+    projected_totals = []
 
     for ay in analog_data.get("analog_years", []):
         burden_at_doy = ay.get("burden_at_doy", 1)
         ratio = cumulative_burden / burden_at_doy if burden_at_doy > 0 else 1
         # Similarity decays as our burden diverges from the analog's burden at same DOY
         sim = max(0, 1 - abs(ratio - 1))
+        total = ay.get("total_season_burden", 50000)
         analog_years.append({
             "year": ay["year"],
             "similarity": round(sim, 3),
             "remaining_extreme_days": ay.get("remaining_extreme_days", 0),
             "last_extreme_doy": ay.get("last_extreme_doy", 100),
-            "total_season_burden": ay.get("total_season_burden", 50000),
+            "total_season_burden": total,
         })
         remaining_extreme_list.append((sim, ay.get("remaining_extreme_days", 0)))
         season_end_list.append((sim, ay.get("last_over100_doy", 130)))
+        projected_totals.append((sim, total))
+
+    # Season progress: use analog-weighted projected total instead of stale historical avg
+    total_sim = sum(s for s, _ in projected_totals) or 1
+    analog_projected_total = sum(s * t for s, t in projected_totals) / total_sim
+    progress_pct = round(cumulative_burden / analog_projected_total * 100, 1) if analog_projected_total > 0 else 0
+    progress_pct = min(progress_pct, 100.0)  # cap at 100%
 
     # Weighted averages
     total_weight = sum(s for s, _ in remaining_extreme_list) or 1
@@ -624,7 +751,14 @@ def build_dashboard(target_date, obs, weather_rows, prev_dashboard, dry_run=Fals
     features_today = assemble_v8_features(
         today_weather, yesterday_weather, history, prev_dashboard, target_date
     )
-    today_pred = score_v8(features_today, weights)
+    today_pred, today_contribs = score_v8(features_today, weights)
+
+    # Build causal explanation for today
+    today_explanation = build_causal_explanation(
+        today_contribs, today_pred,
+        actual_count=today_count if has_observation else None,
+        weather=today_weather
+    )
 
     # Score V8 for tomorrow
     tomorrow_date = target_date + timedelta(days=1)
@@ -645,7 +779,12 @@ def build_dashboard(target_date, obs, weather_rows, prev_dashboard, dry_run=Fals
     features_tomorrow = assemble_v8_features(
         tomorrow_weather, today_weather, tomorrow_history, None, tomorrow_date
     )
-    tomorrow_pred = score_v8(features_tomorrow, weights)
+    tomorrow_pred, tomorrow_contribs = score_v8(features_tomorrow, weights)
+
+    # Build causal explanation for tomorrow
+    tomorrow_explanation = build_causal_explanation(
+        tomorrow_contribs, tomorrow_pred, weather=tomorrow_weather
+    )
 
     # Climatology
     today_actual = today_count if has_observation else today_pred
@@ -703,6 +842,7 @@ def build_dashboard(target_date, obs, weather_rows, prev_dashboard, dry_run=Fals
                 "count": today_pred,
                 "severity": classify_severity(today_pred),
                 "data_source": forecast_data_source,
+                "explanation": today_explanation,
             },
             "climatology": today_clim,
             "weather": {
@@ -721,6 +861,7 @@ def build_dashboard(target_date, obs, weather_rows, prev_dashboard, dry_run=Fals
             "forecast": {
                 "count": tomorrow_pred,
                 "severity": classify_severity(tomorrow_pred),
+                "explanation": tomorrow_explanation,
             },
             "climatology": {
                 "doy": tomorrow_doy,
