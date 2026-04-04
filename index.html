@@ -931,6 +931,67 @@ footer .footer-tagline {
 .freshness-stale { background: #FEF3C7; color: #92400E; border-bottom: 1px solid #F59E0B; }
 .freshness-error { background: var(--severity-extreme-bg); color: var(--severity-extreme); border-bottom: 1px solid rgba(185,28,28,0.2); }
 
+/* ═══════════════════════════════════════════════
+   TOOLTIPS
+   ═══════════════════════════════════════════════ */
+.has-tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted currentColor;
+}
+.has-tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  width: max-content;
+  max-width: 260px;
+  z-index: 50;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: left;
+  white-space: normal;
+}
+.has-tooltip .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--ink);
+}
+.has-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+/* On mobile, tooltips go below instead */
+@media (max-width: 600px) {
+  .has-tooltip .tooltip-text {
+    bottom: auto;
+    top: calc(100% + 8px);
+    max-width: 200px;
+  }
+  .has-tooltip .tooltip-text::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: var(--ink);
+  }
+}
+
 @media (max-width: 600px) {
   .hero-count { font-size: clamp(2.8rem, 14vw, 4.5rem); }
   .progress-ring-wrapper { flex-direction: column; text-align: center; }
@@ -1148,15 +1209,15 @@ footer .footer-tagline {
       <div style="display:flex; flex-direction:column; gap:var(--gap);">
         <div class="card stat-card reveal reveal-delay-2">
           <div class="stat-value" style="color:var(--forest-600);">85.8%</div>
-          <div class="stat-label">Bad-day accuracy<br><small class="text-muted">(count &ge; 90 threshold)</small></div>
+          <div class="stat-label"><span class="has-tooltip">Bad-day accuracy<span class="tooltip-text">When the model predicts a &ldquo;bad day&rdquo; (pollen count &ge; 90 grains/m&sup3;, roughly where allergy symptoms start), it&rsquo;s correct 85.8% of the time. Tested on 11 years of held-out data.</span></span><br><small class="text-muted">(count &ge; 90 threshold)</small></div>
         </div>
         <div class="card stat-card reveal reveal-delay-3">
           <div class="stat-value" style="color:var(--forest-600);">91%</div>
-          <div class="stat-label">Recall &mdash; catches 9 of 10<br>bad days before they hit</div>
+          <div class="stat-label"><span class="has-tooltip">Recall<span class="tooltip-text">Of all actual bad pollen days, the model correctly flagged 91% of them in advance. It misses about 1 in 10 bad days.</span></span> &mdash; catches 9 of 10<br>bad days before they hit</div>
         </div>
         <div class="card stat-card reveal reveal-delay-4">
           <div class="stat-value" style="color:var(--forest-600);">44</div>
-          <div class="stat-label">Features including weather,<br>persistence, seasonality</div>
+          <div class="stat-label"><span class="has-tooltip">Features<span class="tooltip-text">The model uses 44 input variables: yesterday&rsquo;s count, temperature, rain, wind, growing degree days, time of year, weather regime classifications, and more. Each is weighted based on how well it predicted pollen in 35 years of training data.</span></span> including weather,<br>persistence, seasonality</div>
         </div>
       </div>
     </div>
@@ -1212,14 +1273,14 @@ function el(tag, attrs, children) {
 var severityColors = { extreme: '#B91C1C', high: '#D97706', moderate: '#CA8A04', medium: '#CA8A04', low: '#15803D' };
 
 var featureLabels = [
-  { name: "Yesterday's count", weight: 0.50, positive: true },
-  { name: "5-day peak", weight: 0.48, positive: true },
-  { name: "2 days ago count", weight: 0.42, positive: true },
-  { name: "Late-season temp", weight: 0.34, positive: false },
-  { name: "Day of year", weight: 0.27, positive: true },
-  { name: "GDD threshold", weight: 0.25, positive: true },
-  { name: "5-day temp trend", weight: 0.19, positive: true },
-  { name: "Yesterday's rain", weight: 0.19, positive: false }
+  { name: "Yesterday's count", weight: 0.50, positive: true, tip: "The single strongest predictor. Pollen clusters in multi-day runs \u2014 a high day usually follows a high day." },
+  { name: "5-day peak", weight: 0.48, positive: true, tip: "The highest count in the past 5 days. Captures whether we\u2019re in an active pollen episode." },
+  { name: "2 days ago count", weight: 0.42, positive: true, tip: "Adds momentum \u2014 the model looks at a 2-day window, not just yesterday." },
+  { name: "Late-season temp", weight: 0.34, positive: false, tip: "After ~April 1, warmer temps actually push counts DOWN \u2014 the trees are finishing their bloom. Early in the season, warmth pushes counts up." },
+  { name: "Day of year", weight: 0.27, positive: true, tip: "Captures the seasonal cycle \u2014 pollen peaks around late March/early April in Atlanta regardless of weather." },
+  { name: "GDD threshold", weight: 0.25, positive: true, tip: "Growing Degree Days (GDD): accumulated warmth since January. Once enough heat builds up (~100 GDD), trees are \u2018armed\u2019 to release pollen." },
+  { name: "5-day temp trend", weight: 0.19, positive: true, tip: "A warming trend over 5 days signals a ramp-up. Sudden warm spells after cool periods trigger big pollen releases." },
+  { name: "Yesterday's rain", weight: 0.19, positive: false, tip: "Rain washes pollen out of the air. Yesterday\u2019s rain matters MORE than today\u2019s \u2014 the count reflects the prior 24 hours." }
 ];
 
 // ═══════════════════════════════════════════
@@ -1716,9 +1777,9 @@ function buildSources() {
   });
   // Georgia Tech acknowledgment
   var ack = el('div', {style: {marginTop:'0.75rem', paddingTop:'0.75rem', borderTop:'1px solid var(--border-subtle)', fontSize:'0.78rem', color:'var(--text-muted)'}});
-  ack.appendChild(document.createTextNode('Inspired by prior work from '));
+  ack.appendChild(document.createTextNode('This project builds on work by '));
   ack.appendChild(el('a', {href: 'https://github.com/tomasbruna/pollen-predictions', target: '_blank', rel: 'noopener', textContent: 'Georgia Tech BMED 6700', style: {color:'var(--forest-600)', textDecoration:'none'}}));
-  ack.appendChild(document.createTextNode(' (Bruna et al.), which independently validated many of the same modeling approaches using Atlanta Allergy data.'));
+  ack.appendChild(document.createTextNode(' (Bruna et al.), whose Atlanta pollen prediction research using the same data source gave us a strong foundation to build from.'));
   srcList.appendChild(ack);
   srcCard.appendChild(srcList);
   grid.appendChild(srcCard);
@@ -1741,8 +1802,17 @@ function buildFeatures() {
   var maxWeight = Math.max.apply(null, featureLabels.map(function(f){return f.weight;}));
   featureLabels.forEach(function(f) {
     var pct = (f.weight / maxWeight * 100).toFixed(0);
+    var nameSpan = el('span', {className: 'feature-name'});
+    if (f.tip) {
+      var tipWrap = el('span', {className: 'has-tooltip'});
+      tipWrap.appendChild(document.createTextNode(f.name));
+      tipWrap.appendChild(el('span', {className: 'tooltip-text', textContent: f.tip}));
+      nameSpan.appendChild(tipWrap);
+    } else {
+      nameSpan.textContent = f.name;
+    }
     var li = el('li', {className: 'feature-item'}, [
-      el('span', {className: 'feature-name', textContent: f.name}),
+      nameSpan,
       el('div', {className: 'feature-bar-track'}, [
         (function() { var fill = el('div', {className: 'feature-bar-fill' + (f.positive ? '' : ' negative')}); fill.style.width = '0%'; fill.dataset.width = pct + '%'; return fill; })()
       ]),
