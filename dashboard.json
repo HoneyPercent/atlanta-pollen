@@ -1,81 +1,81 @@
 {
   "_meta": {
-    "generated_at": "2026-04-07T16:50:11.425647-04:00",
+    "generated_at": "2026-04-08T11:17:27.039723-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-04-07",
-    "doy": 97,
+    "date": "2026-04-08",
+    "doy": 98,
     "is_weekend": false,
     "observation": {
-      "count": 412,
-      "severity": "moderate",
-      "contributors": "OAK, PINE, SYCAMORE, MULBERRY"
+      "count": 1310,
+      "severity": "high",
+      "contributors": "OAK, PINE, SYCAMORE, MULBERRY, JUNIPER"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 730,
+      "count": 881,
       "severity": "high",
       "data_source": "observation",
-      "explanation": "With 62°F, winds up to 8 mph, no rain. Key factors pushing counts up: the 5-day peak, the day before's count and yesterday's count. Working against that: late-season warmth, the day-over-day trend. The actual count came in 44% lower than predicted — possibly localized rain or wind patterns."
-    },
-    "climatology": {
-      "doy": 97,
-      "n_years": 29,
-      "mean": 1675,
-      "median": 1132,
-      "p10": 156,
-      "p25": 354,
-      "p75": 2556,
-      "p90": 4397,
-      "p95": 4822,
-      "max": 5703,
-      "percentile_rank": 50
-    },
-    "weather": {
-      "temp_max": 75.6,
-      "temp_min": 49.1,
-      "temp_mean": 61.9,
-      "precipitation": 0.0,
-      "wind_max": 8.5,
-      "solar_radiation": 26.58,
-      "regime": "warm_calm"
-    }
-  },
-  "tomorrow": {
-    "date": "2026-04-08",
-    "doy": 98,
-    "forecast": {
-      "count": 487,
-      "severity": "moderate",
-      "explanation": "With 59°F, winds up to 15 mph, no rain. Key factors pushing counts up: the 5-day peak, yesterday's count and the day before's count. Working against that: accumulated heat, late-season warmth."
+      "explanation": "With 59°F, winds up to 16 mph, no rain. Key factors pushing counts up: the 5-day peak, the day before's count and yesterday's count. Working against that: the day-over-day trend, late-season warmth. The actual count came in 49% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 98,
+      "n_years": 29,
+      "mean": 1589,
       "median": 1230,
+      "p10": 235,
+      "p25": 604,
       "p75": 2138,
-      "p90": 3755
+      "p90": 3755,
+      "p95": 4354,
+      "max": 5480,
+      "percentile_rank": 75
+    },
+    "weather": {
+      "temp_max": 67.6,
+      "temp_min": 51.4,
+      "temp_mean": 59.2,
+      "precipitation": 0.0,
+      "wind_max": 16.0,
+      "solar_radiation": 25.97,
+      "regime": "warm_windy"
+    }
+  },
+  "tomorrow": {
+    "date": "2026-04-09",
+    "doy": 99,
+    "forecast": {
+      "count": 741,
+      "severity": "high",
+      "explanation": "With 58°F, winds up to 13 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: accumulated heat, dry conditions."
+    },
+    "climatology": {
+      "doy": 99,
+      "median": 1034,
+      "p75": 2631,
+      "p90": 3923
     },
     "weather_forecast": {
-      "temp_max": 69.3,
-      "temp_min": 50.9,
-      "temp_mean": 59.4,
+      "temp_max": 69.6,
+      "temp_min": 46.2,
+      "temp_mean": 57.7,
       "precipitation": 0.0,
-      "wind_max": 15.2,
+      "wind_max": 12.6,
       "regime": "warm_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-04-07",
-    "as_of_doy": 97,
-    "cumulative_burden": 43305,
+    "as_of_date": "2026-04-08",
+    "as_of_doy": 98,
+    "cumulative_burden": 44615,
     "extreme_days_ytd": 7,
-    "high_days_ytd": 19,
-    "gdd_cumulative": 425.0,
-    "season_progress_pct": 71.0,
+    "high_days_ytd": 20,
+    "gdd_cumulative": 436.9,
+    "season_progress_pct": 73.1,
     "remaining_extreme_days": {
-      "weighted_avg": 3.2,
+      "weighted_avg": 3.1,
       "min": 2,
       "max": 10
     },
@@ -95,7 +95,7 @@
       },
       {
         "year": 2023,
-        "similarity": 0.403,
+        "similarity": 0.355,
         "remaining_extreme_days": 6,
         "last_extreme_doy": 111,
         "total_season_burden": 58397
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-01-30",
-      "count": 1,
-      "severity": "low",
-      "predicted": null
-    },
     {
       "date": "2026-02-02",
       "count": 2,
@@ -399,6 +393,12 @@
       "count": 412,
       "severity": "moderate",
       "predicted": 730
+    },
+    {
+      "date": "2026-04-08",
+      "count": 1310,
+      "severity": "high",
+      "predicted": 881
     }
   ],
   "current_year_scurve": [
@@ -661,6 +661,10 @@
     [
       97,
       43305
+    ],
+    [
+      98,
+      44615
     ]
   ]
 }
