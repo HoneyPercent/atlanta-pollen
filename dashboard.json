@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-04-14T11:18:17.644436-04:00",
+    "generated_at": "2026-04-14T13:56:28.694786-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 370,
+      "count": 385,
       "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 72°F, winds up to 9 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: late-season warmth, dry conditions. The actual count came in 72% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 71°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: late-season warmth, dry conditions. The actual count came in 65% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 104,
@@ -34,12 +34,12 @@
       "percentile_rank": 50
     },
     "weather": {
-      "temp_max": 84.6,
+      "temp_max": 84.2,
       "temp_min": 59.0,
-      "temp_mean": 71.8,
+      "temp_mean": 71.4,
       "precipitation": 0.0,
-      "wind_max": 8.7,
-      "solar_radiation": 26.65,
+      "wind_max": 9.6,
+      "solar_radiation": 26.56,
       "regime": "hot_calm"
     }
   },
@@ -47,7 +47,7 @@
     "date": "2026-04-15",
     "doy": 105,
     "forecast": {
-      "count": 248,
+      "count": 249,
       "severity": "moderate",
       "explanation": "With 74°F, winds up to 11 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: late-season warmth, accumulated heat."
     },
@@ -69,11 +69,11 @@
   "season": {
     "as_of_date": "2026-04-14",
     "as_of_doy": 104,
-    "cumulative_burden": 55281,
+    "cumulative_burden": 55917,
     "extreme_days_ytd": 7,
-    "high_days_ytd": 29,
-    "gdd_cumulative": 587.7,
-    "season_progress_pct": 89.1,
+    "high_days_ytd": 30,
+    "gdd_cumulative": 609.5,
+    "season_progress_pct": 90.2,
     "remaining_extreme_days": {
       "weighted_avg": 2.0,
       "min": 2,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2012,
-        "similarity": 0.743,
+        "similarity": 0.728,
         "remaining_extreme_days": 2,
         "last_extreme_doy": 88,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-04-14",
       "count": 636,
       "severity": "high",
-      "predicted": 370
+      "predicted": 385
     }
   ],
   "current_year_scurve": [
@@ -680,7 +680,7 @@
     ],
     [
       104,
-      55281
+      55917
     ]
   ]
 }
