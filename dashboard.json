@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-04-15T13:57:55.274948-04:00",
+    "generated_at": "2026-04-15T16:51:21.597125-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 498,
+      "count": 478,
       "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 72°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: late-season warmth, dry conditions. The actual count came in 144% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 72°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday's count, the 5-day peak and the day before's count. Working against that: late-season warmth, dry conditions. The actual count came in 154% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 105,
@@ -34,12 +34,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 84.2,
+      "temp_max": 83.7,
       "temp_min": 59.0,
-      "temp_mean": 71.8,
+      "temp_mean": 71.6,
       "precipitation": 0.0,
-      "wind_max": 9.8,
-      "solar_radiation": 26.95,
+      "wind_max": 8.3,
+      "solar_radiation": 26.83,
       "regime": "hot_calm"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-04-16",
     "doy": 106,
     "forecast": {
-      "count": 332,
+      "count": 344,
       "severity": "moderate",
-      "explanation": "With 74°F, winds up to 12 mph, no rain. Key factors pushing counts up: yesterday's count, the day before's count and the 5-day peak. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 74°F, winds up to 14 mph, no rain. Key factors pushing counts up: yesterday's count, the day before's count and the 5-day peak. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
       "doy": 106,
@@ -58,22 +58,22 @@
       "p90": 1755
     },
     "weather_forecast": {
-      "temp_max": 85.3,
-      "temp_min": 62.4,
-      "temp_mean": 73.9,
+      "temp_max": 84.0,
+      "temp_min": 61.7,
+      "temp_mean": 73.8,
       "precipitation": 0.0,
-      "wind_max": 12.4,
+      "wind_max": 13.9,
       "regime": "hot_windy"
     }
   },
   "season": {
     "as_of_date": "2026-04-15",
     "as_of_doy": 105,
-    "cumulative_burden": 58985,
+    "cumulative_burden": 60201,
     "extreme_days_ytd": 7,
-    "high_days_ytd": 33,
-    "gdd_cumulative": 674.2,
-    "season_progress_pct": 95.1,
+    "high_days_ytd": 34,
+    "gdd_cumulative": 696.0,
+    "season_progress_pct": 97.1,
     "remaining_extreme_days": {
       "weighted_avg": 2.0,
       "min": 2,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2012,
-        "similarity": 0.659,
+        "similarity": 0.631,
         "remaining_extreme_days": 2,
         "last_extreme_doy": 88,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-04-15",
       "count": 1216,
       "severity": "high",
-      "predicted": 498
+      "predicted": 478
     }
   ],
   "current_year_scurve": [
@@ -684,7 +684,7 @@
     ],
     [
       105,
-      58985
+      60201
     ]
   ]
 }
