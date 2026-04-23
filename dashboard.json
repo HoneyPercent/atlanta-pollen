@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-04-22T16:56:31.604084-04:00",
+    "generated_at": "2026-04-23T11:58:42.747676-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-04-22",
-    "doy": 112,
+    "date": "2026-04-23",
+    "doy": 113,
     "is_weekend": false,
     "observation": {
-      "count": 130,
+      "count": 182,
       "severity": "moderate",
-      "contributors": "MULBERRY, HICKORY, OAK, JUNIPER, PINE"
+      "contributors": "MULBERRY, HICKORY, OAK, PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 227,
+      "count": 159,
       "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 69°F, winds up to 8 mph, no rain. Key factors pushing counts up: the 5-day peak, the day before's count and yesterday's count. Working against that: late-season warmth, the day-over-day trend. The actual count came in 43% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 70°F, winds up to 9 mph, no rain. Key factors pushing counts up: the 5-day peak, the day before's count and yesterday's count. Working against that: late-season warmth, the day-over-day trend."
     },
     "climatology": {
-      "doy": 112,
+      "doy": 113,
       "n_years": 28,
-      "mean": 466,
-      "median": 372.5,
-      "p10": 122,
-      "p25": 190,
-      "p75": 668,
-      "p90": 1032,
-      "p95": 1309,
-      "max": 1310,
-      "percentile_rank": 25
+      "mean": 371,
+      "median": 251.5,
+      "p10": 42,
+      "p25": 111,
+      "p75": 660,
+      "p90": 757,
+      "p95": 925,
+      "max": 1522,
+      "percentile_rank": 50
     },
     "weather": {
-      "temp_max": 81.7,
-      "temp_min": 57.0,
-      "temp_mean": 69.4,
+      "temp_max": 82.0,
+      "temp_min": 55.8,
+      "temp_mean": 69.6,
       "precipitation": 0.0,
-      "wind_max": 7.5,
-      "solar_radiation": 27.21,
+      "wind_max": 9.0,
+      "solar_radiation": 23.96,
       "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-04-23",
-    "doy": 113,
+    "date": "2026-04-24",
+    "doy": 114,
     "forecast": {
-      "count": 99,
-      "severity": "low",
+      "count": 106,
+      "severity": "moderate",
       "explanation": "With 71°F, winds up to 8 mph, no rain. Key factors pushing counts up: the 5-day peak, yesterday's count and time of year. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
-      "doy": 113,
-      "median": 251.5,
-      "p75": 660,
-      "p90": 757
+      "doy": 114,
+      "median": 158.5,
+      "p75": 321,
+      "p90": 870
     },
     "weather_forecast": {
-      "temp_max": 82.9,
-      "temp_min": 57.6,
-      "temp_mean": 70.9,
+      "temp_max": 80.2,
+      "temp_min": 59.5,
+      "temp_mean": 70.7,
       "precipitation": 0.0,
-      "wind_max": 7.8,
+      "wind_max": 7.6,
       "regime": "hot_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-04-22",
-    "as_of_doy": 112,
-    "cumulative_burden": 67044,
+    "as_of_date": "2026-04-23",
+    "as_of_doy": 113,
+    "cumulative_burden": 67226,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 968.0,
+    "gdd_cumulative": 987.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 2.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2012,
-        "similarity": 0.475,
+        "similarity": 0.471,
         "remaining_extreme_days": 2,
         "last_extreme_doy": 88,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-02-16",
-      "count": 4,
-      "severity": "low",
-      "predicted": null
-    },
     {
       "date": "2026-02-17",
       "count": 107,
@@ -399,6 +393,12 @@
       "count": 130,
       "severity": "moderate",
       "predicted": 227
+    },
+    {
+      "date": "2026-04-23",
+      "count": 182,
+      "severity": "moderate",
+      "predicted": 159
     }
   ],
   "current_year_scurve": [
@@ -705,6 +705,10 @@
     [
       112,
       67044
+    ],
+    [
+      113,
+      67226
     ]
   ]
 }
