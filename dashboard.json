@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-04-27T17:03:40.370425-04:00",
+    "generated_at": "2026-04-28T12:09:53.341429-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-04-27",
-    "doy": 117,
+    "date": "2026-04-28",
+    "doy": 118,
     "is_weekend": false,
     "observation": {
-      "count": 138,
+      "count": 109,
       "severity": "moderate",
-      "contributors": "HICKORY, PINE, JUNIPER, WALNUT, OAK"
+      "contributors": "HICKORY, PINE, OAK, JUNIPER, SYCAMORE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 143,
+      "count": 172,
       "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 68°F, winds up to 13 mph, no rain. Key factors pushing counts up: yesterday's count, the day before's count and the 5-day peak. Working against that: late-season warmth, dry conditions."
-    },
-    "climatology": {
-      "doy": 117,
-      "n_years": 28,
-      "mean": 205,
-      "median": 156.0,
-      "p10": 39,
-      "p25": 65,
-      "p75": 354,
-      "p90": 455,
-      "p95": 593,
-      "max": 636,
-      "percentile_rank": 50
-    },
-    "weather": {
-      "temp_max": 74.5,
-      "temp_min": 59.5,
-      "temp_mean": 67.6,
-      "precipitation": 0.0,
-      "wind_max": 12.7,
-      "solar_radiation": 26.63,
-      "regime": "hot_windy"
-    }
-  },
-  "tomorrow": {
-    "date": "2026-04-28",
-    "doy": 118,
-    "forecast": {
-      "count": 116,
-      "severity": "moderate",
-      "explanation": "With 66°F, winds up to 13 mph, 0.1\" of rain. Key factors pushing counts up: yesterday's count, the day before's count and time of year. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 62°F, winds up to 13 mph, 0.9\" of rain. Key factors pushing counts up: yesterday's count, the day before's count and the 5-day peak. Working against that: late-season warmth, the warming trend. The actual count came in 37% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 118,
+      "n_years": 29,
+      "mean": 177,
       "median": 133,
+      "p10": 27,
+      "p25": 72,
       "p75": 244,
-      "p90": 542
+      "p90": 542,
+      "p95": 547,
+      "max": 642,
+      "percentile_rank": 50
+    },
+    "weather": {
+      "temp_max": 68.0,
+      "temp_min": 56.8,
+      "temp_mean": 62.1,
+      "precipitation": 0.866,
+      "wind_max": 13.1,
+      "solar_radiation": 13.28,
+      "regime": "rainy"
+    }
+  },
+  "tomorrow": {
+    "date": "2026-04-29",
+    "doy": 119,
+    "forecast": {
+      "count": 41,
+      "severity": "low",
+      "explanation": "With 69°F, winds up to 15 mph, no rain. Key factors pushing counts up: the day before's count, yesterday's count and time of year. Working against that: late-season warmth, yesterday's rain."
+    },
+    "climatology": {
+      "doy": 119,
+      "median": 101,
+      "p75": 174,
+      "p90": 396
     },
     "weather_forecast": {
-      "temp_max": 76.8,
-      "temp_min": 56.3,
-      "temp_mean": 65.8,
-      "precipitation": 0.098,
-      "wind_max": 13.2,
-      "regime": "drizzle"
+      "temp_max": 78.3,
+      "temp_min": 61.9,
+      "temp_mean": 68.7,
+      "precipitation": 0.031,
+      "wind_max": 15.2,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-04-27",
-    "as_of_doy": 117,
-    "cumulative_burden": 68433,
+    "as_of_date": "2026-04-28",
+    "as_of_doy": 118,
+    "cumulative_burden": 68542,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1141.5,
+    "gdd_cumulative": 1159.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 2.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2012,
-        "similarity": 0.444,
+        "similarity": 0.441,
         "remaining_extreme_days": 2,
         "last_extreme_doy": 88,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-02-19",
-      "count": 162,
-      "severity": "high",
-      "predicted": null
-    },
     {
       "date": "2026-02-20",
       "count": 557,
@@ -399,6 +393,12 @@
       "count": 138,
       "severity": "moderate",
       "predicted": 143
+    },
+    {
+      "date": "2026-04-28",
+      "count": 109,
+      "severity": "moderate",
+      "predicted": 172
     }
   ],
   "current_year_scurve": [
@@ -717,6 +717,10 @@
     [
       117,
       68433
+    ],
+    [
+      118,
+      68542
     ]
   ]
 }
