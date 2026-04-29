@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-04-29T14:06:39.953664-04:00",
+    "generated_at": "2026-04-29T17:06:54.111075-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 62,
+      "count": 59,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 70°F, winds up to 15 mph, 0.7\" of rain. Key factors pushing counts up: yesterday's count, accumulated heat and time of year. Working against that: late-season warmth, yesterday's rain. The actual count came in 85% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 70°F, winds up to 15 mph, 0.7\" of rain. Key factors pushing counts up: yesterday's count, accumulated heat and time of year. Working against that: late-season warmth, yesterday's rain. The actual count came in 95% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 119,
@@ -34,12 +34,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 80.4,
+      "temp_max": 81.1,
       "temp_min": 62.1,
-      "temp_mean": 69.6,
+      "temp_mean": 70.2,
       "precipitation": 0.709,
-      "wind_max": 15.2,
-      "solar_radiation": 24.72,
+      "wind_max": 14.8,
+      "solar_radiation": 23.77,
       "regime": "rainy"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-04-30",
     "doy": 120,
     "forecast": {
-      "count": 45,
+      "count": 42,
       "severity": "low",
-      "explanation": "With 63°F, winds up to 14 mph, 0.2\" of rain. Key factors pushing counts up: yesterday's count, the day before's count and time of year. Working against that: yesterday's rain, late-season warmth."
+      "explanation": "With 64°F, winds up to 12 mph, 0.2\" of rain. Key factors pushing counts up: yesterday's count, the day before's count and time of year. Working against that: yesterday's rain, late-season warmth."
     },
     "climatology": {
       "doy": 120,
@@ -58,22 +58,22 @@
       "p90": 625
     },
     "weather_forecast": {
-      "temp_max": 69.4,
-      "temp_min": 57.4,
-      "temp_mean": 63.1,
-      "precipitation": 0.185,
-      "wind_max": 14.1,
+      "temp_max": 71.2,
+      "temp_min": 58.5,
+      "temp_mean": 64.4,
+      "precipitation": 0.157,
+      "wind_max": 12.5,
       "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-04-29",
     "as_of_doy": 119,
-    "cumulative_burden": 69105,
+    "cumulative_burden": 69220,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1232.7,
-    "season_progress_pct": 96.5,
+    "gdd_cumulative": 1252.3,
+    "season_progress_pct": 96.7,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
       "min": 0,
@@ -88,35 +88,35 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.997,
+        "similarity": 0.999,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 72076
       },
       {
         "year": 2024,
-        "similarity": 0.977,
+        "similarity": 0.978,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 74585
       },
       {
         "year": 2018,
-        "similarity": 0.976,
+        "similarity": 0.974,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.921,
+        "similarity": 0.922,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.867,
+        "similarity": 0.865,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-04-29",
       "count": 115,
       "severity": "moderate",
-      "predicted": 62
+      "predicted": 59
     }
   ],
   "current_year_scurve": [
@@ -724,7 +724,7 @@
     ],
     [
       119,
-      69105
+      69220
     ]
   ]
 }
