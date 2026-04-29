@@ -1,90 +1,90 @@
 {
   "target_year": 2026,
-  "target_doy": 84,
-  "target_date": "2026-03-25",
-  "target_burden": 32741,
+  "target_doy": 119,
+  "target_date": "2026-04-29",
+  "target_burden": 68497,
   "analog_years": [
     {
-      "year": 2023,
-      "burden_at_doy": 27117,
-      "total_season_burden": 58397,
-      "pct_done_at_doy": 46.4,
-      "remaining_extreme_days": 6,
-      "remaining_high_days": 18,
-      "remaining_over100_days": 37,
-      "last_extreme_doy": 111,
-      "last_over100_doy": 130,
-      "similarity": 0.828
+      "year": 2020,
+      "burden_at_doy": 69322,
+      "total_season_burden": 72076,
+      "pct_done_at_doy": 96.2,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 9,
+      "last_extreme_doy": 119,
+      "last_over100_doy": 153,
+      "similarity": 0.988
+    },
+    {
+      "year": 2018,
+      "burden_at_doy": 67483,
+      "total_season_burden": 70996,
+      "pct_done_at_doy": 95.1,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 2,
+      "remaining_over100_days": 11,
+      "last_extreme_doy": 119,
+      "last_over100_doy": 135,
+      "similarity": 0.985
+    },
+    {
+      "year": 2024,
+      "burden_at_doy": 70756,
+      "total_season_burden": 74585,
+      "pct_done_at_doy": 94.9,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 3,
+      "remaining_over100_days": 11,
+      "last_extreme_doy": 119,
+      "last_over100_doy": 141,
+      "similarity": 0.967
+    },
+    {
+      "year": 2021,
+      "burden_at_doy": 75049,
+      "total_season_burden": 77527,
+      "pct_done_at_doy": 96.8,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 8,
+      "last_extreme_doy": 119,
+      "last_over100_doy": 145,
+      "similarity": 0.904
     },
     {
       "year": 2012,
-      "burden_at_doy": 43971,
+      "burden_at_doy": 61007,
       "total_season_burden": 62018,
-      "pct_done_at_doy": 70.9,
-      "remaining_extreme_days": 2,
-      "remaining_high_days": 11,
-      "remaining_over100_days": 26,
-      "last_extreme_doy": 88,
-      "last_over100_doy": 118,
-      "similarity": 0.657
-    },
-    {
-      "year": 2016,
-      "burden_at_doy": 19734,
-      "total_season_burden": 52108,
-      "pct_done_at_doy": 37.9,
-      "remaining_extreme_days": 6,
-      "remaining_high_days": 19,
-      "remaining_over100_days": 37,
-      "last_extreme_doy": 94,
-      "last_over100_doy": 144,
-      "similarity": 0.603
-    },
-    {
-      "year": 2011,
-      "burden_at_doy": 15984,
-      "total_season_burden": 38833,
-      "pct_done_at_doy": 41.2,
-      "remaining_extreme_days": 4,
-      "remaining_high_days": 12,
-      "remaining_over100_days": 24,
-      "last_extreme_doy": 100,
-      "last_over100_doy": 124,
-      "similarity": 0.488
-    },
-    {
-      "year": 2017,
-      "burden_at_doy": 12590,
-      "total_season_burden": 50948,
-      "pct_done_at_doy": 24.7,
-      "remaining_extreme_days": 10,
-      "remaining_high_days": 21,
-      "remaining_over100_days": 35,
-      "last_extreme_doy": 103,
-      "last_over100_doy": 124,
-      "similarity": 0.385
+      "pct_done_at_doy": 98.4,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 0,
+      "last_extreme_doy": 119,
+      "last_over100_doy": 119,
+      "similarity": 0.891
     }
   ],
   "projection": {
     "remaining_extreme_days": {
-      "weighted_avg": 5.3,
-      "min": 2,
-      "max": 10
+      "weighted_avg": 0.0,
+      "min": 0,
+      "max": 0
     },
     "remaining_over100_days": {
-      "weighted_avg": 32.2,
-      "min": 24,
-      "max": 37
+      "weighted_avg": 7.9,
+      "min": 0,
+      "max": 11
     },
     "estimated_season_end_doy": {
-      "weighted_avg": 128,
-      "min": 118,
-      "max": 144
+      "weighted_avg": 139,
+      "min": 119,
+      "max": 153
     },
     "estimated_last_extreme_doy": {
-      "weighted_avg": 100,
-      "min": 88,
-      "max": 111
+      "weighted_avg": 119,
+      "min": 119,
+      "max": 119
     }
   }
 }

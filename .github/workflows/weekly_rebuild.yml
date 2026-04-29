@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Refresh full pollen history
+      - name: Refresh recent pollen history (2009-current)
         env:
           TZ: America/New_York
         run: |
@@ -37,7 +37,31 @@ jobs:
             --start-year 2009 \
             --end-year $YEAR \
             --months 1,2,3,4,5,6 \
-            --output full_history
+            --output recent_only
+
+      - name: Stitch seed (1992-2008) + scraped (2009-current)
+        # Atlanta Allergy only exposes 2009 onward. The 1992-2008 history is a
+        # frozen seed file committed to the repo (data/processed/historical_seed.csv).
+        # baseline_models.py needs the full range to compute decade comparisons.
+        run: |
+          python -c "
+          import csv
+          SEED='data/processed/historical_seed.csv'
+          RECENT='data/processed/recent_only_calendar.csv'
+          OUT='data/processed/full_history_calendar.csv'
+          with open(OUT, 'w', newline='', encoding='utf-8') as out:
+              w = csv.writer(out, lineterminator='\n')
+              wrote_header = False
+              for path in (SEED, RECENT):
+                  with open(path, newline='', encoding='utf-8') as f:
+                      r = csv.reader(f)
+                      header = next(r)
+                      if not wrote_header:
+                          w.writerow(header); wrote_header = True
+                      for row in r:
+                          w.writerow(row)
+          print('Stitched full_history_calendar.csv')
+          "
 
       - name: Refresh weather history
         env:
