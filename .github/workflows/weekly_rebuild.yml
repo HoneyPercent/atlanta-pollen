@@ -80,15 +80,12 @@ jobs:
         run: python scripts/baseline_models.py
 
       - name: Commit refreshed baselines
+        # Only the model_output JSONs are tracked. The processed CSVs/JSONs
+        # are regenerated from source each run and stay gitignored.
         run: |
           git config user.name "pollen-bot"
           git config user.email "pollen-bot@users.noreply.github.com"
-          git add data/processed/full_history_calendar.csv \
-                  data/processed/full_history_calendar.json \
-                  data/processed/weather_complete_v2.csv \
-                  data/processed/weather_complete_v2.json \
-                  data/processed/features_daily.csv \
-                  data/model_output/climatology.json \
+          git add data/model_output/climatology.json \
                   data/model_output/season_progress.json \
                   data/model_output/analog_projection.json \
                   data/model_output/scurve_data.json
