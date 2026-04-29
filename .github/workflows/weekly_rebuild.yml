@@ -1,0 +1,74 @@
+name: Weekly Baseline Rebuild
+
+# Refreshes climatology / season_progress / analog_projection / scurve_data
+# JSONs every Friday by re-running the full data + features chain. The daily
+# pipeline only updates dashboard.json — without this, the season-context
+# layer drifts further out of date each week.
+
+on:
+  schedule:
+    - cron: '0 13 * * 5'   # Friday 9am ET (UTC-4 summer) — before the 10am daily run
+  workflow_dispatch:        # Manual trigger
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh full pollen history
+        env:
+          TZ: America/New_York
+        run: |
+          YEAR=$(date +%Y)
+          python scripts/scrape_atlanta_allergy.py \
+            --calendar \
+            --start-year 2009 \
+            --end-year $YEAR \
+            --months 1,2,3,4,5,6 \
+            --output full_history
+
+      - name: Refresh weather history
+        env:
+          TZ: America/New_York
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          python scripts/fetch_weather.py \
+            --start-date 1992-01-01 \
+            --end-date $TODAY \
+            --output weather_complete_v2
+
+      - name: Recompute daily features
+        run: python scripts/compute_features.py
+
+      - name: Rebuild baseline JSONs
+        run: python scripts/baseline_models.py
+
+      - name: Commit refreshed baselines
+        run: |
+          git config user.name "pollen-bot"
+          git config user.email "pollen-bot@users.noreply.github.com"
+          git add data/processed/full_history_calendar.csv \
+                  data/processed/full_history_calendar.json \
+                  data/processed/weather_complete_v2.csv \
+                  data/processed/weather_complete_v2.json \
+                  data/processed/features_daily.csv \
+                  data/model_output/climatology.json \
+                  data/model_output/season_progress.json \
+                  data/model_output/analog_projection.json \
+                  data/model_output/scurve_data.json
+          git diff --staged --quiet || git commit -m "baselines: weekly rebuild $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+      - name: Push changes
+        run: git push
