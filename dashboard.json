@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-04-30T14:02:05.867457-04:00",
+    "generated_at": "2026-04-30T17:02:42.611767-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 53,
+      "count": 55,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 66°F, winds up to 12 mph, no rain. Key factors pushing counts up: accumulated heat, the day before's count and time of year. Working against that: late-season warmth, yesterday's rain. The actual count came in 45% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 66°F, winds up to 13 mph, no rain. Key factors pushing counts up: accumulated heat, the day before's count and time of year. Working against that: late-season warmth, yesterday's rain. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 120,
@@ -36,10 +36,10 @@
     "weather": {
       "temp_max": 73.4,
       "temp_min": 59.0,
-      "temp_mean": 65.7,
+      "temp_mean": 65.5,
       "precipitation": 0.0,
-      "wind_max": 12.4,
-      "solar_radiation": 23.27,
+      "wind_max": 13.1,
+      "solar_radiation": 23.98,
       "regime": "hot_windy"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-05-01",
     "doy": 121,
     "forecast": {
-      "count": 80,
+      "count": 78,
       "severity": "low",
-      "explanation": "With 64°F, winds up to 10 mph, no rain. Key factors pushing counts up: time of year, yesterday's count and how far into the season we are. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 63°F, winds up to 9 mph, no rain. Key factors pushing counts up: time of year, yesterday's count and how far into the season we are. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
       "doy": 121,
@@ -58,22 +58,22 @@
       "p90": 298
     },
     "weather_forecast": {
-      "temp_max": 75.0,
-      "temp_min": 52.3,
-      "temp_mean": 63.5,
+      "temp_max": 73.8,
+      "temp_min": 53.1,
+      "temp_mean": 63.1,
       "precipitation": 0.0,
-      "wind_max": 9.9,
+      "wind_max": 8.8,
       "regime": "warm_calm"
     }
   },
   "season": {
     "as_of_date": "2026-04-30",
     "as_of_doy": 120,
-    "cumulative_burden": 69374,
+    "cumulative_burden": 69451,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1288.3,
-    "season_progress_pct": 96.9,
+    "gdd_cumulative": 1304.0,
+    "season_progress_pct": 97.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
       "min": 0,
@@ -88,35 +88,35 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.999,
+        "similarity": 0.998,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 72076
       },
       {
         "year": 2024,
-        "similarity": 0.98,
+        "similarity": 0.982,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 74585
       },
       {
         "year": 2018,
-        "similarity": 0.972,
+        "similarity": 0.971,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.924,
+        "similarity": 0.925,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.863,
+        "similarity": 0.862,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 119,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-04-30",
       "count": 77,
       "severity": "low",
-      "predicted": 53
+      "predicted": 55
     }
   ],
   "current_year_scurve": [
@@ -728,7 +728,7 @@
     ],
     [
       120,
-      69374
+      69451
     ]
   ]
 }
