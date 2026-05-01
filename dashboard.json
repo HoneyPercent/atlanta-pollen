@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-01T13:46:53.457117-04:00",
+    "generated_at": "2026-05-01T16:54:27.167490-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 128,
+      "count": 123,
       "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 63°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday's count, accumulated heat and time of year. Working against that: late-season warmth, dry conditions."
+      "explanation": "With 62°F, winds up to 7 mph, no rain. Key factors pushing counts up: yesterday's count, accumulated heat and time of year. Working against that: late-season warmth, wind speed."
     },
     "climatology": {
       "doy": 121,
@@ -34,12 +34,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 72.1,
+      "temp_max": 68.7,
       "temp_min": 56.1,
-      "temp_mean": 63.1,
+      "temp_mean": 62.2,
       "precipitation": 0.0,
-      "wind_max": 7.8,
-      "solar_radiation": 20.98,
+      "wind_max": 7.0,
+      "solar_radiation": 17.47,
       "regime": "warm_calm"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 146,
       "severity": "moderate",
-      "explanation": "With 58°F, winds up to 17 mph, 0.1\" of rain. Key factors pushing counts up: yesterday being warm and calm, yesterday's count and the day before's count. Working against that: accumulated heat, the warming trend."
+      "explanation": "With 59°F, winds up to 17 mph, 0.2\" of rain. Key factors pushing counts up: yesterday being warm and calm, yesterday's count and the day before's count. Working against that: accumulated heat, late-season warmth."
     },
     "climatology": {
       "doy": 122,
@@ -58,22 +58,22 @@
       "p90": 271
     },
     "weather_forecast": {
-      "temp_max": 66.7,
-      "temp_min": 51.8,
-      "temp_mean": 58.5,
-      "precipitation": 0.126,
-      "wind_max": 16.7,
+      "temp_max": 67.8,
+      "temp_min": 52.2,
+      "temp_mean": 59.0,
+      "precipitation": 0.161,
+      "wind_max": 17.0,
       "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-05-01",
     "as_of_doy": 121,
-    "cumulative_burden": 69669,
+    "cumulative_burden": 69778,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1333.4,
-    "season_progress_pct": 97.3,
+    "gdd_cumulative": 1346.5,
+    "season_progress_pct": 97.4,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
       "min": 0,
@@ -88,35 +88,35 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.997,
+        "similarity": 0.995,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 72076
       },
       {
         "year": 2024,
-        "similarity": 0.982,
+        "similarity": 0.983,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 74585
       },
       {
         "year": 2018,
-        "similarity": 0.979,
+        "similarity": 0.977,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.926,
+        "similarity": 0.927,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.859,
+        "similarity": 0.858,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-05-01",
       "count": 109,
       "severity": "moderate",
-      "predicted": 128
+      "predicted": 123
     }
   ],
   "current_year_scurve": [
@@ -732,7 +732,7 @@
     ],
     [
       121,
-      69669
+      69778
     ]
   ]
 }
