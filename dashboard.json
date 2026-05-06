@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-06T14:10:23.524104-04:00",
+    "generated_at": "2026-05-06T17:11:56.512386-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 95,
-      "severity": "low",
+      "count": 104,
+      "severity": "moderate",
       "data_source": "observation",
-      "explanation": "With 72°F, winds up to 13 mph, 0.6\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the day-over-day trend. Working against that: late-season warmth, rain today."
+      "explanation": "With 72°F, winds up to 13 mph, 0.1\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the day-over-day trend. Working against that: late-season warmth."
     },
     "climatology": {
       "doy": 126,
@@ -34,22 +34,22 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 81.7,
+      "temp_max": 80.4,
       "temp_min": 65.8,
       "temp_mean": 72.1,
-      "precipitation": 0.638,
-      "wind_max": 13.1,
-      "solar_radiation": 16.75,
-      "regime": "rainy"
+      "precipitation": 0.055,
+      "wind_max": 13.4,
+      "solar_radiation": 18.12,
+      "regime": "drizzle"
     }
   },
   "tomorrow": {
     "date": "2026-05-07",
     "doy": 127,
     "forecast": {
-      "count": 28,
+      "count": 44,
       "severity": "low",
-      "explanation": "With 65°F, winds up to 13 mph, 1.0\" of rain. Key factors pushing counts up: temperature stability, yesterday's count and how far into the season we are. Working against that: late-season warmth, yesterday's rain."
+      "explanation": "With 65°F, winds up to 12 mph, 0.7\" of rain. Key factors pushing counts up: temperature stability, yesterday's count and how far into the season we are. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
       "doy": 127,
@@ -58,22 +58,22 @@
       "p90": 448
     },
     "weather_forecast": {
-      "temp_max": 69.3,
-      "temp_min": 59.4,
-      "temp_mean": 64.9,
-      "precipitation": 0.957,
-      "wind_max": 13.0,
+      "temp_max": 70.5,
+      "temp_min": 57.9,
+      "temp_mean": 64.8,
+      "precipitation": 0.669,
+      "wind_max": 12.2,
       "regime": "rainy"
     }
   },
   "season": {
     "as_of_date": "2026-05-06",
     "as_of_doy": 126,
-    "cumulative_burden": 70237,
+    "cumulative_burden": 70315,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1476.9,
-    "season_progress_pct": 98.0,
+    "gdd_cumulative": 1499.0,
+    "season_progress_pct": 98.1,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
       "min": 0,
@@ -88,35 +88,35 @@
     "analog_years": [
       {
         "year": 2024,
-        "similarity": 0.99,
+        "similarity": 0.991,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 74585
       },
       {
         "year": 2020,
-        "similarity": 0.989,
+        "similarity": 0.988,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 72076
       },
       {
         "year": 2018,
-        "similarity": 0.97,
+        "similarity": 0.969,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.933,
+        "similarity": 0.934,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.85,
+        "similarity": 0.849,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-05-06",
       "count": 78,
       "severity": "low",
-      "predicted": 95
+      "predicted": 104
     }
   ],
   "current_year_scurve": [
@@ -744,7 +744,7 @@
     ],
     [
       126,
-      70237
+      70315
     ]
   ]
 }
