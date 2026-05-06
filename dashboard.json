@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-06T12:03:39.608040-04:00",
+    "generated_at": "2026-05-06T14:10:23.524104-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 71,
+      "count": 95,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 74°F, winds up to 16 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, the day-over-day trend."
+      "explanation": "With 72°F, winds up to 13 mph, 0.6\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the day-over-day trend. Working against that: late-season warmth, rain today."
     },
     "climatology": {
       "doy": 126,
@@ -34,22 +34,22 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 84.6,
+      "temp_max": 81.7,
       "temp_min": 65.8,
-      "temp_mean": 73.9,
-      "precipitation": 0.016,
-      "wind_max": 16.0,
-      "solar_radiation": 23.17,
-      "regime": "hot_windy"
+      "temp_mean": 72.1,
+      "precipitation": 0.638,
+      "wind_max": 13.1,
+      "solar_radiation": 16.75,
+      "regime": "rainy"
     }
   },
   "tomorrow": {
     "date": "2026-05-07",
     "doy": 127,
     "forecast": {
-      "count": 70,
+      "count": 28,
       "severity": "low",
-      "explanation": "With 65°F, winds up to 13 mph, 1.0\" of rain. Key factors pushing counts up: temperature stability, the day-over-day trend and yesterday's count. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 65°F, winds up to 13 mph, 1.0\" of rain. Key factors pushing counts up: temperature stability, yesterday's count and how far into the season we are. Working against that: late-season warmth, yesterday's rain."
     },
     "climatology": {
       "doy": 127,
@@ -58,10 +58,10 @@
       "p90": 448
     },
     "weather_forecast": {
-      "temp_max": 70.7,
+      "temp_max": 69.3,
       "temp_min": 59.4,
       "temp_mean": 64.9,
-      "precipitation": 1.008,
+      "precipitation": 0.957,
       "wind_max": 13.0,
       "regime": "rainy"
     }
@@ -69,11 +69,11 @@
   "season": {
     "as_of_date": "2026-05-06",
     "as_of_doy": 126,
-    "cumulative_burden": 70159,
+    "cumulative_burden": 70237,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1453.0,
-    "season_progress_pct": 97.9,
+    "gdd_cumulative": 1476.9,
+    "season_progress_pct": 98.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
       "min": 0,
@@ -87,36 +87,36 @@
     },
     "analog_years": [
       {
-        "year": 2020,
-        "similarity": 0.99,
-        "remaining_extreme_days": 0,
-        "last_extreme_doy": 121,
-        "total_season_burden": 72076
-      },
-      {
         "year": 2024,
-        "similarity": 0.989,
+        "similarity": 0.99,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 74585
       },
       {
+        "year": 2020,
+        "similarity": 0.989,
+        "remaining_extreme_days": 0,
+        "last_extreme_doy": 121,
+        "total_season_burden": 72076
+      },
+      {
         "year": 2018,
-        "similarity": 0.971,
+        "similarity": 0.97,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.932,
+        "similarity": 0.933,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.851,
+        "similarity": 0.85,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 121,
         "total_season_burden": 62018
@@ -398,7 +398,7 @@
       "date": "2026-05-06",
       "count": 78,
       "severity": "low",
-      "predicted": 71
+      "predicted": 95
     }
   ],
   "current_year_scurve": [
@@ -744,7 +744,7 @@
     ],
     [
       126,
-      70159
+      70237
     ]
   ]
 }
