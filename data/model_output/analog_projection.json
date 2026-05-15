@@ -1,68 +1,68 @@
 {
   "target_year": 2026,
-  "target_doy": 128,
-  "target_date": "2026-05-08",
-  "target_burden": 68914,
+  "target_doy": 135,
+  "target_date": "2026-05-15",
+  "target_burden": 69201,
   "analog_years": [
     {
       "year": 2018,
-      "burden_at_doy": 69610,
+      "burden_at_doy": 70328,
       "total_season_burden": 70996,
-      "pct_done_at_doy": 98.0,
-      "remaining_extreme_days": 0,
-      "remaining_high_days": 0,
-      "remaining_over100_days": 5,
-      "last_extreme_doy": 128,
-      "last_over100_doy": 135,
-      "similarity": 0.99
-    },
-    {
-      "year": 2020,
-      "burden_at_doy": 70732,
-      "total_season_burden": 72076,
-      "pct_done_at_doy": 98.1,
-      "remaining_extreme_days": 0,
-      "remaining_high_days": 0,
-      "remaining_over100_days": 4,
-      "last_extreme_doy": 128,
-      "last_over100_doy": 153,
-      "similarity": 0.974
-    },
-    {
-      "year": 2024,
-      "burden_at_doy": 72630,
-      "total_season_burden": 74585,
-      "pct_done_at_doy": 97.4,
-      "remaining_extreme_days": 0,
-      "remaining_high_days": 1,
-      "remaining_over100_days": 5,
-      "last_extreme_doy": 128,
-      "last_over100_doy": 141,
-      "similarity": 0.946
-    },
-    {
-      "year": 2021,
-      "burden_at_doy": 75955,
-      "total_season_burden": 77527,
-      "pct_done_at_doy": 98.0,
-      "remaining_extreme_days": 0,
-      "remaining_high_days": 0,
-      "remaining_over100_days": 4,
-      "last_extreme_doy": 128,
-      "last_over100_doy": 145,
-      "similarity": 0.898
-    },
-    {
-      "year": 2012,
-      "burden_at_doy": 61283,
-      "total_season_burden": 62018,
-      "pct_done_at_doy": 98.8,
+      "pct_done_at_doy": 99.1,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 128,
-      "last_over100_doy": 128,
-      "similarity": 0.889
+      "last_extreme_doy": 135,
+      "last_over100_doy": 135,
+      "similarity": 0.984
+    },
+    {
+      "year": 2020,
+      "burden_at_doy": 71307,
+      "total_season_burden": 72076,
+      "pct_done_at_doy": 98.9,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 1,
+      "last_extreme_doy": 135,
+      "last_over100_doy": 153,
+      "similarity": 0.97
+    },
+    {
+      "year": 2024,
+      "burden_at_doy": 73265,
+      "total_season_burden": 74585,
+      "pct_done_at_doy": 98.2,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 1,
+      "remaining_over100_days": 2,
+      "last_extreme_doy": 135,
+      "last_over100_doy": 141,
+      "similarity": 0.941
+    },
+    {
+      "year": 2021,
+      "burden_at_doy": 76404,
+      "total_season_burden": 77527,
+      "pct_done_at_doy": 98.6,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 2,
+      "last_extreme_doy": 135,
+      "last_over100_doy": 145,
+      "similarity": 0.896
+    },
+    {
+      "year": 2012,
+      "burden_at_doy": 61408,
+      "total_season_burden": 62018,
+      "pct_done_at_doy": 99.0,
+      "remaining_extreme_days": 0,
+      "remaining_high_days": 0,
+      "remaining_over100_days": 0,
+      "last_extreme_doy": 135,
+      "last_over100_doy": 135,
+      "similarity": 0.887
     }
   ],
   "projection": {
@@ -72,19 +72,19 @@
       "max": 0
     },
     "remaining_over100_days": {
-      "weighted_avg": 3.7,
+      "weighted_avg": 1.0,
       "min": 0,
-      "max": 5
+      "max": 2
     },
     "estimated_season_end_doy": {
-      "weighted_avg": 141,
-      "min": 128,
+      "weighted_avg": 142,
+      "min": 135,
       "max": 153
     },
     "estimated_last_extreme_doy": {
-      "weighted_avg": 128,
-      "min": 128,
-      "max": 128
+      "weighted_avg": 135,
+      "min": 135,
+      "max": 135
     }
   }
 }
