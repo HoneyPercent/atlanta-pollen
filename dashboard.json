@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-05-18T17:12:57.126389-04:00",
+    "generated_at": "2026-05-19T12:51:35.901309-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-05-18",
-    "doy": 138,
+    "date": "2026-05-19",
+    "doy": 139,
     "is_weekend": false,
     "observation": {
-      "count": 33,
+      "count": 21,
       "severity": "low",
-      "contributors": "BEECH, PINE, HICKORY, OAK"
+      "contributors": "MULBERRY, BEECH, PINE, WILLOW"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 47,
+      "count": 38,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 75°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day before's count. Working against that: late-season warmth, the day-over-day trend."
-    },
-    "climatology": {
-      "doy": 138,
-      "n_years": 24,
-      "mean": 53,
-      "median": 34.0,
-      "p10": 10,
-      "p25": 24,
-      "p75": 68,
-      "p90": 140,
-      "p95": 168,
-      "max": 219,
-      "percentile_rank": 50
-    },
-    "weather": {
-      "temp_max": 87.1,
-      "temp_min": 62.6,
-      "temp_mean": 74.7,
-      "precipitation": 0.0,
-      "wind_max": 10.7,
-      "solar_radiation": 26.69,
-      "regime": "hot_windy"
-    }
-  },
-  "tomorrow": {
-    "date": "2026-05-19",
-    "doy": 139,
-    "forecast": {
-      "count": 29,
-      "severity": "low",
-      "explanation": "With 78°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, solar radiation and how far into the season we are. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 77°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and solar radiation. Working against that: late-season warmth, the day-over-day trend. The actual count came in 45% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 139,
+      "n_years": 26,
+      "mean": 41,
       "median": 35.0,
+      "p10": 7,
+      "p25": 12,
       "p75": 59,
-      "p90": 88
+      "p90": 88,
+      "p95": 106,
+      "max": 146,
+      "percentile_rank": 50
     },
-    "weather_forecast": {
-      "temp_max": 90.1,
-      "temp_min": 64.4,
-      "temp_mean": 77.9,
+    "weather": {
+      "temp_max": 88.3,
+      "temp_min": 65.7,
+      "temp_mean": 77.2,
       "precipitation": 0.0,
-      "wind_max": 8.6,
+      "wind_max": 6.7,
+      "solar_radiation": 29.06,
       "regime": "hot_calm"
     }
   },
+  "tomorrow": {
+    "date": "2026-05-20",
+    "doy": 140,
+    "forecast": {
+      "count": 19,
+      "severity": "low",
+      "explanation": "With 80°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, accumulated heat."
+    },
+    "climatology": {
+      "doy": 140,
+      "median": 41,
+      "p75": 51,
+      "p90": 111
+    },
+    "weather_forecast": {
+      "temp_max": 90.1,
+      "temp_min": 68.9,
+      "temp_mean": 79.7,
+      "precipitation": 0.0,
+      "wind_max": 10.5,
+      "regime": "hot_windy"
+    }
+  },
   "season": {
-    "as_of_date": "2026-05-18",
-    "as_of_doy": 138,
-    "cumulative_burden": 71431,
+    "as_of_date": "2026-05-19",
+    "as_of_doy": 139,
+    "cumulative_burden": 71452,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 1903.9,
+    "gdd_cumulative": 1928.6,
     "season_progress_pct": 99.7,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -116,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.837,
+        "similarity": 0.836,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 135,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-03-12",
-      "count": 3226,
-      "severity": "extreme",
-      "predicted": null
-    },
     {
       "date": "2026-03-13",
       "count": 512,
@@ -399,6 +393,12 @@
       "count": 33,
       "severity": "low",
       "predicted": 47
+    },
+    {
+      "date": "2026-05-19",
+      "count": 21,
+      "severity": "low",
+      "predicted": 38
     }
   ],
   "current_year_scurve": [
@@ -777,6 +777,10 @@
     [
       138,
       71431
+    ],
+    [
+      139,
+      71452
     ]
   ]
 }
