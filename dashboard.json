@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-25T14:20:11.980796-04:00",
+    "generated_at": "2026-05-25T17:08:35.223195-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -14,7 +14,7 @@
       "count": 25,
       "severity": "low",
       "data_source": "prior_prediction",
-      "explanation": "With 72°F, winds up to 9 mph, 2.5\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and recent rainfall. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 72°F, winds up to 11 mph, 1.6\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
       "doy": 145,
@@ -30,12 +30,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 77.0,
+      "temp_max": 78.1,
       "temp_min": 68.9,
-      "temp_mean": 72.0,
-      "precipitation": 2.48,
-      "wind_max": 9.3,
-      "solar_radiation": 8.42,
+      "temp_mean": 71.8,
+      "precipitation": 1.559,
+      "wind_max": 11.3,
+      "solar_radiation": 9.95,
       "regime": "rainy"
     }
   },
@@ -43,9 +43,9 @@
     "date": "2026-05-26",
     "doy": 146,
     "forecast": {
-      "count": 2,
+      "count": 5,
       "severity": "low",
-      "explanation": "With 72°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, recent rainfall and the overnight low. Working against that: yesterday's rain, late-season warmth."
+      "explanation": "With 74°F, winds up to 11 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: yesterday's rain, late-season warmth."
     },
     "climatology": {
       "doy": 146,
@@ -54,12 +54,12 @@
       "p90": 47
     },
     "weather_forecast": {
-      "temp_max": 79.0,
-      "temp_min": 69.1,
-      "temp_mean": 72.3,
-      "precipitation": 0.031,
-      "wind_max": 10.1,
-      "regime": "hot_windy"
+      "temp_max": 81.0,
+      "temp_min": 69.4,
+      "temp_mean": 73.6,
+      "precipitation": 0.213,
+      "wind_max": 11.0,
+      "regime": "drizzle"
     }
   },
   "season": {
@@ -68,7 +68,7 @@
     "cumulative_burden": 71698,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2268.7,
+    "gdd_cumulative": 2290.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
