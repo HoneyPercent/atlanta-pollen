@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-28T15:31:49.530402-04:00",
+    "generated_at": "2026-05-28T17:54:45.833283-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 12,
+      "count": 11,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count. The actual count came in 58% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 76°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count. The actual count came in 55% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 148,
@@ -34,12 +34,12 @@
       "percentile_rank": 10
     },
     "weather": {
-      "temp_max": 82.8,
+      "temp_max": 85.3,
       "temp_min": 70.3,
-      "temp_mean": 76.1,
+      "temp_mean": 76.3,
       "precipitation": 0.016,
-      "wind_max": 9.5,
-      "solar_radiation": 23.61,
+      "wind_max": 7.1,
+      "solar_radiation": 21.66,
       "regime": "hot_calm"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-05-29",
     "doy": 149,
     "forecast": {
-      "count": 8,
+      "count": 9,
       "severity": "low",
-      "explanation": "With 72°F, winds up to 10 mph, 2.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and recent rainfall. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 74°F, winds up to 11 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
       "doy": 149,
@@ -58,21 +58,21 @@
       "p90": 40
     },
     "weather_forecast": {
-      "temp_max": 75.2,
-      "temp_min": 69.3,
-      "temp_mean": 72.1,
-      "precipitation": 2.087,
-      "wind_max": 9.6,
-      "regime": "rainy"
+      "temp_max": 78.3,
+      "temp_min": 67.5,
+      "temp_mean": 73.6,
+      "precipitation": 0.228,
+      "wind_max": 10.8,
+      "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-05-28",
     "as_of_doy": 148,
-    "cumulative_burden": 71738,
+    "cumulative_burden": 71743,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2478.7,
+    "gdd_cumulative": 2504.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-05-28",
       "count": 5,
       "severity": "low",
-      "predicted": 12
+      "predicted": 11
     }
   ],
   "current_year_scurve": [
@@ -808,7 +808,7 @@
     ],
     [
       148,
-      71738
+      71743
     ]
   ]
 }
