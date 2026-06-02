@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-01T18:33:04.570177-04:00",
+    "generated_at": "2026-06-02T14:06:55.025291-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-01",
-    "doy": 152,
+    "date": "2026-06-02",
+    "doy": 153,
     "is_weekend": false,
     "observation": {
-      "count": 10,
+      "count": 20,
       "severity": "low",
-      "contributors": "JUNIPER, BEECH, PINE, OAK"
+      "contributors": "PRIVET, JUNIPER, PINE, MULBERRY, BEECH"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 19,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 71°F, winds up to 12 mph, no rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, the 5-day peak. The actual count came in 47% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 73°F, winds up to 13 mph, no rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
-      "doy": 152,
-      "n_years": 24,
-      "mean": 19,
-      "median": 15.5,
-      "p10": 6,
-      "p25": 11,
+      "doy": 153,
+      "n_years": 26,
+      "mean": 22,
+      "median": 16.5,
+      "p10": 5,
+      "p25": 7,
       "p75": 22,
-      "p90": 33,
-      "p95": 55,
-      "max": 65,
-      "percentile_rank": 25
+      "p90": 27,
+      "p95": 102,
+      "max": 120,
+      "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 82.2,
-      "temp_min": 63.0,
-      "temp_mean": 70.9,
+      "temp_max": 79.9,
+      "temp_min": 66.6,
+      "temp_mean": 72.7,
       "precipitation": 0.0,
-      "wind_max": 12.4,
-      "solar_radiation": 20.39,
+      "wind_max": 12.6,
+      "solar_radiation": 22.53,
       "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-06-02",
-    "doy": 153,
+    "date": "2026-06-03",
+    "doy": 154,
     "forecast": {
-      "count": 13,
+      "count": 17,
       "severity": "low",
-      "explanation": "With 72°F, winds up to 16 mph, no rain. Key factors pushing counts up: unusually warm temperatures, how far into the season we are and wind speed. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 68°F, winds up to 10 mph, no rain. Key factors pushing counts up: solar radiation, how far into the season we are and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
-      "doy": 153,
-      "median": 16.5,
+      "doy": 154,
+      "median": 13,
       "p75": 22,
-      "p90": 27
+      "p90": 29
     },
     "weather_forecast": {
-      "temp_max": 82.4,
-      "temp_min": 63.0,
-      "temp_mean": 71.8,
+      "temp_max": 77.5,
+      "temp_min": 56.7,
+      "temp_mean": 67.5,
       "precipitation": 0.0,
-      "wind_max": 15.6,
+      "wind_max": 10.0,
       "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-06-01",
-    "as_of_doy": 152,
-    "cumulative_burden": 71824,
+    "as_of_date": "2026-06-02",
+    "as_of_doy": 153,
+    "cumulative_burden": 71844,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2648.5,
+    "gdd_cumulative": 2669.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-03-24",
-      "count": 5902,
-      "severity": "extreme",
-      "predicted": null
-    },
     {
       "date": "2026-03-25",
       "count": 3279,
@@ -397,6 +391,12 @@
     {
       "date": "2026-06-01",
       "count": 10,
+      "severity": "low",
+      "predicted": 19
+    },
+    {
+      "date": "2026-06-02",
+      "count": 20,
       "severity": "low",
       "predicted": 19
     }
@@ -817,6 +817,10 @@
     [
       152,
       71824
+    ],
+    [
+      153,
+      71844
     ]
   ]
 }
