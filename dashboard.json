@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-02T14:06:55.025291-04:00",
+    "generated_at": "2026-06-02T15:58:59.428770-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,7 +15,7 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 19,
+      "count": 26,
       "severity": "low",
       "data_source": "observation",
       "explanation": "With 73°F, winds up to 13 mph, no rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, the 5-day peak."
@@ -34,12 +34,12 @@
       "percentile_rank": 75
     },
     "weather": {
-      "temp_max": 79.9,
-      "temp_min": 66.6,
+      "temp_max": 81.5,
+      "temp_min": 65.7,
       "temp_mean": 72.7,
       "precipitation": 0.0,
-      "wind_max": 12.6,
-      "solar_radiation": 22.53,
+      "wind_max": 12.8,
+      "solar_radiation": 25.89,
       "regime": "hot_windy"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 17,
       "severity": "low",
-      "explanation": "With 68°F, winds up to 10 mph, no rain. Key factors pushing counts up: solar radiation, how far into the season we are and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 67°F, winds up to 10 mph, no rain. Key factors pushing counts up: solar radiation, how far into the season we are and temperature stability. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
       "doy": 154,
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 77.5,
-      "temp_min": 56.7,
-      "temp_mean": 67.5,
+      "temp_min": 57.0,
+      "temp_mean": 67.3,
       "precipitation": 0.0,
       "wind_max": 10.0,
       "regime": "hot_windy"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-02",
     "as_of_doy": 153,
-    "cumulative_burden": 71844,
+    "cumulative_burden": 71864,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2669.4,
+    "gdd_cumulative": 2692.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.997,
+        "similarity": 0.996,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 72076
@@ -398,7 +398,7 @@
       "date": "2026-06-02",
       "count": 20,
       "severity": "low",
-      "predicted": 19
+      "predicted": 26
     }
   ],
   "current_year_scurve": [
@@ -820,7 +820,7 @@
     ],
     [
       153,
-      71844
+      71864
     ]
   ]
 }
