@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-03T16:11:53.039499-04:00",
+    "generated_at": "2026-06-03T18:28:23.113804-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,12 +34,12 @@
       "percentile_rank": 95
     },
     "weather": {
-      "temp_max": 78.1,
+      "temp_max": 79.3,
       "temp_min": 55.9,
-      "temp_mean": 67.1,
+      "temp_mean": 67.3,
       "precipitation": 0.0,
       "wind_max": 9.5,
-      "solar_radiation": 30.87,
+      "solar_radiation": 30.78,
       "regime": "hot_calm"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 19,
       "severity": "low",
-      "explanation": "With 70°F, winds up to 8 mph, no rain. Key factors pushing counts up: solar radiation, unusually warm temperatures and how far into the season we are. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 70°F, winds up to 7 mph, no rain. Key factors pushing counts up: solar radiation, unusually warm temperatures and how far into the season we are. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
       "doy": 155,
@@ -58,21 +58,21 @@
       "p90": 27
     },
     "weather_forecast": {
-      "temp_max": 81.7,
-      "temp_min": 56.8,
+      "temp_max": 81.3,
+      "temp_min": 56.7,
       "temp_mean": 69.8,
       "precipitation": 0.0,
-      "wind_max": 7.5,
+      "wind_max": 6.8,
       "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-06-03",
     "as_of_doy": 154,
-    "cumulative_burden": 71950,
+    "cumulative_burden": 71983,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2753.1,
+    "gdd_cumulative": 2770.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,21 +95,21 @@
       },
       {
         "year": 2018,
-        "similarity": 0.98,
+        "similarity": 0.979,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 70996
       },
       {
         "year": 2024,
-        "similarity": 0.969,
+        "similarity": 0.97,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 74585
       },
       {
         "year": 2021,
-        "similarity": 0.932,
+        "similarity": 0.933,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 77527
@@ -824,7 +824,7 @@
     ],
     [
       154,
-      71950
+      71983
     ]
   ]
 }
