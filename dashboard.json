@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-04T15:11:07.611468-04:00",
+    "generated_at": "2026-06-04T17:41:51.426722-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 27,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 71°F, winds up to 8 mph, no rain. Key factors pushing counts up: accumulated heat, solar radiation and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 71°F, winds up to 10 mph, no rain. Key factors pushing counts up: accumulated heat, solar radiation and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
       "doy": 155,
@@ -34,12 +34,12 @@
       "percentile_rank": 95
     },
     "weather": {
-      "temp_max": 83.3,
+      "temp_max": 83.8,
       "temp_min": 55.4,
       "temp_mean": 71.1,
       "precipitation": 0.0,
-      "wind_max": 8.5,
-      "solar_radiation": 31.1,
+      "wind_max": 9.6,
+      "solar_radiation": 31.02,
       "regime": "hot_calm"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 16,
       "severity": "low",
-      "explanation": "With 75°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, solar radiation and how far into the season we are. Working against that: late-season warmth, accumulated heat."
+      "explanation": "With 76°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, solar radiation and how far into the season we are. Working against that: late-season warmth, accumulated heat."
     },
     "climatology": {
       "doy": 156,
@@ -58,21 +58,21 @@
       "p90": 27
     },
     "weather_forecast": {
-      "temp_max": 87.6,
-      "temp_min": 61.0,
-      "temp_mean": 75.2,
+      "temp_max": 87.4,
+      "temp_min": 61.2,
+      "temp_mean": 75.7,
       "precipitation": 0.0,
-      "wind_max": 8.7,
+      "wind_max": 9.1,
       "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-06-04",
     "as_of_doy": 155,
-    "cumulative_burden": 72041,
+    "cumulative_burden": 72070,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2808.7,
+    "gdd_cumulative": 2829.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.994,
+        "similarity": 0.993,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 72076
@@ -109,14 +109,14 @@
       },
       {
         "year": 2021,
-        "similarity": 0.933,
+        "similarity": 0.934,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.831,
+        "similarity": 0.83,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 62018
@@ -828,7 +828,7 @@
     ],
     [
       155,
-      72041
+      72070
     ]
   ]
 }
