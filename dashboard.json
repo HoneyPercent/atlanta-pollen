@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-04T12:56:14.630704-04:00",
+    "generated_at": "2026-06-04T15:11:07.611468-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 28,
+      "count": 27,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 71°F, winds up to 9 mph, no rain. Key factors pushing counts up: accumulated heat, solar radiation and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 71°F, winds up to 8 mph, no rain. Key factors pushing counts up: accumulated heat, solar radiation and unusually warm temperatures. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
       "doy": 155,
@@ -34,12 +34,12 @@
       "percentile_rank": 95
     },
     "weather": {
-      "temp_max": 84.4,
+      "temp_max": 83.3,
       "temp_min": 55.4,
-      "temp_mean": 71.2,
+      "temp_mean": 71.1,
       "precipitation": 0.0,
-      "wind_max": 9.4,
-      "solar_radiation": 31.12,
+      "wind_max": 8.5,
+      "solar_radiation": 31.1,
       "regime": "hot_calm"
     }
   },
@@ -59,7 +59,7 @@
     },
     "weather_forecast": {
       "temp_max": 87.6,
-      "temp_min": 61.5,
+      "temp_min": 61.0,
       "temp_mean": 75.2,
       "precipitation": 0.0,
       "wind_max": 8.7,
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-04",
     "as_of_doy": 155,
-    "cumulative_burden": 72012,
+    "cumulative_burden": 72041,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2787.5,
+    "gdd_cumulative": 2808.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,14 +95,14 @@
       },
       {
         "year": 2018,
-        "similarity": 0.979,
+        "similarity": 0.978,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 70996
       },
       {
         "year": 2024,
-        "similarity": 0.97,
+        "similarity": 0.971,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 149,
         "total_season_burden": 74585
@@ -398,7 +398,7 @@
       "date": "2026-06-04",
       "count": 29,
       "severity": "low",
-      "predicted": 28
+      "predicted": 27
     }
   ],
   "current_year_scurve": [
@@ -828,7 +828,7 @@
     ],
     [
       155,
-      72012
+      72041
     ]
   ]
 }
