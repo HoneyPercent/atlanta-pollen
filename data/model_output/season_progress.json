@@ -1,17 +1,17 @@
 {
   "target_year": 2026,
-  "target_doy": 149,
-  "target_date": "2026-05-29",
-  "cumulative_burden": 69355,
-  "latest_count": 17,
+  "target_doy": 156,
+  "target_date": "2026-06-05",
+  "cumulative_burden": 69461,
+  "latest_count": 14,
   "historical_pct_done_at_doy": {
-    "mean": 99.3,
-    "median": 99.4,
-    "recent_mean": 99.4
+    "mean": 99.6,
+    "median": 99.6,
+    "recent_mean": 99.6
   },
   "projected_total_burden": {
-    "from_historical_avg": 69838,
-    "from_recent_avg": 69756
+    "from_historical_avg": 69760,
+    "from_recent_avg": 69744
   },
   "remaining_extreme_by_pct": {
     "25": {
@@ -35,7 +35,7 @@
       "median_extreme_remaining": 1.0
     },
     "75": {
-      "avg_extreme_remaining": 1,
+      "avg_extreme_remaining": 1.0,
       "max_extreme_remaining": 4,
       "median_extreme_remaining": 0.0
     },
@@ -63,7 +63,7 @@
   "season_trend": {
     "1990s_avg_total": 22107,
     "2000s_avg_total": 30651,
-    "2010s_avg_total": 51470,
+    "2010s_avg_total": 51593,
     "2020s_avg_total": 71037
   }
 }
