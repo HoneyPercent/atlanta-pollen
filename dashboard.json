@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-08T15:13:17.627941-04:00",
+    "generated_at": "2026-06-08T17:50:17.979224-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 7,
+      "count": 8,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 74°F, winds up to 9 mph, no rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 71% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 72°F, winds up to 10 mph, 0.4\" of rain. Key factors pushing counts up: accumulated heat, unusually warm temperatures and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 75% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 159,
@@ -34,22 +34,22 @@
       "percentile_rank": 10
     },
     "weather": {
-      "temp_max": 79.5,
+      "temp_max": 80.1,
       "temp_min": 69.3,
-      "temp_mean": 73.6,
-      "precipitation": 0.016,
-      "wind_max": 8.9,
-      "solar_radiation": 13.48,
-      "regime": "hot_calm"
+      "temp_mean": 72.5,
+      "precipitation": 0.441,
+      "wind_max": 10.1,
+      "solar_radiation": 11.17,
+      "regime": "rainy"
     }
   },
   "tomorrow": {
     "date": "2026-06-09",
     "doy": 160,
     "forecast": {
-      "count": 4,
+      "count": 3,
       "severity": "low",
-      "explanation": "With 74°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 74°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
       "doy": 160,
@@ -58,21 +58,21 @@
       "p90": 21
     },
     "weather_forecast": {
-      "temp_max": 82.4,
-      "temp_min": 70.7,
-      "temp_mean": 74.5,
-      "precipitation": 0.0,
-      "wind_max": 10.5,
+      "temp_max": 81.1,
+      "temp_min": 69.1,
+      "temp_mean": 74.3,
+      "precipitation": 0.043,
+      "wind_max": 12.3,
       "regime": "hot_windy"
     }
   },
   "season": {
     "as_of_date": "2026-06-08",
     "as_of_doy": 159,
-    "cumulative_burden": 72116,
+    "cumulative_burden": 72118,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2948.6,
+    "gdd_cumulative": 2972.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-06-08",
       "count": 2,
       "severity": "low",
-      "predicted": 7
+      "predicted": 8
     }
   ],
   "current_year_scurve": [
@@ -836,7 +836,7 @@
     ],
     [
       159,
-      72116
+      72118
     ]
   ]
 }
