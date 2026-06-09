@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-09T12:33:15.934949-04:00",
+    "generated_at": "2026-06-09T15:05:00.805207-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 75°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 75% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 75°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 67% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 160,
@@ -34,12 +34,12 @@
       "percentile_rank": 10
     },
     "weather": {
-      "temp_max": 81.1,
+      "temp_max": 79.9,
       "temp_min": 72.0,
       "temp_mean": 75.0,
-      "precipitation": 0.016,
+      "precipitation": 0.0,
       "wind_max": 7.1,
-      "solar_radiation": 16.41,
+      "solar_radiation": 12.66,
       "regime": "hot_calm"
     }
   },
@@ -59,7 +59,7 @@
     },
     "weather_forecast": {
       "temp_max": 87.3,
-      "temp_min": 69.4,
+      "temp_min": 70.2,
       "temp_mean": 77.9,
       "precipitation": 0.0,
       "wind_max": 6.7,
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-09",
     "as_of_doy": 160,
-    "cumulative_burden": 72119,
+    "cumulative_burden": 72120,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 2994.7,
+    "gdd_cumulative": 3019.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-06-09",
       "count": 1,
       "severity": "low",
-      "predicted": 4
+      "predicted": 3
     }
   ],
   "current_year_scurve": [
@@ -840,7 +840,7 @@
     ],
     [
       160,
-      72119
+      72120
     ]
   ]
 }
