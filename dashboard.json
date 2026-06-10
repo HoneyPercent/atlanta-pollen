@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-10T13:24:46.747231-04:00",
+    "generated_at": "2026-06-10T15:27:57.159880-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 7,
+      "count": 8,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 77°F, winds up to 7 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 79°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count. The actual count came in 38% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 161,
@@ -34,13 +34,13 @@
       "percentile_rank": 50
     },
     "weather": {
-      "temp_max": 85.8,
+      "temp_max": 88.5,
       "temp_min": 70.5,
-      "temp_mean": 77.0,
-      "precipitation": 0.055,
-      "wind_max": 6.9,
-      "solar_radiation": 20.82,
-      "regime": "drizzle"
+      "temp_mean": 78.6,
+      "precipitation": 0.0,
+      "wind_max": 5.5,
+      "solar_radiation": 22.75,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 4,
       "severity": "low",
-      "explanation": "With 81°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the day-over-day trend and the overnight low. Working against that: late-season warmth, the day before's count."
+      "explanation": "With 81°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
       "doy": 162,
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 90.0,
-      "temp_min": 72.3,
-      "temp_mean": 81.1,
+      "temp_min": 72.5,
+      "temp_mean": 81.3,
       "precipitation": 0.0,
       "wind_max": 6.0,
       "regime": "hot_calm"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-10",
     "as_of_doy": 161,
-    "cumulative_burden": 72126,
+    "cumulative_burden": 72131,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3069.5,
+    "gdd_cumulative": 3096.5,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-06-10",
       "count": 5,
       "severity": "low",
-      "predicted": 7
+      "predicted": 8
     }
   ],
   "current_year_scurve": [
@@ -844,7 +844,7 @@
     ],
     [
       161,
-      72126
+      72131
     ]
   ]
 }
