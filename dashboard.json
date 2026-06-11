@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-10T18:03:03.984529-04:00",
+    "generated_at": "2026-06-11T13:38:12.574073-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-10",
-    "doy": 161,
+    "date": "2026-06-11",
+    "doy": 162,
     "is_weekend": false,
     "observation": {
-      "count": 5,
+      "count": 7,
       "severity": "low",
-      "contributors": "MULBERRY, BEECH, HEMLOCK"
+      "contributors": "MULBERRY, JUNIPER, BEECH, PINE"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 8,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 79°F, winds up to 5 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count. The actual count came in 38% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 81°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count."
     },
     "climatology": {
-      "doy": 161,
-      "n_years": 25,
-      "mean": 9,
-      "median": 7,
+      "doy": 162,
+      "n_years": 23,
+      "mean": 10,
+      "median": 9,
       "p10": 3,
       "p25": 4,
       "p75": 14,
-      "p90": 17,
-      "p95": 17,
-      "max": 20,
+      "p90": 19,
+      "p95": 19,
+      "max": 31,
       "percentile_rank": 50
     },
     "weather": {
-      "temp_max": 88.2,
-      "temp_min": 70.5,
-      "temp_mean": 78.6,
+      "temp_max": 91.8,
+      "temp_min": 72.1,
+      "temp_mean": 81.3,
       "precipitation": 0.0,
-      "wind_max": 5.1,
-      "solar_radiation": 22.45,
+      "wind_max": 6.7,
+      "solar_radiation": 22.99,
       "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-06-11",
-    "doy": 162,
+    "date": "2026-06-12",
+    "doy": 163,
     "forecast": {
-      "count": 4,
+      "count": 6,
       "severity": "low",
-      "explanation": "With 82°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 83°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
-      "doy": 162,
-      "median": 9,
-      "p75": 14,
-      "p90": 19
+      "doy": 163,
+      "median": 8.5,
+      "p75": 16,
+      "p90": 20
     },
     "weather_forecast": {
-      "temp_max": 91.4,
-      "temp_min": 72.9,
-      "temp_mean": 81.9,
+      "temp_max": 92.8,
+      "temp_min": 73.0,
+      "temp_mean": 82.9,
       "precipitation": 0.0,
-      "wind_max": 6.2,
+      "wind_max": 9.6,
       "regime": "hot_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-06-10",
-    "as_of_doy": 161,
-    "cumulative_burden": 72136,
+    "as_of_date": "2026-06-11",
+    "as_of_doy": 162,
+    "cumulative_burden": 72143,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3125.1,
+    "gdd_cumulative": 3153.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -102,14 +102,14 @@
       },
       {
         "year": 2024,
-        "similarity": 0.97,
+        "similarity": 0.971,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 156,
         "total_season_burden": 74585
       },
       {
         "year": 2021,
-        "similarity": 0.933,
+        "similarity": 0.934,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 156,
         "total_season_burden": 77527
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-04-09",
-      "count": 1443,
-      "severity": "high",
-      "predicted": 1074
-    },
     {
       "date": "2026-04-10",
       "count": 368,
@@ -397,6 +391,12 @@
     {
       "date": "2026-06-10",
       "count": 5,
+      "severity": "low",
+      "predicted": 8
+    },
+    {
+      "date": "2026-06-11",
+      "count": 7,
       "severity": "low",
       "predicted": 8
     }
@@ -845,6 +845,10 @@
     [
       161,
       72136
+    ],
+    [
+      162,
+      72143
     ]
   ]
 }
