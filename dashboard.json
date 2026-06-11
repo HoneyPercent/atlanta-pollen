@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-11T13:38:12.574073-04:00",
+    "generated_at": "2026-06-11T15:27:52.482953-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 8,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 81°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the day-over-day trend. Working against that: late-season warmth, the day before's count."
+      "explanation": "With 81°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
       "doy": 162,
@@ -47,7 +47,7 @@
     "date": "2026-06-12",
     "doy": 163,
     "forecast": {
-      "count": 6,
+      "count": 5,
       "severity": "low",
       "explanation": "With 83°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, the 5-day peak."
     },
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-11",
     "as_of_doy": 162,
-    "cumulative_burden": 72143,
+    "cumulative_burden": 72150,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3153.7,
+    "gdd_cumulative": 3185.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,7 +95,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.979,
+        "similarity": 0.978,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 156,
         "total_season_burden": 70996
@@ -848,7 +848,7 @@
     ],
     [
       162,
-      72143
+      72150
     ]
   ]
 }
