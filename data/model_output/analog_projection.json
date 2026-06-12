@@ -1,67 +1,67 @@
 {
   "target_year": 2026,
-  "target_doy": 156,
-  "target_date": "2026-06-05",
-  "target_burden": 69461,
+  "target_doy": 163,
+  "target_date": "2026-06-12",
+  "target_burden": 69485,
   "analog_years": [
     {
       "year": 2018,
-      "burden_at_doy": 70630,
+      "burden_at_doy": 70774,
       "total_season_burden": 70996,
-      "pct_done_at_doy": 99.5,
+      "pct_done_at_doy": 99.7,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 156,
-      "last_over100_doy": 156,
-      "similarity": 0.983
+      "last_extreme_doy": 163,
+      "last_over100_doy": 163,
+      "similarity": 0.981
     },
     {
       "year": 2020,
-      "burden_at_doy": 71837,
+      "burden_at_doy": 71893,
       "total_season_burden": 72076,
       "pct_done_at_doy": 99.7,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 156,
-      "last_over100_doy": 156,
-      "similarity": 0.966
+      "last_extreme_doy": 163,
+      "last_over100_doy": 163,
+      "similarity": 0.965
     },
     {
       "year": 2024,
-      "burden_at_doy": 74332,
+      "burden_at_doy": 74406,
       "total_season_burden": 74585,
-      "pct_done_at_doy": 99.7,
+      "pct_done_at_doy": 99.8,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 156,
-      "last_over100_doy": 156,
-      "similarity": 0.93
+      "last_extreme_doy": 163,
+      "last_over100_doy": 163,
+      "similarity": 0.929
     },
     {
       "year": 2012,
-      "burden_at_doy": 61746,
+      "burden_at_doy": 61784,
       "total_season_burden": 62018,
       "pct_done_at_doy": 99.6,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 156,
-      "last_over100_doy": 156,
+      "last_extreme_doy": 163,
+      "last_over100_doy": 163,
       "similarity": 0.889
     },
     {
       "year": 2021,
-      "burden_at_doy": 77281,
+      "burden_at_doy": 77324,
       "total_season_burden": 77527,
       "pct_done_at_doy": 99.7,
       "remaining_extreme_days": 0,
       "remaining_high_days": 0,
       "remaining_over100_days": 0,
-      "last_extreme_doy": 156,
-      "last_over100_doy": 156,
+      "last_extreme_doy": 163,
+      "last_over100_doy": 163,
       "similarity": 0.887
     }
   ],
@@ -77,14 +77,14 @@
       "max": 0
     },
     "estimated_season_end_doy": {
-      "weighted_avg": 156,
-      "min": 156,
-      "max": 156
+      "weighted_avg": 163,
+      "min": 163,
+      "max": 163
     },
     "estimated_last_extreme_doy": {
-      "weighted_avg": 156,
-      "min": 156,
-      "max": 156
+      "weighted_avg": 163,
+      "min": 163,
+      "max": 163
     }
   }
 }
