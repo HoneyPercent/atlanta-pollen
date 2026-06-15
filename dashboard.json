@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-12T17:45:16.105955-04:00",
+    "generated_at": "2026-06-15T14:42:22.776685-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-12",
-    "doy": 163,
+    "date": "2026-06-15",
+    "doy": 166,
     "is_weekend": false,
     "observation": {
-      "count": 9,
+      "count": 6,
       "severity": "low",
-      "contributors": "JUNIPER, BEECH, MULBERRY, HEMLOCK"
+      "contributors": "JUNIPER, HICKORY, MULBERRY, PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 8,
+      "count": 6,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 83°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 76°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
-      "doy": 163,
-      "n_years": 24,
-      "mean": 11,
-      "median": 8.5,
+      "doy": 166,
+      "n_years": 25,
+      "mean": 9,
+      "median": 6,
       "p10": 2,
-      "p25": 5,
-      "p75": 16,
-      "p90": 20,
-      "p95": 32,
-      "max": 33,
-      "percentile_rank": 75
+      "p25": 4,
+      "p75": 14,
+      "p90": 21,
+      "p95": 21,
+      "max": 22,
+      "percentile_rank": 50
     },
     "weather": {
-      "temp_max": 92.1,
-      "temp_min": 73.8,
-      "temp_mean": 82.8,
+      "temp_max": 84.0,
+      "temp_min": 68.7,
+      "temp_mean": 75.7,
       "precipitation": 0.0,
-      "wind_max": 9.4,
-      "solar_radiation": 23.43,
-      "regime": "hot_calm"
+      "wind_max": 12.1,
+      "solar_radiation": 28.03,
+      "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-06-13",
-    "doy": 164,
+    "date": "2026-06-16",
+    "doy": 167,
     "forecast": {
-      "count": 5,
+      "count": 7,
       "severity": "low",
-      "explanation": "With 83°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, the 5-day peak."
+      "explanation": "With 73°F, winds up to 11 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, the 5-day peak."
     },
     "climatology": {
-      "doy": 164,
-      "median": 9,
-      "p75": 15,
-      "p90": 31
+      "doy": 167,
+      "median": 7.0,
+      "p75": 10,
+      "p90": 27
     },
     "weather_forecast": {
-      "temp_max": 91.9,
-      "temp_min": 73.6,
-      "temp_mean": 82.9,
-      "precipitation": 0.0,
-      "wind_max": 8.7,
-      "regime": "hot_calm"
+      "temp_max": 77.5,
+      "temp_min": 69.6,
+      "temp_mean": 72.7,
+      "precipitation": 0.13,
+      "wind_max": 11.2,
+      "regime": "drizzle"
     }
   },
   "season": {
-    "as_of_date": "2026-06-12",
-    "as_of_doy": 163,
-    "cumulative_burden": 72184,
+    "as_of_date": "2026-06-15",
+    "as_of_doy": 166,
+    "cumulative_burden": 72190,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3312.8,
+    "gdd_cumulative": 3345.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-04-13",
-      "count": 659,
-      "severity": "high",
-      "predicted": 426
-    },
     {
       "date": "2026-04-14",
       "count": 636,
@@ -399,6 +393,12 @@
       "count": 9,
       "severity": "low",
       "predicted": 8
+    },
+    {
+      "date": "2026-06-15",
+      "count": 6,
+      "severity": "low",
+      "predicted": 6
     }
   ],
   "current_year_scurve": [
@@ -853,6 +853,10 @@
     [
       163,
       72184
+    ],
+    [
+      166,
+      72190
     ]
   ]
 }
