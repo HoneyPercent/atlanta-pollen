@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-16T18:12:29.277500-04:00",
+    "generated_at": "2026-06-17T12:57:22.141231-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-16",
-    "doy": 167,
+    "date": "2026-06-17",
+    "doy": 168,
     "is_weekend": false,
     "observation": {
-      "count": 29,
+      "count": 2,
       "severity": "low",
-      "contributors": "JUNIPER, PINE, MULBERRY, SYCAMORE"
+      "contributors": "MULBERRY, JUNIPER, PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 23,
+      "count": 16,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 69°F, winds up to 8 mph, 0.1\" of rain. Key factors pushing counts up: the day-over-day trend, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
+      "explanation": "With 76°F, winds up to 13 mph, 0.1\" of rain. Key factors pushing counts up: the day-over-day trend, unusually warm temperatures and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 88% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
-      "doy": 167,
-      "n_years": 26,
-      "mean": 9,
-      "median": 7.0,
+      "doy": 168,
+      "n_years": 24,
+      "mean": 8,
+      "median": 8.5,
       "p10": 2,
       "p25": 4,
-      "p75": 10,
-      "p90": 27,
-      "p95": 30,
-      "max": 40,
-      "percentile_rank": 95
+      "p75": 12,
+      "p90": 14,
+      "p95": 14,
+      "max": 19,
+      "percentile_rank": 10
     },
     "weather": {
-      "temp_max": 71.6,
-      "temp_min": 67.3,
-      "temp_mean": 69.1,
-      "precipitation": 0.102,
-      "wind_max": 7.5,
-      "solar_radiation": 10.26,
+      "temp_max": 86.2,
+      "temp_min": 68.9,
+      "temp_mean": 75.6,
+      "precipitation": 0.13,
+      "wind_max": 13.3,
+      "solar_radiation": 24.0,
       "regime": "drizzle"
     }
   },
   "tomorrow": {
-    "date": "2026-06-17",
-    "doy": 168,
+    "date": "2026-06-18",
+    "doy": 169,
     "forecast": {
-      "count": 11,
+      "count": 3,
       "severity": "low",
-      "explanation": "With 76°F, winds up to 13 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, time of year."
+      "explanation": "With 75°F, winds up to 12 mph, 3.1\" of rain. Key factors pushing counts up: recent rainfall, unusually warm temperatures and the overnight low. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
-      "doy": 168,
-      "median": 8.5,
-      "p75": 12,
-      "p90": 14
+      "doy": 169,
+      "median": 7,
+      "p75": 13,
+      "p90": 16
     },
     "weather_forecast": {
-      "temp_max": 86.5,
-      "temp_min": 68.5,
-      "temp_mean": 76.1,
-      "precipitation": 0.0,
-      "wind_max": 13.0,
-      "regime": "hot_windy"
+      "temp_max": 79.5,
+      "temp_min": 71.1,
+      "temp_mean": 75.0,
+      "precipitation": 3.071,
+      "wind_max": 12.5,
+      "regime": "rainy"
     }
   },
   "season": {
-    "as_of_date": "2026-06-16",
-    "as_of_doy": 167,
-    "cumulative_burden": 72289,
+    "as_of_date": "2026-06-17",
+    "as_of_doy": 168,
+    "cumulative_burden": 72291,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3460.9,
+    "gdd_cumulative": 3480.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-04-15",
-      "count": 1216,
-      "severity": "high",
-      "predicted": 478
-    },
     {
       "date": "2026-04-16",
       "count": 713,
@@ -399,6 +393,12 @@
       "count": 29,
       "severity": "low",
       "predicted": 23
+    },
+    {
+      "date": "2026-06-17",
+      "count": 2,
+      "severity": "low",
+      "predicted": 16
     }
   ],
   "current_year_scurve": [
@@ -861,6 +861,10 @@
     [
       167,
       72289
+    ],
+    [
+      168,
+      72291
     ]
   ]
 }
