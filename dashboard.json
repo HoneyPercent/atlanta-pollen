@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-17T12:57:22.141231-04:00",
+    "generated_at": "2026-06-17T15:15:42.336698-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 16,
+      "count": 6,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 13 mph, 0.1\" of rain. Key factors pushing counts up: the day-over-day trend, unusually warm temperatures and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 88% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 75°F, winds up to 13 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 67% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 168,
@@ -34,12 +34,12 @@
       "percentile_rank": 10
     },
     "weather": {
-      "temp_max": 86.2,
+      "temp_max": 84.9,
       "temp_min": 68.9,
-      "temp_mean": 75.6,
-      "precipitation": 0.13,
-      "wind_max": 13.3,
-      "solar_radiation": 24.0,
+      "temp_mean": 74.8,
+      "precipitation": 0.217,
+      "wind_max": 13.2,
+      "solar_radiation": 21.02,
       "regime": "drizzle"
     }
   },
@@ -62,17 +62,17 @@
       "temp_min": 71.1,
       "temp_mean": 75.0,
       "precipitation": 3.071,
-      "wind_max": 12.5,
+      "wind_max": 11.9,
       "regime": "rainy"
     }
   },
   "season": {
     "as_of_date": "2026-06-17",
     "as_of_doy": 168,
-    "cumulative_burden": 72291,
+    "cumulative_burden": 72293,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3480.0,
+    "gdd_cumulative": 3505.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-06-17",
       "count": 2,
       "severity": "low",
-      "predicted": 16
+      "predicted": 6
     }
   ],
   "current_year_scurve": [
@@ -864,7 +864,7 @@
     ],
     [
       168,
-      72291
+      72293
     ]
   ]
 }
