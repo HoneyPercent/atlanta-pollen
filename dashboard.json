@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-17T18:04:25.450107-04:00",
+    "generated_at": "2026-06-18T13:18:07.768065-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-17",
-    "doy": 168,
+    "date": "2026-06-18",
+    "doy": 169,
     "is_weekend": false,
     "observation": {
-      "count": 2,
+      "count": 7,
       "severity": "low",
-      "contributors": "MULBERRY, JUNIPER, PINE"
+      "contributors": "JUNIPER, PINE, HICKORY, MULBERRY"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 5,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 12 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, yesterday's count. The actual count came in 60% lower than predicted — possibly localized rain or wind patterns."
-    },
-    "climatology": {
-      "doy": 168,
-      "n_years": 24,
-      "mean": 8,
-      "median": 8.5,
-      "p10": 2,
-      "p25": 4,
-      "p75": 12,
-      "p90": 14,
-      "p95": 14,
-      "max": 19,
-      "percentile_rank": 10
-    },
-    "weather": {
-      "temp_max": 85.8,
-      "temp_min": 68.9,
-      "temp_mean": 75.6,
-      "precipitation": 0.13,
-      "wind_max": 11.7,
-      "solar_radiation": 20.96,
-      "regime": "drizzle"
-    }
-  },
-  "tomorrow": {
-    "date": "2026-06-18",
-    "doy": 169,
-    "forecast": {
-      "count": 7,
-      "severity": "low",
-      "explanation": "With 77°F, winds up to 18 mph, 8.9\" of rain. Key factors pushing counts up: recent rainfall, unusually warm temperatures and the overnight low. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 77°F, winds up to 15 mph, 2.6\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and recent rainfall. Working against that: late-season warmth, yesterday's count. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 169,
+      "n_years": 25,
+      "mean": 9,
       "median": 7,
+      "p10": 2,
+      "p25": 4,
       "p75": 13,
-      "p90": 16
+      "p90": 16,
+      "p95": 21,
+      "max": 29,
+      "percentile_rank": 50
     },
-    "weather_forecast": {
-      "temp_max": 86.5,
-      "temp_min": 72.9,
-      "temp_mean": 77.2,
-      "precipitation": 8.945,
-      "wind_max": 18.3,
+    "weather": {
+      "temp_max": 82.8,
+      "temp_min": 71.4,
+      "temp_mean": 76.6,
+      "precipitation": 2.65,
+      "wind_max": 15.0,
+      "solar_radiation": 15.83,
       "regime": "rainy"
     }
   },
+  "tomorrow": {
+    "date": "2026-06-19",
+    "doy": 170,
+    "forecast": {
+      "count": 0,
+      "severity": "low",
+      "explanation": "With 76°F, winds up to 10 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, recent rainfall and the overnight low. Working against that: yesterday's rain, late-season warmth."
+    },
+    "climatology": {
+      "doy": 170,
+      "median": 8.0,
+      "p75": 12,
+      "p90": 14
+    },
+    "weather_forecast": {
+      "temp_max": 81.9,
+      "temp_min": 71.1,
+      "temp_mean": 75.9,
+      "precipitation": 0.13,
+      "wind_max": 10.1,
+      "regime": "drizzle"
+    }
+  },
   "season": {
-    "as_of_date": "2026-06-17",
-    "as_of_doy": 168,
-    "cumulative_burden": 72295,
+    "as_of_date": "2026-06-18",
+    "as_of_doy": 169,
+    "cumulative_burden": 72302,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3530.4,
+    "gdd_cumulative": 3556.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,7 +95,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.979,
+        "similarity": 0.978,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 163,
         "total_season_burden": 70996
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-04-16",
-      "count": 713,
-      "severity": "high",
-      "predicted": 387
-    },
     {
       "date": "2026-04-17",
       "count": 822,
@@ -397,6 +391,12 @@
     {
       "date": "2026-06-17",
       "count": 2,
+      "severity": "low",
+      "predicted": 5
+    },
+    {
+      "date": "2026-06-18",
+      "count": 7,
       "severity": "low",
       "predicted": 5
     }
@@ -865,6 +865,10 @@
     [
       168,
       72295
+    ],
+    [
+      169,
+      72302
     ]
   ]
 }
