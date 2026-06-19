@@ -1,17 +1,17 @@
 {
   "target_year": 2026,
-  "target_doy": 163,
-  "target_date": "2026-06-12",
-  "cumulative_burden": 69485,
-  "latest_count": 9,
+  "target_doy": 170,
+  "target_date": "2026-06-19",
+  "cumulative_burden": 69533,
+  "latest_count": 4,
   "historical_pct_done_at_doy": {
-    "mean": 99.7,
-    "median": 99.7,
-    "recent_mean": 99.7
+    "mean": 99.9,
+    "median": 99.9,
+    "recent_mean": 99.8
   },
   "projected_total_burden": {
-    "from_historical_avg": 69679,
-    "from_recent_avg": 69681
+    "from_historical_avg": 69637,
+    "from_recent_avg": 69647
   },
   "remaining_extreme_by_pct": {
     "25": {
