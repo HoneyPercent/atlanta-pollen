@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-19T14:27:03.591338-04:00",
+    "generated_at": "2026-06-19T17:10:49.966862-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,12 +34,12 @@
       "percentile_rank": 25
     },
     "weather": {
-      "temp_max": 85.3,
+      "temp_max": 84.6,
       "temp_min": 70.2,
-      "temp_mean": 76.6,
+      "temp_mean": 76.8,
       "precipitation": 0.059,
       "wind_max": 11.6,
-      "solar_radiation": 24.64,
+      "solar_radiation": 23.92,
       "regime": "drizzle"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-06-20",
     "doy": 171,
     "forecast": {
-      "count": 5,
+      "count": 4,
       "severity": "low",
-      "explanation": "With 78°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
+      "explanation": "With 76°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, yesterday's count."
     },
     "climatology": {
       "doy": 171,
@@ -58,21 +58,21 @@
       "p90": 18
     },
     "weather_forecast": {
-      "temp_max": 88.2,
-      "temp_min": 70.3,
-      "temp_mean": 78.3,
+      "temp_max": 85.1,
+      "temp_min": 69.3,
+      "temp_mean": 76.3,
       "precipitation": 0.0,
-      "wind_max": 7.9,
+      "wind_max": 9.8,
       "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-06-19",
     "as_of_doy": 170,
-    "cumulative_burden": 72324,
+    "cumulative_burden": 72328,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3663.6,
+    "gdd_cumulative": 3690.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -872,7 +872,7 @@
     ],
     [
       170,
-      72324
+      72328
     ]
   ]
 }
