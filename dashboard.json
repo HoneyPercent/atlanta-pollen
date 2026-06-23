@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-23T15:00:09.655084-04:00",
+    "generated_at": "2026-06-23T17:43:17.423403-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 14,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 16 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
+      "explanation": "With 76°F, winds up to 14 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
     },
     "climatology": {
       "doy": 174,
@@ -34,12 +34,12 @@
       "percentile_rank": 90
     },
     "weather": {
-      "temp_max": 82.2,
+      "temp_max": 82.0,
       "temp_min": 71.1,
       "temp_mean": 76.5,
       "precipitation": 0.0,
-      "wind_max": 15.5,
-      "solar_radiation": 27.94,
+      "wind_max": 13.9,
+      "solar_radiation": 27.47,
       "regime": "hot_windy"
     }
   },
@@ -59,20 +59,20 @@
     },
     "weather_forecast": {
       "temp_max": 88.0,
-      "temp_min": 63.1,
-      "temp_mean": 75.9,
+      "temp_min": 62.8,
+      "temp_mean": 75.7,
       "precipitation": 0.0,
-      "wind_max": 6.6,
+      "wind_max": 7.1,
       "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-06-23",
     "as_of_doy": 174,
-    "cumulative_burden": 72378,
+    "cumulative_burden": 72391,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 3830.6,
+    "gdd_cumulative": 3857.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,7 +95,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.979,
+        "similarity": 0.978,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 170,
         "total_season_burden": 70996
@@ -880,7 +880,7 @@
     ],
     [
       174,
-      72378
+      72391
     ]
   ]
 }
