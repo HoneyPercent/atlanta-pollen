@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-06-26T12:21:19.010831-04:00",
+    "generated_at": "2026-06-26T14:20:31.138409-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,12 +34,12 @@
       "percentile_rank": 90
     },
     "weather": {
-      "temp_max": 89.4,
+      "temp_max": 90.1,
       "temp_min": 68.4,
-      "temp_mean": 79.2,
+      "temp_mean": 79.3,
       "precipitation": 0.0,
-      "wind_max": 7.5,
-      "solar_radiation": 24.88,
+      "wind_max": 7.8,
+      "solar_radiation": 25.11,
       "regime": "hot_calm"
     }
   },
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 92.1,
-      "temp_min": 74.3,
-      "temp_mean": 82.8,
+      "temp_min": 73.6,
+      "temp_mean": 82.6,
       "precipitation": 0.0,
       "wind_max": 12.1,
       "regime": "hot_windy"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-06-26",
     "as_of_doy": 177,
-    "cumulative_burden": 72509,
+    "cumulative_burden": 72525,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 4040.5,
+    "gdd_cumulative": 4069.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2020,
-        "similarity": 0.985,
+        "similarity": 0.984,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 177,
         "total_season_burden": 71451
@@ -892,7 +892,7 @@
     ],
     [
       177,
-      72509
+      72525
     ]
   ]
 }
