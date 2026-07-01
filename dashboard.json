@@ -1,78 +1,78 @@
 {
   "_meta": {
-    "generated_at": "2026-06-30T17:27:53.269047-04:00",
+    "generated_at": "2026-07-01T12:29:23.991946-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-06-30",
-    "doy": 181,
+    "date": "2026-07-01",
+    "doy": 182,
     "is_weekend": false,
     "observation": {
-      "count": 14,
+      "count": 9,
       "severity": "low",
-      "contributors": "JUNIPER, PINE, HICKORY"
+      "contributors": "PRIVET, JUNIPER, MULBERRY, HEMLOCK"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 9,
+      "count": 8,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 85°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 56% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 87°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 181,
-      "n_years": 25,
-      "mean": 6,
-      "median": 4,
+      "doy": 182,
+      "n_years": 5,
+      "mean": 5,
+      "median": 2,
       "p10": 1,
       "p25": 2,
-      "p75": 8,
-      "p90": 14,
-      "p95": 14,
-      "max": 18,
+      "p75": 4,
+      "p90": 15,
+      "p95": 15,
+      "max": 15,
       "percentile_rank": 90
     },
     "weather": {
-      "temp_max": 95.0,
-      "temp_min": 75.4,
-      "temp_mean": 85.3,
+      "temp_max": 97.2,
+      "temp_min": 77.5,
+      "temp_mean": 87.3,
       "precipitation": 0.0,
-      "wind_max": 7.3,
-      "solar_radiation": 24.15,
+      "wind_max": 7.5,
+      "solar_radiation": 26.04,
       "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-07-01",
-    "doy": 182,
+    "date": "2026-07-02",
+    "doy": 183,
     "forecast": {
-      "count": 5,
+      "count": 4,
       "severity": "low",
-      "explanation": "With 87°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
+      "explanation": "With 90°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 182,
-      "median": 2,
-      "p75": 4,
-      "p90": 15
+      "doy": 183,
+      "median": 0,
+      "p75": 0,
+      "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 97.7,
-      "temp_min": 77.0,
-      "temp_mean": 87.4,
+      "temp_max": 100.8,
+      "temp_min": 79.3,
+      "temp_mean": 89.6,
       "precipitation": 0.0,
-      "wind_max": 8.5,
-      "regime": "hot_calm"
+      "wind_max": 10.3,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-06-30",
-    "as_of_doy": 181,
-    "cumulative_burden": 72616,
+    "as_of_date": "2026-07-01",
+    "as_of_doy": 182,
+    "cumulative_burden": 72625,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 4304.9,
+    "gdd_cumulative": 4340.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-04-29",
-      "count": 115,
-      "severity": "moderate",
-      "predicted": 59
-    },
     {
       "date": "2026-04-30",
       "count": 77,
@@ -399,6 +393,12 @@
       "count": 14,
       "severity": "low",
       "predicted": 9
+    },
+    {
+      "date": "2026-07-01",
+      "count": 9,
+      "severity": "low",
+      "predicted": 8
     }
   ],
   "current_year_scurve": [
@@ -901,6 +901,10 @@
     [
       181,
       72616
+    ],
+    [
+      182,
+      72625
     ]
   ]
 }
