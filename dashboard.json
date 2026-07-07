@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-07-07T12:34:44.327440-04:00",
+    "generated_at": "2026-07-07T14:52:48.894039-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 14,
+      "count": 7,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 82°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year. The actual count came in 57% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 82°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
     },
     "climatology": {
       "doy": 188,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 92.1,
+      "temp_max": 91.9,
       "temp_min": 70.7,
       "temp_mean": 81.5,
       "precipitation": 0.0,
-      "wind_max": 9.6,
-      "solar_radiation": 27.83,
+      "wind_max": 9.0,
+      "solar_radiation": 27.59,
       "regime": "hot_calm"
     }
   },
@@ -47,7 +47,7 @@
     "date": "2026-07-08",
     "doy": 189,
     "forecast": {
-      "count": 4,
+      "count": 3,
       "severity": "low",
       "explanation": "With 82°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
     },
@@ -59,7 +59,7 @@
     },
     "weather_forecast": {
       "temp_max": 90.1,
-      "temp_min": 74.1,
+      "temp_min": 73.8,
       "temp_mean": 82.2,
       "precipitation": 0.0,
       "wind_max": 9.3,
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-07-07",
     "as_of_doy": 188,
-    "cumulative_burden": 72841,
+    "cumulative_burden": 72847,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 4715.4,
+    "gdd_cumulative": 4746.9,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-07-07",
       "count": 6,
       "severity": "low",
-      "predicted": 14
+      "predicted": 7
     }
   ],
   "current_year_scurve": [
@@ -920,7 +920,7 @@
     ],
     [
       188,
-      72841
+      72847
     ]
   ]
 }
