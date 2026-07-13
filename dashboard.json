@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-10T17:05:46.613097-04:00",
+    "generated_at": "2026-07-13T12:38:03.856623-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-10",
-    "doy": 191,
+    "date": "2026-07-13",
+    "doy": 194,
     "is_weekend": false,
     "observation": {
-      "count": 6,
+      "count": 11,
       "severity": "low",
-      "contributors": "MULBERRY, PINE, BEECH"
+      "contributors": "BEECH, JUNIPER, PINE, MULBERRY"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 12,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 80°F, winds up to 24 mph, 1.2\" of rain. Key factors pushing counts up: wind speed, unusually warm temperatures and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 50% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 74°F, winds up to 21 mph, 1.8\" of rain. Key factors pushing counts up: wind speed, unusually warm temperatures and accumulated heat. Working against that: time of year, late-season warmth. The actual count came in 175% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 191,
+      "doy": 194,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 89.4,
-      "temp_min": 71.6,
-      "temp_mean": 79.9,
-      "precipitation": 1.232,
-      "wind_max": 23.7,
-      "solar_radiation": 18.19,
+      "temp_max": 80.1,
+      "temp_min": 69.6,
+      "temp_mean": 73.8,
+      "precipitation": 1.787,
+      "wind_max": 20.6,
+      "solar_radiation": 8.69,
       "regime": "rainy"
     }
   },
   "tomorrow": {
-    "date": "2026-07-11",
-    "doy": 192,
+    "date": "2026-07-14",
+    "doy": 195,
     "forecast": {
       "count": 0,
       "severity": "low",
-      "explanation": "With 82°F, winds up to 11 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
+      "explanation": "With 74°F, winds up to 9 mph, 0.3\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and recent rainfall. Working against that: yesterday's rain, time of year."
     },
     "climatology": {
-      "doy": 192,
+      "doy": 195,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 92.1,
-      "temp_min": 73.9,
-      "temp_mean": 82.0,
-      "precipitation": 0.157,
-      "wind_max": 11.3,
-      "regime": "drizzle"
+      "temp_max": 78.4,
+      "temp_min": 71.2,
+      "temp_mean": 73.8,
+      "precipitation": 0.303,
+      "wind_max": 8.8,
+      "regime": "rainy"
     }
   },
   "season": {
-    "as_of_date": "2026-07-10",
-    "as_of_doy": 191,
-    "cumulative_burden": 72943,
+    "as_of_date": "2026-07-13",
+    "as_of_doy": 194,
+    "cumulative_burden": 72954,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5069.7,
+    "gdd_cumulative": 5099.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -102,7 +102,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.973,
+        "similarity": 0.972,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-11",
-      "count": 41,
-      "severity": "low",
-      "predicted": 52
-    },
     {
       "date": "2026-05-12",
       "count": 62,
@@ -399,6 +393,12 @@
       "count": 6,
       "severity": "low",
       "predicted": 12
+    },
+    {
+      "date": "2026-07-13",
+      "count": 11,
+      "severity": "low",
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -933,6 +933,10 @@
     [
       191,
       72943
+    ],
+    [
+      194,
+      72954
     ]
   ]
 }
