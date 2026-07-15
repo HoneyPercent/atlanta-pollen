@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-14T17:00:30.618380-04:00",
+    "generated_at": "2026-07-15T11:37:40.343011-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-14",
-    "doy": 195,
+    "date": "2026-07-15",
+    "doy": 196,
     "is_weekend": false,
     "observation": {
       "count": 2,
       "severity": "low",
-      "contributors": "BEECH, PINE, SWEET GUM"
+      "contributors": "PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 2,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 74°F, winds up to 10 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 76°F, winds up to 14 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year. The actual count came in 50% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
-      "doy": 195,
+      "doy": 196,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 81.1,
-      "temp_min": 71.2,
-      "temp_mean": 74.3,
-      "precipitation": 0.217,
-      "wind_max": 10.1,
-      "solar_radiation": 18.11,
+      "temp_max": 87.1,
+      "temp_min": 71.8,
+      "temp_mean": 76.5,
+      "precipitation": 0.126,
+      "wind_max": 14.2,
+      "solar_radiation": 15.07,
       "regime": "drizzle"
     }
   },
   "tomorrow": {
-    "date": "2026-07-15",
-    "doy": 196,
+    "date": "2026-07-16",
+    "doy": 197,
     "forecast": {
       "count": 1,
       "severity": "low",
-      "explanation": "With 76°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, time of year."
+      "explanation": "With 81°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 196,
+      "doy": 197,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 85.6,
-      "temp_min": 70.3,
-      "temp_mean": 76.5,
+      "temp_max": 89.4,
+      "temp_min": 72.3,
+      "temp_mean": 80.6,
       "precipitation": 0.0,
-      "wind_max": 6.0,
-      "regime": "hot_calm"
+      "wind_max": 10.8,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-07-14",
-    "as_of_doy": 195,
-    "cumulative_burden": 72982,
+    "as_of_date": "2026-07-15",
+    "as_of_doy": 196,
+    "cumulative_burden": 72984,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5220.9,
+    "gdd_cumulative": 5245.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-13",
-      "count": 41,
-      "severity": "low",
-      "predicted": 60
-    },
     {
       "date": "2026-05-14",
       "count": 56,
@@ -399,6 +393,12 @@
       "count": 2,
       "severity": "low",
       "predicted": 2
+    },
+    {
+      "date": "2026-07-15",
+      "count": 2,
+      "severity": "low",
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -941,6 +941,10 @@
     [
       195,
       72982
+    ],
+    [
+      196,
+      72984
     ]
   ]
 }
