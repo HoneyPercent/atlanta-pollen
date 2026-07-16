@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-15T17:00:46.727674-04:00",
+    "generated_at": "2026-07-16T11:40:52.586773-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-15",
-    "doy": 196,
+    "date": "2026-07-16",
+    "doy": 197,
     "is_weekend": false,
     "observation": {
-      "count": 2,
+      "count": 6,
       "severity": "low",
-      "contributors": "PINE"
+      "contributors": "MULBERRY, BEECH, JUNIPER, HICKORY"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 78°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
+      "explanation": "With 80°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year. The actual count came in 200% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 196,
+      "doy": 197,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 88.3,
-      "temp_min": 71.8,
-      "temp_mean": 78.4,
+      "temp_max": 87.4,
+      "temp_min": 72.7,
+      "temp_mean": 80.4,
       "precipitation": 0.0,
-      "wind_max": 9.0,
-      "solar_radiation": 17.81,
+      "wind_max": 9.2,
+      "solar_radiation": 15.47,
       "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-07-16",
-    "doy": 197,
+    "date": "2026-07-17",
+    "doy": 198,
     "forecast": {
-      "count": 1,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 81°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: late-season warmth, time of year."
+      "explanation": "With 82°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and the day-over-day trend. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 197,
+      "doy": 198,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 89.1,
-      "temp_min": 72.1,
-      "temp_mean": 81.0,
+      "temp_max": 90.9,
+      "temp_min": 73.2,
+      "temp_mean": 82.4,
       "precipitation": 0.0,
-      "wind_max": 10.1,
+      "wind_max": 10.8,
       "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-07-15",
-    "as_of_doy": 196,
-    "cumulative_burden": 72988,
+    "as_of_date": "2026-07-16",
+    "as_of_doy": 197,
+    "cumulative_burden": 72994,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5297.8,
+    "gdd_cumulative": 5326.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -109,7 +109,7 @@
       },
       {
         "year": 2021,
-        "similarity": 0.941,
+        "similarity": 0.942,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 77527
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-14",
-      "count": 56,
-      "severity": "low",
-      "predicted": 71
-    },
     {
       "date": "2026-05-15",
       "count": 87,
@@ -397,6 +391,12 @@
     {
       "date": "2026-07-15",
       "count": 2,
+      "severity": "low",
+      "predicted": 2
+    },
+    {
+      "date": "2026-07-16",
+      "count": 6,
       "severity": "low",
       "predicted": 2
     }
@@ -945,6 +945,10 @@
     [
       196,
       72988
+    ],
+    [
+      197,
+      72994
     ]
   ]
 }
