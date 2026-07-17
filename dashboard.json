@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-07-17T11:17:41.623667-04:00",
+    "generated_at": "2026-07-17T13:55:41.831659-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 5,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 82°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year. The actual count came in 125% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 82°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year. The actual count came in 80% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 198,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 88.9,
+      "temp_max": 91.4,
       "temp_min": 74.5,
-      "temp_mean": 81.7,
+      "temp_mean": 81.9,
       "precipitation": 0.0,
       "wind_max": 8.1,
-      "solar_radiation": 13.16,
+      "solar_radiation": 15.76,
       "regime": "hot_calm"
     }
   },
@@ -60,7 +60,7 @@
     "weather_forecast": {
       "temp_max": 91.0,
       "temp_min": 73.0,
-      "temp_mean": 81.1,
+      "temp_mean": 81.3,
       "precipitation": 0.0,
       "wind_max": 12.2,
       "regime": "hot_windy"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-07-17",
     "as_of_doy": 198,
-    "cumulative_burden": 73015,
+    "cumulative_burden": 73024,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5417.6,
+    "gdd_cumulative": 5449.3,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -102,7 +102,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.972,
+        "similarity": 0.971,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
@@ -398,7 +398,7 @@
       "date": "2026-07-17",
       "count": 9,
       "severity": "low",
-      "predicted": 4
+      "predicted": 5
     }
   ],
   "current_year_scurve": [
@@ -952,7 +952,7 @@
     ],
     [
       198,
-      73015
+      73024
     ]
   ]
 }
