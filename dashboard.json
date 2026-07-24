@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-07-24T14:08:54.549841-04:00",
+    "generated_at": "2026-07-24T17:04:01.268098-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 79°F, winds up to 10 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: time of year, late-season warmth. The actual count came in 75% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 78°F, winds up to 10 mph, 1.5\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 75% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 205,
@@ -34,22 +34,22 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 86.2,
-      "temp_min": 75.4,
-      "temp_mean": 78.6,
-      "precipitation": 0.185,
-      "wind_max": 10.5,
-      "solar_radiation": 15.84,
-      "regime": "drizzle"
+      "temp_max": 81.7,
+      "temp_min": 74.3,
+      "temp_mean": 77.9,
+      "precipitation": 1.516,
+      "wind_max": 9.9,
+      "solar_radiation": 14.2,
+      "regime": "rainy"
     }
   },
   "tomorrow": {
     "date": "2026-07-25",
     "doy": 206,
     "forecast": {
-      "count": 2,
+      "count": 0,
       "severity": "low",
-      "explanation": "With 78°F, winds up to 18 mph, 3.3\" of rain. Key factors pushing counts up: unusually warm temperatures, recent rainfall and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 77°F, winds up to 12 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, yesterday's rain."
     },
     "climatology": {
       "doy": 206,
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 84.0,
-      "temp_min": 72.9,
-      "temp_mean": 77.9,
-      "precipitation": 3.303,
-      "wind_max": 17.8,
-      "regime": "rainy"
+      "temp_max": 84.6,
+      "temp_min": 73.6,
+      "temp_mean": 77.2,
+      "precipitation": 0.087,
+      "wind_max": 11.6,
+      "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-07-24",
     "as_of_doy": 205,
-    "cumulative_burden": 73110,
+    "cumulative_burden": 73117,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5852.1,
+    "gdd_cumulative": 5880.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -972,7 +972,7 @@
     ],
     [
       205,
-      73110
+      73117
     ]
   ]
 }
