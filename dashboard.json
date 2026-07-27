@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-24T17:04:01.268098-04:00",
+    "generated_at": "2026-07-27T12:25:07.974411-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-24",
-    "doy": 205,
+    "date": "2026-07-27",
+    "doy": 208,
     "is_weekend": false,
     "observation": {
-      "count": 7,
+      "count": 11,
       "severity": "low",
-      "contributors": "BEECH, PINE, SWEET GUM, JUNIPER"
+      "contributors": "BEECH, MULBERRY, OAK, SWEET GUM"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 78°F, winds up to 10 mph, 1.5\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 75% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 83°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 267% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 205,
+      "doy": 208,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 81.7,
-      "temp_min": 74.3,
-      "temp_mean": 77.9,
-      "precipitation": 1.516,
-      "wind_max": 9.9,
-      "solar_radiation": 14.2,
-      "regime": "rainy"
+      "temp_max": 92.5,
+      "temp_min": 75.4,
+      "temp_mean": 82.9,
+      "precipitation": 0.0,
+      "wind_max": 10.6,
+      "solar_radiation": 23.31,
+      "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-07-25",
-    "doy": 206,
+    "date": "2026-07-28",
+    "doy": 209,
     "forecast": {
-      "count": 0,
+      "count": 3,
       "severity": "low",
-      "explanation": "With 77°F, winds up to 12 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, yesterday's rain."
+      "explanation": "With 85°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 206,
+      "doy": 209,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 84.6,
-      "temp_min": 73.6,
-      "temp_mean": 77.2,
-      "precipitation": 0.087,
-      "wind_max": 11.6,
-      "regime": "drizzle"
+      "temp_max": 97.2,
+      "temp_min": 74.7,
+      "temp_mean": 84.7,
+      "precipitation": 0.0,
+      "wind_max": 11.0,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-07-24",
-    "as_of_doy": 205,
-    "cumulative_burden": 73117,
+    "as_of_date": "2026-07-27",
+    "as_of_doy": 208,
+    "cumulative_burden": 73128,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5880.7,
+    "gdd_cumulative": 5908.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-25",
-      "count": null,
-      "severity": null,
-      "predicted": 25
-    },
     {
       "date": "2026-05-26",
       "count": 9,
@@ -399,6 +393,12 @@
       "count": 7,
       "severity": "low",
       "predicted": 4
+    },
+    {
+      "date": "2026-07-27",
+      "count": 11,
+      "severity": "low",
+      "predicted": 3
     }
   ],
   "current_year_scurve": [
@@ -973,6 +973,10 @@
     [
       205,
       73117
+    ],
+    [
+      208,
+      73128
     ]
   ]
 }
