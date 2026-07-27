@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-07-27T14:17:00.243666-04:00",
+    "generated_at": "2026-07-27T17:10:36.798000-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 92.7,
+      "temp_max": 90.9,
       "temp_min": 75.4,
-      "temp_mean": 82.2,
+      "temp_mean": 81.9,
       "precipitation": 0.0,
       "wind_max": 10.6,
-      "solar_radiation": 23.66,
+      "solar_radiation": 23.84,
       "regime": "hot_windy"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 3,
       "severity": "low",
-      "explanation": "With 85°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
+      "explanation": "With 86°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
     },
     "climatology": {
       "doy": 209,
@@ -59,20 +59,20 @@
     },
     "weather_forecast": {
       "temp_max": 97.2,
-      "temp_min": 74.7,
-      "temp_mean": 84.7,
+      "temp_min": 74.1,
+      "temp_mean": 85.6,
       "precipitation": 0.0,
-      "wind_max": 11.0,
+      "wind_max": 12.1,
       "regime": "hot_windy"
     }
   },
   "season": {
     "as_of_date": "2026-07-27",
     "as_of_doy": 208,
-    "cumulative_burden": 73139,
+    "cumulative_burden": 73150,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5941.5,
+    "gdd_cumulative": 5973.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -109,7 +109,7 @@
       },
       {
         "year": 2021,
-        "similarity": 0.943,
+        "similarity": 0.944,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 77527
@@ -976,7 +976,7 @@
     ],
     [
       208,
-      73139
+      73150
     ]
   ]
 }
