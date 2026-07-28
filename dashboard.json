@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-27T17:10:36.798000-04:00",
+    "generated_at": "2026-07-28T12:06:39.443552-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-27",
-    "doy": 208,
+    "date": "2026-07-28",
+    "doy": 209,
     "is_weekend": false,
     "observation": {
-      "count": 11,
+      "count": 7,
       "severity": "low",
-      "contributors": "BEECH, MULBERRY, OAK, SWEET GUM"
+      "contributors": "MULBERRY, PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 5,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 82°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 175% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 85°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 208,
+      "doy": 209,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 90.9,
+      "temp_max": 96.4,
       "temp_min": 75.4,
-      "temp_mean": 81.9,
+      "temp_mean": 85.3,
       "precipitation": 0.0,
-      "wind_max": 10.6,
-      "solar_radiation": 23.84,
+      "wind_max": 12.2,
+      "solar_radiation": 27.14,
       "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-07-28",
-    "doy": 209,
+    "date": "2026-07-29",
+    "doy": 210,
     "forecast": {
-      "count": 3,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 86°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
+      "explanation": "With 85°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 209,
+      "doy": 210,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 97.2,
-      "temp_min": 74.1,
-      "temp_mean": 85.6,
+      "temp_max": 93.0,
+      "temp_min": 79.0,
+      "temp_mean": 85.1,
       "precipitation": 0.0,
-      "wind_max": 12.1,
+      "wind_max": 11.1,
       "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-07-27",
-    "as_of_doy": 208,
-    "cumulative_burden": 73150,
+    "as_of_date": "2026-07-28",
+    "as_of_doy": 209,
+    "cumulative_burden": 73157,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 5973.7,
+    "gdd_cumulative": 6005.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -116,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.821,
+        "similarity": 0.82,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-26",
-      "count": 9,
-      "severity": "low",
-      "predicted": 5
-    },
     {
       "date": "2026-05-27",
       "count": 1,
@@ -399,6 +393,12 @@
       "count": 11,
       "severity": "low",
       "predicted": 4
+    },
+    {
+      "date": "2026-07-28",
+      "count": 7,
+      "severity": "low",
+      "predicted": 5
     }
   ],
   "current_year_scurve": [
@@ -977,6 +977,10 @@
     [
       208,
       73150
+    ],
+    [
+      209,
+      73157
     ]
   ]
 }
