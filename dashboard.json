@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-07-28T17:07:45.771951-04:00",
+    "generated_at": "2026-07-29T11:52:01.817093-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-07-28",
-    "doy": 209,
+    "date": "2026-07-29",
+    "doy": 210,
     "is_weekend": false,
     "observation": {
-      "count": 7,
+      "count": 4,
       "severity": "low",
-      "contributors": "MULBERRY, PINE"
+      "contributors": "MULBERRY"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 85°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 75% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 81°F, winds up to 14 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: late-season warmth, time of year."
     },
     "climatology": {
-      "doy": 209,
+      "doy": 210,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 95.0,
-      "temp_min": 75.4,
-      "temp_mean": 84.6,
-      "precipitation": 0.0,
-      "wind_max": 12.3,
-      "solar_radiation": 26.31,
+      "temp_max": 91.9,
+      "temp_min": 73.8,
+      "temp_mean": 81.3,
+      "precipitation": 0.028,
+      "wind_max": 14.5,
+      "solar_radiation": 18.41,
       "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-07-29",
-    "doy": 210,
+    "date": "2026-07-30",
+    "doy": 211,
     "forecast": {
       "count": 2,
       "severity": "low",
-      "explanation": "With 84°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: late-season warmth, time of year."
+      "explanation": "With 80°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and solar radiation. Working against that: time of year, late-season warmth."
     },
     "climatology": {
-      "doy": 210,
+      "doy": 211,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 92.8,
-      "temp_min": 77.9,
-      "temp_mean": 84.2,
+      "temp_max": 91.4,
+      "temp_min": 70.0,
+      "temp_mean": 80.4,
       "precipitation": 0.0,
-      "wind_max": 11.1,
-      "regime": "hot_windy"
+      "wind_max": 8.0,
+      "regime": "hot_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-07-28",
-    "as_of_doy": 209,
-    "cumulative_burden": 73171,
+    "as_of_date": "2026-07-29",
+    "as_of_doy": 210,
+    "cumulative_burden": 73175,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6076.0,
+    "gdd_cumulative": 6110.6,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-05-27",
-      "count": 1,
-      "severity": "low",
-      "predicted": 5
-    },
     {
       "date": "2026-05-28",
       "count": 5,
@@ -397,6 +391,12 @@
     {
       "date": "2026-07-28",
       "count": 7,
+      "severity": "low",
+      "predicted": 4
+    },
+    {
+      "date": "2026-07-29",
+      "count": 4,
       "severity": "low",
       "predicted": 4
     }
@@ -981,6 +981,10 @@
     [
       209,
       73171
+    ],
+    [
+      210,
+      73175
     ]
   ]
 }
