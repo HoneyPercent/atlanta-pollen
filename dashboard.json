@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-03T12:29:52.059527-04:00",
+    "generated_at": "2026-08-03T14:30:12.188137-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 2,
+      "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 75°F, winds up to 8 mph, 0.6\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 450% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 76°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 267% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 215,
@@ -34,20 +34,20 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 83.5,
+      "temp_max": 84.0,
       "temp_min": 69.4,
-      "temp_mean": 75.0,
-      "precipitation": 0.638,
-      "wind_max": 8.1,
-      "solar_radiation": 11.96,
-      "regime": "rainy"
+      "temp_mean": 76.1,
+      "precipitation": 0.016,
+      "wind_max": 11.1,
+      "solar_radiation": 15.79,
+      "regime": "hot_windy"
     }
   },
   "tomorrow": {
     "date": "2026-08-04",
     "doy": 216,
     "forecast": {
-      "count": 1,
+      "count": 4,
       "severity": "low",
       "explanation": "With 76°F, winds up to 13 mph, 1.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 82.2,
-      "temp_min": 72.0,
-      "temp_mean": 75.9,
+      "temp_min": 70.0,
+      "temp_mean": 75.6,
       "precipitation": 1.118,
       "wind_max": 12.9,
       "regime": "rainy"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-08-03",
     "as_of_doy": 215,
-    "cumulative_burden": 73284,
+    "cumulative_burden": 73295,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6384.3,
+    "gdd_cumulative": 6409.3,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-08-03",
       "count": 11,
       "severity": "low",
-      "predicted": 2
+      "predicted": 3
     }
   ],
   "current_year_scurve": [
@@ -996,7 +996,7 @@
     ],
     [
       215,
-      73284
+      73295
     ]
   ]
 }
