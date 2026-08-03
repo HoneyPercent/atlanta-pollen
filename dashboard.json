@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-03T14:30:12.188137-04:00",
+    "generated_at": "2026-08-03T17:02:31.200449-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 267% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 77°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 267% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 215,
@@ -34,22 +34,22 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 84.0,
+      "temp_max": 84.9,
       "temp_min": 69.4,
-      "temp_mean": 76.1,
-      "precipitation": 0.016,
-      "wind_max": 11.1,
-      "solar_radiation": 15.79,
-      "regime": "hot_windy"
+      "temp_mean": 77.0,
+      "precipitation": 0.0,
+      "wind_max": 8.3,
+      "solar_radiation": 17.4,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
     "date": "2026-08-04",
     "doy": 216,
     "forecast": {
-      "count": 4,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 76°F, winds up to 13 mph, 1.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
+      "explanation": "With 77°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 216,
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 82.2,
-      "temp_min": 70.0,
-      "temp_mean": 75.6,
-      "precipitation": 1.118,
-      "wind_max": 12.9,
-      "regime": "rainy"
+      "temp_max": 84.6,
+      "temp_min": 70.2,
+      "temp_mean": 76.6,
+      "precipitation": 0.0,
+      "wind_max": 9.8,
+      "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-08-03",
     "as_of_doy": 215,
-    "cumulative_burden": 73295,
+    "cumulative_burden": 73306,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6409.3,
+    "gdd_cumulative": 6435.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -102,14 +102,14 @@
       },
       {
         "year": 2018,
-        "similarity": 0.968,
+        "similarity": 0.967,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.945,
+        "similarity": 0.946,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 77527
@@ -996,7 +996,7 @@
     ],
     [
       215,
-      73295
+      73306
     ]
   ]
 }
