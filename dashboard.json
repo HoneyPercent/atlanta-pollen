@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-04T12:15:02.858763-04:00",
+    "generated_at": "2026-08-04T14:20:36.110755-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 7,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 11 mph, 2.7\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and recent rainfall. Working against that: time of year, late-season warmth."
+      "explanation": "With 75°F, winds up to 9 mph, 2.9\" of rain. Key factors pushing counts up: unusually warm temperatures, recent rainfall and accumulated heat. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 216,
@@ -35,11 +35,11 @@
     },
     "weather": {
       "temp_max": 80.2,
-      "temp_min": 72.3,
-      "temp_mean": 75.7,
-      "precipitation": 2.693,
-      "wind_max": 11.4,
-      "solar_radiation": 15.34,
+      "temp_min": 71.1,
+      "temp_mean": 75.4,
+      "precipitation": 2.906,
+      "wind_max": 8.6,
+      "solar_radiation": 12.71,
       "regime": "rainy"
     }
   },
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-08-04",
     "as_of_doy": 216,
-    "cumulative_burden": 73311,
+    "cumulative_burden": 73316,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6462.4,
+    "gdd_cumulative": 6488.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-08-04",
       "count": 5,
       "severity": "low",
-      "predicted": 7
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -1000,7 +1000,7 @@
     ],
     [
       216,
-      73311
+      73316
     ]
   ]
 }
