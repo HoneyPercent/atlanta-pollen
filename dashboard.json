@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-08-04T17:12:15.874298-04:00",
+    "generated_at": "2026-08-05T12:02:41.575309-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-08-04",
-    "doy": 216,
+    "date": "2026-08-05",
+    "doy": 217,
     "is_weekend": false,
     "observation": {
-      "count": 5,
+      "count": 3,
       "severity": "low",
-      "contributors": "MULBERRY, PINE, HAZELNUT, ALDER"
+      "contributors": "MULBERRY, BEECH"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 0,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 75°F, winds up to 9 mph, 1.9\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 76°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: yesterday's rain, time of year."
     },
     "climatology": {
-      "doy": 216,
+      "doy": 217,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 79.7,
-      "temp_min": 70.5,
-      "temp_mean": 75.2,
-      "precipitation": 1.898,
-      "wind_max": 8.8,
-      "solar_radiation": 15.25,
-      "regime": "rainy"
+      "temp_max": 83.1,
+      "temp_min": 70.7,
+      "temp_mean": 75.9,
+      "precipitation": 0.0,
+      "wind_max": 8.0,
+      "solar_radiation": 12.89,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-08-05",
-    "doy": 217,
+    "date": "2026-08-06",
+    "doy": 218,
     "forecast": {
-      "count": 0,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 76°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: yesterday's rain, time of year."
+      "explanation": "With 76°F, winds up to 9 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
     "climatology": {
-      "doy": 217,
+      "doy": 218,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 82.6,
-      "temp_min": 70.5,
-      "temp_mean": 75.9,
-      "precipitation": 0.0,
-      "wind_max": 9.2,
-      "regime": "hot_calm"
+      "temp_max": 84.7,
+      "temp_min": 70.0,
+      "temp_mean": 76.3,
+      "precipitation": 0.055,
+      "wind_max": 9.3,
+      "regime": "drizzle"
     }
   },
   "season": {
-    "as_of_date": "2026-08-04",
-    "as_of_doy": 216,
-    "cumulative_burden": 73321,
+    "as_of_date": "2026-08-05",
+    "as_of_doy": 217,
+    "cumulative_burden": 73324,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6513.5,
+    "gdd_cumulative": 6538.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -87,18 +87,18 @@
     },
     "analog_years": [
       {
-        "year": 2020,
-        "similarity": 0.983,
-        "remaining_extreme_days": 0,
-        "last_extreme_doy": 181,
-        "total_season_burden": 72076
-      },
-      {
         "year": 2024,
         "similarity": 0.983,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 74585
+      },
+      {
+        "year": 2020,
+        "similarity": 0.982,
+        "remaining_extreme_days": 0,
+        "last_extreme_doy": 181,
+        "total_season_burden": 72076
       },
       {
         "year": 2018,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-06-03",
-      "count": 33,
-      "severity": "low",
-      "predicted": 35
-    },
     {
       "date": "2026-06-04",
       "count": 29,
@@ -399,6 +393,12 @@
       "count": 5,
       "severity": "low",
       "predicted": 4
+    },
+    {
+      "date": "2026-08-05",
+      "count": 3,
+      "severity": "low",
+      "predicted": 0
     }
   ],
   "current_year_scurve": [
@@ -1001,6 +1001,10 @@
     [
       216,
       73321
+    ],
+    [
+      217,
+      73324
     ]
   ]
 }
