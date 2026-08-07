@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-08-05T17:08:35.834016-04:00",
+    "generated_at": "2026-08-06T20:52:23.772137-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-08-05",
-    "doy": 217,
+    "date": "2026-08-06",
+    "doy": 218,
     "is_weekend": false,
     "observation": {
       "count": 3,
       "severity": "low",
-      "contributors": "MULBERRY, BEECH"
+      "contributors": "PINE, BEECH, HICKORY, MULBERRY"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 0,
+      "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 76°F, winds up to 13 mph, 0.5\" of rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: yesterday's rain, time of year."
+      "explanation": "With 76°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 50% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 217,
+      "doy": 218,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 87.3,
-      "temp_min": 70.7,
-      "temp_mean": 75.7,
-      "precipitation": 0.457,
-      "wind_max": 12.6,
-      "solar_radiation": 21.5,
-      "regime": "rainy"
+      "temp_max": 87.4,
+      "temp_min": 69.4,
+      "temp_mean": 76.3,
+      "precipitation": 0.016,
+      "wind_max": 8.3,
+      "solar_radiation": 17.62,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-08-06",
-    "doy": 218,
+    "date": "2026-08-07",
+    "doy": 219,
     "forecast": {
       "count": 1,
       "severity": "low",
-      "explanation": "With 76°F, winds up to 20 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, wind speed and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 78°F, winds up to 9 mph, 0.1\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
     "climatology": {
-      "doy": 218,
+      "doy": 219,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 84.0,
-      "temp_min": 70.9,
-      "temp_mean": 75.9,
-      "precipitation": 0.185,
-      "wind_max": 20.0,
+      "temp_max": 87.4,
+      "temp_min": 69.8,
+      "temp_mean": 78.1,
+      "precipitation": 0.071,
+      "wind_max": 9.4,
       "regime": "drizzle"
     }
   },
   "season": {
-    "as_of_date": "2026-08-05",
-    "as_of_doy": 217,
-    "cumulative_burden": 73330,
+    "as_of_date": "2026-08-06",
+    "as_of_doy": 218,
+    "cumulative_burden": 73333,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6594.1,
+    "gdd_cumulative": 6619.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-06-04",
-      "count": 29,
-      "severity": "low",
-      "predicted": 27
-    },
     {
       "date": "2026-06-05",
       "count": 14,
@@ -399,6 +393,12 @@
       "count": 3,
       "severity": "low",
       "predicted": 0
+    },
+    {
+      "date": "2026-08-06",
+      "count": 3,
+      "severity": "low",
+      "predicted": 2
     }
   ],
   "current_year_scurve": [
@@ -1005,6 +1005,10 @@
     [
       217,
       73330
+    ],
+    [
+      218,
+      73333
     ]
   ]
 }
