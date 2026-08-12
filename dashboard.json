@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-12T11:02:23.593308-04:00",
+    "generated_at": "2026-08-12T13:48:04.791344-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 80°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 167% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 80°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 167% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 224,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 92.5,
+      "temp_max": 93.0,
       "temp_min": 69.3,
-      "temp_mean": 79.5,
+      "temp_mean": 80.1,
       "precipitation": 0.0,
-      "wind_max": 10.4,
-      "solar_radiation": 24.47,
+      "wind_max": 11.4,
+      "solar_radiation": 25.14,
       "regime": "hot_windy"
     }
   },
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-08-12",
     "as_of_doy": 224,
-    "cumulative_burden": 73389,
+    "cumulative_burden": 73397,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 6923.6,
+    "gdd_cumulative": 6953.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -95,7 +95,7 @@
       },
       {
         "year": 2020,
-        "similarity": 0.982,
+        "similarity": 0.981,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 72076
@@ -1024,7 +1024,7 @@
     ],
     [
       224,
-      73389
+      73397
     ]
   ]
 }
