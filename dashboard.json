@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-14T13:42:42.723684-04:00",
+    "generated_at": "2026-08-14T16:31:08.247438-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 86°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 325% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 86°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and accumulated heat. Working against that: late-season warmth, time of year. The actual count came in 325% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 226,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 97.2,
+      "temp_max": 96.8,
       "temp_min": 76.3,
       "temp_mean": 86.2,
       "precipitation": 0.0,
-      "wind_max": 8.2,
-      "solar_radiation": 22.82,
+      "wind_max": 9.5,
+      "solar_radiation": 24.36,
       "regime": "hot_calm"
     }
   },
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-08-14",
     "as_of_doy": 226,
-    "cumulative_burden": 73484,
+    "cumulative_burden": 73501,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7153.2,
+    "gdd_cumulative": 7189.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -1032,7 +1032,7 @@
     ],
     [
       226,
-      73484
+      73501
     ]
   ]
 }
