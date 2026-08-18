@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-18T10:38:07.048012-04:00",
+    "generated_at": "2026-08-18T13:15:57.980613-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 5,
+      "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 81°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 81°F, winds up to 11 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 230,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 92.1,
+      "temp_max": 91.8,
       "temp_min": 71.8,
-      "temp_mean": 80.8,
+      "temp_mean": 81.0,
       "precipitation": 0.016,
-      "wind_max": 10.0,
-      "solar_radiation": 24.72,
+      "wind_max": 10.6,
+      "solar_radiation": 24.51,
       "regime": "hot_windy"
     }
   },
@@ -60,7 +60,7 @@
     "weather_forecast": {
       "temp_max": 95.4,
       "temp_min": 70.0,
-      "temp_mean": 83.1,
+      "temp_mean": 83.3,
       "precipitation": 0.0,
       "wind_max": 8.9,
       "regime": "hot_calm"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-08-18",
     "as_of_doy": 230,
-    "cumulative_burden": 73561,
+    "cumulative_burden": 73567,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7338.1,
+    "gdd_cumulative": 7368.9,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-08-18",
       "count": 6,
       "severity": "low",
-      "predicted": 5
+      "predicted": 3
     }
   ],
   "current_year_scurve": [
@@ -1040,7 +1040,7 @@
     ],
     [
       230,
-      73561
+      73567
     ]
   ]
 }
