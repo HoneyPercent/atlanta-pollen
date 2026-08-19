@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-08-18T16:23:33.846592-04:00",
+    "generated_at": "2026-08-19T10:38:34.362217-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-08-18",
-    "doy": 230,
+    "date": "2026-08-19",
+    "doy": 231,
     "is_weekend": false,
     "observation": {
-      "count": 6,
+      "count": 30,
       "severity": "low",
-      "contributors": "PINE, BEECH, MULBERRY, ELM"
+      "contributors": "MULBERRY, BEECH, HICKORY"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 80°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 82°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth. The actual count came in 900% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 230,
+      "doy": 231,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 91.0,
-      "temp_min": 71.8,
-      "temp_mean": 80.4,
-      "precipitation": 0.016,
-      "wind_max": 10.5,
-      "solar_radiation": 22.93,
-      "regime": "hot_windy"
+      "temp_max": 94.3,
+      "temp_min": 70.2,
+      "temp_mean": 82.0,
+      "precipitation": 0.0,
+      "wind_max": 9.9,
+      "solar_radiation": 26.83,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-08-19",
-    "doy": 231,
+    "date": "2026-08-20",
+    "doy": 232,
     "forecast": {
-      "count": 2,
+      "count": 4,
       "severity": "low",
-      "explanation": "With 83°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: time of year, late-season warmth."
+      "explanation": "With 86°F, winds up to 12 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the day-over-day trend and the overnight low. Working against that: time of year, late-season warmth."
     },
     "climatology": {
-      "doy": 231,
+      "doy": 232,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 95.0,
-      "temp_min": 70.0,
-      "temp_mean": 83.1,
+      "temp_max": 97.9,
+      "temp_min": 72.9,
+      "temp_mean": 85.8,
       "precipitation": 0.0,
-      "wind_max": 9.8,
-      "regime": "hot_calm"
+      "wind_max": 12.0,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-08-18",
-    "as_of_doy": 230,
-    "cumulative_burden": 73573,
+    "as_of_date": "2026-08-19",
+    "as_of_doy": 231,
+    "cumulative_burden": 73603,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7399.9,
+    "gdd_cumulative": 7430.3,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2024,
-        "similarity": 0.986,
+        "similarity": 0.987,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 74585
@@ -102,7 +102,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.964,
+        "similarity": 0.963,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
@@ -116,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.814,
+        "similarity": 0.813,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-06-17",
-      "count": 2,
-      "severity": "low",
-      "predicted": 5
-    },
     {
       "date": "2026-06-18",
       "count": 7,
@@ -397,6 +391,12 @@
     {
       "date": "2026-08-18",
       "count": 6,
+      "severity": "low",
+      "predicted": 3
+    },
+    {
+      "date": "2026-08-19",
+      "count": 30,
       "severity": "low",
       "predicted": 3
     }
@@ -1041,6 +1041,10 @@
     [
       230,
       73573
+    ],
+    [
+      231,
+      73603
     ]
   ]
 }
