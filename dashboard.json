@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-20T13:17:45.507942-04:00",
+    "generated_at": "2026-08-20T16:27:56.728193-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -36,10 +36,10 @@
     "weather": {
       "temp_max": 96.8,
       "temp_min": 73.9,
-      "temp_mean": 84.4,
+      "temp_mean": 84.2,
       "precipitation": 0.0,
       "wind_max": 9.3,
-      "solar_radiation": 25.13,
+      "solar_radiation": 25.34,
       "regime": "hot_calm"
     }
   },
@@ -47,9 +47,9 @@
     "date": "2026-08-21",
     "doy": 233,
     "forecast": {
-      "count": 6,
+      "count": 7,
       "severity": "low",
-      "explanation": "With 84°F, winds up to 16 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: time of year, late-season warmth."
+      "explanation": "With 80°F, winds up to 22 mph, no rain. Key factors pushing counts up: unusually warm temperatures, wind speed and the overnight low. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 233,
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 93.2,
-      "temp_min": 73.4,
-      "temp_mean": 83.5,
-      "precipitation": 0.0,
-      "wind_max": 15.5,
+      "temp_max": 93.4,
+      "temp_min": 73.6,
+      "temp_mean": 80.2,
+      "precipitation": 0.028,
+      "wind_max": 21.6,
       "regime": "hot_windy"
     }
   },
   "season": {
     "as_of_date": "2026-08-20",
     "as_of_doy": 232,
-    "cumulative_burden": 73755,
+    "cumulative_burden": 73801,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7560.6,
+    "gdd_cumulative": 7595.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -102,21 +102,21 @@
       },
       {
         "year": 2018,
-        "similarity": 0.961,
+        "similarity": 0.96,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
       },
       {
         "year": 2021,
-        "similarity": 0.951,
+        "similarity": 0.952,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 77527
       },
       {
         "year": 2012,
-        "similarity": 0.811,
+        "similarity": 0.81,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -1048,7 +1048,7 @@
     ],
     [
       232,
-      73755
+      73801
     ]
   ]
 }
