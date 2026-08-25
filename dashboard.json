@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-25T13:21:07.522345-04:00",
+    "generated_at": "2026-08-25T16:28:47.143321-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -14,7 +14,7 @@
       "count": 8,
       "severity": "low",
       "data_source": "prior_prediction",
-      "explanation": "With 80°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 80°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 237,
@@ -30,12 +30,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 92.1,
+      "temp_max": 91.2,
       "temp_min": 68.5,
-      "temp_mean": 80.1,
+      "temp_mean": 79.9,
       "precipitation": 0.0,
-      "wind_max": 7.0,
-      "solar_radiation": 25.57,
+      "wind_max": 6.1,
+      "solar_radiation": 25.29,
       "regime": "hot_calm"
     }
   },
@@ -45,7 +45,7 @@
     "forecast": {
       "count": 2,
       "severity": "low",
-      "explanation": "With 83°F, winds up to 9 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: time of year, late-season warmth."
+      "explanation": "With 80°F, winds up to 15 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 238,
@@ -54,12 +54,12 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 94.5,
-      "temp_min": 70.0,
-      "temp_mean": 82.8,
+      "temp_max": 88.3,
+      "temp_min": 72.1,
+      "temp_mean": 80.1,
       "precipitation": 0.0,
-      "wind_max": 8.6,
-      "regime": "hot_calm"
+      "wind_max": 15.3,
+      "regime": "hot_windy"
     }
   },
   "season": {
@@ -68,7 +68,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7843.9,
+    "gdd_cumulative": 7874.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
