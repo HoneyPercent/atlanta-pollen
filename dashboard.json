@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-26T10:49:15.382386-04:00",
+    "generated_at": "2026-08-26T14:45:22.101468-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -14,7 +14,7 @@
       "count": 6,
       "severity": "low",
       "data_source": "prior_prediction",
-      "explanation": "With 80°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": "With 80°F, winds up to 10 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 238,
@@ -30,20 +30,20 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 91.0,
+      "temp_max": 91.2,
       "temp_min": 70.0,
-      "temp_mean": 80.2,
+      "temp_mean": 79.9,
       "precipitation": 0.0,
-      "wind_max": 8.3,
-      "solar_radiation": 21.17,
-      "regime": "hot_calm"
+      "wind_max": 10.2,
+      "solar_radiation": 20.36,
+      "regime": "hot_windy"
     }
   },
   "tomorrow": {
     "date": "2026-08-27",
     "doy": 239,
     "forecast": {
-      "count": 2,
+      "count": 3,
       "severity": "low",
       "explanation": "With 77°F, winds up to 22 mph, no rain. Key factors pushing counts up: wind speed, unusually warm temperatures and the overnight low. Working against that: time of year, late-season warmth."
     },
@@ -56,7 +56,7 @@
     "weather_forecast": {
       "temp_max": 86.0,
       "temp_min": 71.4,
-      "temp_mean": 76.8,
+      "temp_mean": 76.6,
       "precipitation": 0.047,
       "wind_max": 21.6,
       "regime": "hot_windy"
@@ -68,7 +68,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7903.9,
+    "gdd_cumulative": 7934.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
