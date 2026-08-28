@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-27T19:40:59.336898-04:00",
+    "generated_at": "2026-08-27T21:11:54.509248-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -68,7 +68,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 7991.5,
+    "gdd_cumulative": 8018.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
