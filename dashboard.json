@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-28T20:46:31.866389-04:00",
+    "generated_at": "2026-08-28T22:44:03.311189-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -45,7 +45,7 @@
     "forecast": {
       "count": 0,
       "severity": "low",
-      "explanation": "With 78°F, winds up to 7 mph, 0.2\" of rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
+      "explanation": "With 77°F, winds up to 8 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and how far into the season we are. Working against that: time of year, late-season warmth."
     },
     "climatology": {
       "doy": 241,
@@ -54,12 +54,12 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 87.4,
-      "temp_min": 71.6,
-      "temp_mean": 78.1,
-      "precipitation": 0.244,
-      "wind_max": 7.3,
-      "regime": "drizzle"
+      "temp_max": 83.5,
+      "temp_min": 72.0,
+      "temp_mean": 76.8,
+      "precipitation": 0.0,
+      "wind_max": 8.3,
+      "regime": "hot_calm"
     }
   },
   "season": {
@@ -68,7 +68,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 8101.9,
+    "gdd_cumulative": 8130.9,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
