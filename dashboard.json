@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-09-01T13:44:32.810317-04:00",
+    "generated_at": "2026-09-01T15:39:55.089180-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -11,10 +11,10 @@
     "observation": null,
     "observation_status": "not_posted",
     "forecast": {
-      "count": 5,
-      "severity": "low",
+      "count": null,
+      "severity": null,
       "data_source": "prior_prediction",
-      "explanation": "With 84°F, winds up to 6 mph, no rain. Key factors pushing counts up: unusually warm temperatures, accumulated heat and the overnight low. Working against that: time of year, late-season warmth."
+      "explanation": ""
     },
     "climatology": {
       "doy": 244,
@@ -26,16 +26,15 @@
       "p75": 0,
       "p90": 0,
       "p95": 0,
-      "max": 0,
-      "percentile_rank": 99
+      "max": 0
     },
     "weather": {
-      "temp_max": 95.7,
+      "temp_max": 95.4,
       "temp_min": 73.4,
       "temp_mean": 84.2,
       "precipitation": 0.0,
       "wind_max": 6.0,
-      "solar_radiation": 23.35,
+      "solar_radiation": 22.53,
       "regime": "hot_calm"
     }
   },
@@ -43,9 +42,9 @@
     "date": "2026-09-02",
     "doy": 245,
     "forecast": {
-      "count": 0,
-      "severity": "low",
-      "explanation": "With 87°F, winds up to 7 mph, no rain. Key factors pushing counts up: unusually warm temperatures, the overnight low and today's temperature. Working against that: time of year, late-season warmth."
+      "count": null,
+      "severity": null,
+      "explanation": ""
     },
     "climatology": {
       "doy": 245,
@@ -56,7 +55,7 @@
     "weather_forecast": {
       "temp_max": 97.3,
       "temp_min": 75.9,
-      "temp_mean": 86.9,
+      "temp_mean": 86.7,
       "precipitation": 0.0,
       "wind_max": 7.4,
       "regime": "hot_calm"
@@ -68,7 +67,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 8256.1,
+    "gdd_cumulative": 8290.3,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -394,7 +393,7 @@
       "date": "2026-09-01",
       "count": null,
       "severity": null,
-      "predicted": 5
+      "predicted": null
     }
   ],
   "current_year_scurve": [
