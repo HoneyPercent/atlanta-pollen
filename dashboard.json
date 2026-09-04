@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-09-04T15:11:30.742933-04:00",
+    "generated_at": "2026-09-04T18:10:08.564952-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -29,12 +29,12 @@
       "max": 0
     },
     "weather": {
-      "temp_max": 95.5,
+      "temp_max": 94.6,
       "temp_min": 75.0,
       "temp_mean": 85.3,
       "precipitation": 0.0,
-      "wind_max": 7.5,
-      "solar_radiation": 23.55,
+      "wind_max": 6.7,
+      "solar_radiation": 23.22,
       "regime": "hot_calm"
     }
   },
@@ -53,12 +53,12 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 99.9,
-      "temp_min": 75.6,
+      "temp_max": 99.5,
+      "temp_min": 76.6,
       "temp_mean": 87.1,
       "precipitation": 0.0,
-      "wind_max": 14.1,
-      "regime": "hot_windy"
+      "wind_max": 9.5,
+      "regime": "hot_calm"
     }
   },
   "season": {
@@ -67,7 +67,7 @@
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 8605.9,
+    "gdd_cumulative": 8641.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
