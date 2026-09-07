@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "generated_at": "2026-09-04T18:10:08.564952-04:00",
+    "generated_at": "2026-09-07T14:39:26.502117-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-09-04",
-    "doy": 247,
+    "date": "2026-09-07",
+    "doy": 250,
     "is_weekend": false,
     "observation": null,
     "observation_status": "not_posted",
@@ -17,7 +17,7 @@
       "explanation": ""
     },
     "climatology": {
-      "doy": 247,
+      "doy": 250,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -29,45 +29,45 @@
       "max": 0
     },
     "weather": {
-      "temp_max": 94.6,
-      "temp_min": 75.0,
-      "temp_mean": 85.3,
+      "temp_max": 84.6,
+      "temp_min": 72.0,
+      "temp_mean": 77.4,
       "precipitation": 0.0,
-      "wind_max": 6.7,
-      "solar_radiation": 23.22,
-      "regime": "hot_calm"
+      "wind_max": 10.6,
+      "solar_radiation": 13.42,
+      "regime": "hot_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-09-05",
-    "doy": 248,
+    "date": "2026-09-08",
+    "doy": 251,
     "forecast": {
       "count": null,
       "severity": null,
       "explanation": ""
     },
     "climatology": {
-      "doy": 248,
+      "doy": 251,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 99.5,
-      "temp_min": 76.6,
-      "temp_mean": 87.1,
+      "temp_max": 88.7,
+      "temp_min": 67.3,
+      "temp_mean": 78.4,
       "precipitation": 0.0,
-      "wind_max": 9.5,
+      "wind_max": 9.6,
       "regime": "hot_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-09-04",
-    "as_of_doy": 247,
+    "as_of_date": "2026-09-07",
+    "as_of_doy": 250,
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 8641.2,
+    "gdd_cumulative": 8676.5,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -125,12 +125,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-07-06",
-      "count": 30,
-      "severity": "low",
-      "predicted": 9
-    },
     {
       "date": "2026-07-07",
       "count": 6,
@@ -391,6 +385,12 @@
     },
     {
       "date": "2026-09-04",
+      "count": null,
+      "severity": null,
+      "predicted": null
+    },
+    {
+      "date": "2026-09-07",
       "count": null,
       "severity": null,
       "predicted": null
@@ -1087,6 +1087,10 @@
     ],
     [
       247,
+      73894
+    ],
+    [
+      250,
       73894
     ]
   ]
