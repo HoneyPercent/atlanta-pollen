@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "generated_at": "2026-09-10T18:17:41.813272-04:00",
+    "generated_at": "2026-09-11T13:40:31.427394-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-09-10",
-    "doy": 253,
+    "date": "2026-09-11",
+    "doy": 254,
     "is_weekend": false,
     "observation": null,
     "observation_status": "not_posted",
@@ -17,7 +17,7 @@
       "explanation": ""
     },
     "climatology": {
-      "doy": 253,
+      "doy": 254,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -29,45 +29,45 @@
       "max": 0
     },
     "weather": {
-      "temp_max": 90.1,
-      "temp_min": 71.1,
-      "temp_mean": 80.8,
-      "precipitation": 0.0,
-      "wind_max": 6.3,
-      "solar_radiation": 20.91,
-      "regime": "hot_calm"
+      "temp_max": 85.8,
+      "temp_min": 72.5,
+      "temp_mean": 77.4,
+      "precipitation": 0.299,
+      "wind_max": 16.8,
+      "solar_radiation": 13.04,
+      "regime": "rainy"
     }
   },
   "tomorrow": {
-    "date": "2026-09-11",
-    "doy": 254,
+    "date": "2026-09-12",
+    "doy": 255,
     "forecast": {
       "count": null,
       "severity": null,
       "explanation": ""
     },
     "climatology": {
-      "doy": 254,
+      "doy": 255,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 86.4,
-      "temp_min": 74.3,
-      "temp_mean": 80.6,
-      "precipitation": 0.0,
-      "wind_max": 7.5,
-      "regime": "hot_calm"
+      "temp_max": 84.2,
+      "temp_min": 72.3,
+      "temp_mean": 76.5,
+      "precipitation": 0.059,
+      "wind_max": 12.1,
+      "regime": "drizzle"
     }
   },
   "season": {
-    "as_of_date": "2026-09-10",
-    "as_of_doy": 253,
+    "as_of_date": "2026-09-11",
+    "as_of_doy": 254,
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 8993.1,
+    "gdd_cumulative": 9023.9,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -125,12 +125,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-07-10",
-      "count": 6,
-      "severity": "low",
-      "predicted": 12
-    },
     {
       "date": "2026-07-13",
       "count": 11,
@@ -391,6 +385,12 @@
     },
     {
       "date": "2026-09-10",
+      "count": null,
+      "severity": null,
+      "predicted": null
+    },
+    {
+      "date": "2026-09-11",
       "count": null,
       "severity": null,
       "predicted": null
@@ -1103,6 +1103,10 @@
     ],
     [
       253,
+      73894
+    ],
+    [
+      254,
       73894
     ]
   ]
