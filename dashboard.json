@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "generated_at": "2026-09-21T19:02:12.665054-04:00",
+    "generated_at": "2026-09-22T14:00:13.207207-04:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-09-21",
-    "doy": 264,
+    "date": "2026-09-22",
+    "doy": 265,
     "is_weekend": false,
     "observation": null,
     "observation_status": "not_posted",
@@ -17,7 +17,7 @@
       "explanation": ""
     },
     "climatology": {
-      "doy": 264,
+      "doy": 265,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -29,45 +29,45 @@
       "max": 0
     },
     "weather": {
-      "temp_max": 91.8,
-      "temp_min": 70.2,
-      "temp_mean": 79.7,
-      "precipitation": 0.311,
-      "wind_max": 10.7,
-      "solar_radiation": 20.68,
-      "regime": "rainy"
+      "temp_max": 86.5,
+      "temp_min": 71.2,
+      "temp_mean": 77.5,
+      "precipitation": 0.016,
+      "wind_max": 9.9,
+      "solar_radiation": 16.17,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-09-22",
-    "doy": 265,
+    "date": "2026-09-23",
+    "doy": 266,
     "forecast": {
       "count": null,
       "severity": null,
       "explanation": ""
     },
     "climatology": {
-      "doy": 265,
+      "doy": 266,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 89.4,
-      "temp_min": 71.4,
-      "temp_mean": 77.4,
-      "precipitation": 1.161,
-      "wind_max": 17.5,
-      "regime": "rainy"
+      "temp_max": 76.1,
+      "temp_min": 64.8,
+      "temp_mean": 72.1,
+      "precipitation": 0.0,
+      "wind_max": 10.9,
+      "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-09-21",
-    "as_of_doy": 264,
+    "as_of_date": "2026-09-22",
+    "as_of_doy": 265,
     "cumulative_burden": 73894,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 9628.4,
+    "gdd_cumulative": 9658.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -125,12 +125,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-07-21",
-      "count": 6,
-      "severity": "low",
-      "predicted": 3
-    },
     {
       "date": "2026-07-22",
       "count": 3,
@@ -391,6 +385,12 @@
     },
     {
       "date": "2026-09-21",
+      "count": null,
+      "severity": null,
+      "predicted": null
+    },
+    {
+      "date": "2026-09-22",
       "count": null,
       "severity": null,
       "predicted": null
@@ -1131,6 +1131,10 @@
     ],
     [
       264,
+      73894
+    ],
+    [
+      265,
       73894
     ]
   ]
