@@ -1,19 +1,23 @@
 {
   "_meta": {
-    "generated_at": "2026-10-20T16:10:55.837108-04:00",
-    "data_status": "awaiting_observation",
+    "generated_at": "2026-10-20T18:57:17.724535-04:00",
+    "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
     "date": "2026-10-20",
     "doy": 293,
     "is_weekend": false,
-    "observation": null,
-    "observation_status": "not_posted",
+    "observation": {
+      "count": 6,
+      "severity": "low",
+      "contributors": "PINE, JUNIPER, ELM"
+    },
+    "observation_status": "posted",
     "forecast": {
       "count": null,
       "severity": null,
-      "data_source": "prior_prediction",
+      "data_source": "observation",
       "explanation": ""
     },
     "climatology": {
@@ -26,15 +30,16 @@
       "p75": 0,
       "p90": 0,
       "p95": 0,
-      "max": 0
+      "max": 0,
+      "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 75.0,
+      "temp_max": 76.1,
       "temp_min": 43.7,
-      "temp_mean": 59.0,
+      "temp_mean": 59.4,
       "precipitation": 0.0,
-      "wind_max": 5.6,
-      "solar_radiation": 16.23,
+      "wind_max": 5.7,
+      "solar_radiation": 17.46,
       "regime": "warm_calm"
     }
   },
@@ -42,9 +47,9 @@
     "date": "2026-10-21",
     "doy": 294,
     "forecast": {
-      "count": null,
-      "severity": null,
-      "explanation": ""
+      "count": 2,
+      "severity": "low",
+      "explanation": "With 62°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and warm and calm conditions. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 294,
@@ -53,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 74.3,
-      "temp_min": 47.5,
-      "temp_mean": 61.0,
+      "temp_max": 75.4,
+      "temp_min": 48.7,
+      "temp_mean": 62.1,
       "precipitation": 0.0,
-      "wind_max": 7.0,
+      "wind_max": 7.7,
       "regime": "warm_calm"
     }
   },
   "season": {
     "as_of_date": "2026-10-20",
     "as_of_doy": 293,
-    "cumulative_burden": 73894,
+    "cumulative_burden": 73900,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 10886.0,
+    "gdd_cumulative": 10895.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -90,7 +95,7 @@
       },
       {
         "year": 2020,
-        "similarity": 0.975,
+        "similarity": 0.974,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 72076
@@ -111,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.809,
+        "similarity": 0.808,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -391,8 +396,8 @@
     },
     {
       "date": "2026-10-20",
-      "count": null,
-      "severity": null,
+      "count": 6,
+      "severity": "low",
       "predicted": null
     }
   ],
@@ -1215,7 +1220,7 @@
     ],
     [
       293,
-      73894
+      73900
     ]
   ]
 }
