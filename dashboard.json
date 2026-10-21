@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-10-21T14:30:03.719349-04:00",
+    "generated_at": "2026-10-21T16:23:36.099685-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 3,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 60°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak. The actual count came in 200% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 60°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak. The actual count came in 125% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 294,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 75.9,
+      "temp_max": 75.6,
       "temp_min": 45.3,
       "temp_mean": 60.4,
       "precipitation": 0.0,
-      "wind_max": 6.2,
-      "solar_radiation": 17.63,
+      "wind_max": 5.5,
+      "solar_radiation": 17.65,
       "regime": "warm_calm"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 2,
       "severity": "low",
-      "explanation": "With 62°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and warm and calm conditions. Working against that: time of year, the 5-day peak."
+      "explanation": "With 63°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and warm and calm conditions. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 295,
@@ -59,20 +59,20 @@
     },
     "weather_forecast": {
       "temp_max": 77.7,
-      "temp_min": 47.1,
-      "temp_mean": 62.4,
+      "temp_min": 48.2,
+      "temp_mean": 62.8,
       "precipitation": 0.0,
-      "wind_max": 6.0,
+      "wind_max": 6.3,
       "regime": "warm_calm"
     }
   },
   "season": {
     "as_of_date": "2026-10-21",
     "as_of_doy": 294,
-    "cumulative_burden": 73909,
+    "cumulative_burden": 73918,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 10904.4,
+    "gdd_cumulative": 10914.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-10-21",
       "count": 9,
       "severity": "low",
-      "predicted": 3
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -1224,7 +1224,7 @@
     ],
     [
       294,
-      73909
+      73918
     ]
   ]
 }
