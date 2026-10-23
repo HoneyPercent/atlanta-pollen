@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-10-22T18:59:28.159194-04:00",
+    "generated_at": "2026-10-23T14:11:43.432873-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-10-22",
-    "doy": 295,
+    "date": "2026-10-23",
+    "doy": 296,
     "is_weekend": false,
     "observation": {
-      "count": 7,
+      "count": 9,
       "severity": "low",
-      "contributors": "ELM, PINE, SWEET GUM"
+      "contributors": "JUNIPER, SWEET GUM"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 3,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 62°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak. The actual count came in 133% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 60°F, winds up to 9 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak. The actual count came in 125% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 295,
+      "doy": 296,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 77.4,
-      "temp_min": 47.3,
-      "temp_mean": 61.5,
+      "temp_max": 72.3,
+      "temp_min": 48.9,
+      "temp_mean": 60.3,
       "precipitation": 0.0,
-      "wind_max": 7.5,
-      "solar_radiation": 17.56,
+      "wind_max": 8.6,
+      "solar_radiation": 17.41,
       "regime": "warm_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-10-23",
-    "doy": 296,
+    "date": "2026-10-24",
+    "doy": 297,
     "forecast": {
-      "count": 2,
+      "count": 3,
       "severity": "low",
-      "explanation": "With 61°F, winds up to 9 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and warm and calm conditions. Working against that: time of year, the 5-day peak."
+      "explanation": "With 58°F, winds up to 11 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and yesterday's rain. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
-      "doy": 296,
+      "doy": 297,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 72.9,
-      "temp_min": 51.4,
-      "temp_mean": 61.3,
+      "temp_max": 68.9,
+      "temp_min": 48.2,
+      "temp_mean": 58.3,
       "precipitation": 0.0,
-      "wind_max": 8.9,
-      "regime": "warm_calm"
+      "wind_max": 10.9,
+      "regime": "warm_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-10-22",
-    "as_of_doy": 295,
-    "cumulative_burden": 73948,
+    "as_of_date": "2026-10-23",
+    "as_of_doy": 296,
+    "cumulative_burden": 73957,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 10958.2,
+    "gdd_cumulative": 10969.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2024,
-        "similarity": 0.991,
+        "similarity": 0.992,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 74585
@@ -116,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.808,
+        "similarity": 0.807,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-08-21",
-      "count": 31,
-      "severity": "low",
-      "predicted": 11
-    },
     {
       "date": "2026-08-24",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 7,
       "severity": "low",
       "predicted": 3
+    },
+    {
+      "date": "2026-10-23",
+      "count": 9,
+      "severity": "low",
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -1229,6 +1229,10 @@
     [
       295,
       73948
+    ],
+    [
+      296,
+      73957
     ]
   ]
 }
