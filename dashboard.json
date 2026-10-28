@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-10-27T19:32:52.341085-04:00",
+    "generated_at": "2026-10-28T15:24:06.330587-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-10-27",
-    "doy": 300,
+    "date": "2026-10-28",
+    "doy": 301,
     "is_weekend": false,
     "observation": {
       "count": 7,
       "severity": "low",
-      "contributors": "JUNIPER, PINE, SWEET GUM"
+      "contributors": "ELM, JUNIPER, MULBERRY, OAK"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 5,
+      "count": 6,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 60°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, yesterday's count. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 61°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and yesterday's rain. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 300,
+      "doy": 301,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 75.4,
-      "temp_min": 45.9,
-      "temp_mean": 59.9,
+      "temp_max": 73.4,
+      "temp_min": 51.3,
+      "temp_mean": 61.3,
       "precipitation": 0.0,
-      "wind_max": 5.8,
-      "solar_radiation": 16.88,
-      "regime": "warm_calm"
+      "wind_max": 10.4,
+      "solar_radiation": 13.72,
+      "regime": "warm_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-10-28",
-    "doy": 301,
+    "date": "2026-10-29",
+    "doy": 302,
     "forecast": {
       "count": 4,
       "severity": "low",
-      "explanation": "With 61°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and warm and calm conditions. Working against that: time of year, yesterday's count."
+      "explanation": "With 64°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, how far into the season we are and warm and calm conditions. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 301,
+      "doy": 302,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 72.9,
-      "temp_min": 50.4,
-      "temp_mean": 61.3,
+      "temp_max": 75.4,
+      "temp_min": 53.4,
+      "temp_mean": 63.9,
       "precipitation": 0.0,
-      "wind_max": 9.5,
+      "wind_max": 8.4,
       "regime": "warm_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-10-27",
-    "as_of_doy": 300,
-    "cumulative_burden": 74098,
+    "as_of_date": "2026-10-28",
+    "as_of_doy": 301,
+    "cumulative_burden": 74105,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11039.9,
+    "gdd_cumulative": 11049.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -88,7 +88,7 @@
     "analog_years": [
       {
         "year": 2024,
-        "similarity": 0.993,
+        "similarity": 0.994,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 74585
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-08-26",
-      "count": null,
-      "severity": null,
-      "predicted": 11
-    },
     {
       "date": "2026-08-27",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 7,
       "severity": "low",
       "predicted": 5
+    },
+    {
+      "date": "2026-10-28",
+      "count": 7,
+      "severity": "low",
+      "predicted": 6
     }
   ],
   "current_year_scurve": [
@@ -1241,6 +1241,10 @@
     [
       300,
       74098
+    ],
+    [
+      301,
+      74105
     ]
   ]
 }
