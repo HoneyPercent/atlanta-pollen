@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-10-29T15:28:15.361155-04:00",
+    "generated_at": "2026-10-29T17:28:25.580614-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 75.6,
+      "temp_max": 75.4,
       "temp_min": 54.5,
       "temp_mean": 64.4,
       "precipitation": 0.0,
       "wind_max": 7.1,
-      "solar_radiation": 14.21,
+      "solar_radiation": 14.25,
       "regime": "warm_calm"
     }
   },
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 79.7,
+      "temp_max": 79.5,
       "temp_min": 52.7,
-      "temp_mean": 65.8,
+      "temp_mean": 65.7,
       "precipitation": 0.0,
-      "wind_max": 8.0,
+      "wind_max": 8.3,
       "regime": "hot_calm"
     }
   },
   "season": {
     "as_of_date": "2026-10-29",
     "as_of_doy": 302,
-    "cumulative_burden": 74126,
+    "cumulative_burden": 74133,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11082.9,
+    "gdd_cumulative": 11097.3,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -1248,7 +1248,7 @@
     ],
     [
       302,
-      74126
+      74133
     ]
   ]
 }
