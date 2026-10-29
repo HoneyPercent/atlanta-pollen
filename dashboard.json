@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-10-28T19:53:57.281619-04:00",
+    "generated_at": "2026-10-29T15:28:15.361155-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-10-28",
-    "doy": 301,
+    "date": "2026-10-29",
+    "doy": 302,
     "is_weekend": false,
     "observation": {
       "count": 7,
       "severity": "low",
-      "contributors": "ELM, JUNIPER, MULBERRY, OAK"
+      "contributors": "PINE, ELM"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 6,
+      "count": 5,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 61°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and yesterday's rain. Working against that: time of year, yesterday's count."
+      "explanation": "With 64°F, winds up to 7 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, accumulated heat and warm and calm conditions. Working against that: time of year, yesterday's count. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 301,
+      "doy": 302,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 73.6,
-      "temp_min": 51.3,
-      "temp_mean": 61.0,
+      "temp_max": 75.6,
+      "temp_min": 54.5,
+      "temp_mean": 64.4,
       "precipitation": 0.0,
-      "wind_max": 10.4,
-      "solar_radiation": 14.33,
-      "regime": "warm_windy"
+      "wind_max": 7.1,
+      "solar_radiation": 14.21,
+      "regime": "warm_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-10-29",
-    "doy": 302,
+    "date": "2026-10-30",
+    "doy": 303,
     "forecast": {
-      "count": 4,
+      "count": 3,
       "severity": "low",
-      "explanation": "With 64°F, winds up to 9 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, how far into the season we are and warm and calm conditions. Working against that: time of year, yesterday's count."
+      "explanation": "With 66°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and unusually warm temperatures. Working against that: time of year, late-season warmth."
     },
     "climatology": {
-      "doy": 302,
+      "doy": 303,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 74.8,
-      "temp_min": 53.1,
-      "temp_mean": 63.7,
+      "temp_max": 79.7,
+      "temp_min": 52.7,
+      "temp_mean": 65.8,
       "precipitation": 0.0,
-      "wind_max": 8.7,
-      "regime": "warm_calm"
+      "wind_max": 8.0,
+      "regime": "hot_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-10-28",
-    "as_of_doy": 301,
-    "cumulative_burden": 74119,
+    "as_of_date": "2026-10-29",
+    "as_of_doy": 302,
+    "cumulative_burden": 74126,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11071.9,
+    "gdd_cumulative": 11082.9,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-08-27",
-      "count": null,
-      "severity": null,
-      "predicted": 3
-    },
     {
       "date": "2026-08-28",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 7,
       "severity": "low",
       "predicted": 6
+    },
+    {
+      "date": "2026-10-29",
+      "count": 7,
+      "severity": "low",
+      "predicted": 5
     }
   ],
   "current_year_scurve": [
@@ -1245,6 +1245,10 @@
     [
       301,
       74119
+    ],
+    [
+      302,
+      74126
     ]
   ]
 }
