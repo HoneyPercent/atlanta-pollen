@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-10-30T15:04:40.670631-04:00",
+    "generated_at": "2026-10-30T17:11:21.883608-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -34,22 +34,22 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 79.7,
+      "temp_max": 80.8,
       "temp_min": 51.8,
-      "temp_mean": 64.9,
+      "temp_mean": 65.3,
       "precipitation": 0.0,
-      "wind_max": 8.5,
-      "solar_radiation": 16.18,
-      "regime": "warm_calm"
+      "wind_max": 8.4,
+      "solar_radiation": 16.17,
+      "regime": "hot_calm"
     }
   },
   "tomorrow": {
     "date": "2026-10-31",
     "doy": 304,
     "forecast": {
-      "count": 5,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 65°F, winds up to 15 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and wind speed. Working against that: time of year, yesterday's count."
+      "explanation": "With 65°F, winds up to 16 mph, no rain. Key factors pushing counts up: how far into the season we are, wind speed and unusually warm temperatures. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 304,
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 72.3,
-      "temp_min": 59.2,
-      "temp_mean": 64.8,
+      "temp_max": 72.1,
+      "temp_min": 59.7,
+      "temp_mean": 64.9,
       "precipitation": 0.0,
-      "wind_max": 15.1,
+      "wind_max": 15.7,
       "regime": "warm_windy"
     }
   },
   "season": {
     "as_of_date": "2026-10-30",
     "as_of_doy": 303,
-    "cumulative_burden": 74147,
+    "cumulative_burden": 74154,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11126.1,
+    "gdd_cumulative": 11141.0,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -1252,7 +1252,7 @@
     ],
     [
       303,
-      74147
+      74154
     ]
   ]
 }
