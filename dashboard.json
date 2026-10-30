@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-10-29T19:48:36.335391-04:00",
+    "generated_at": "2026-10-30T15:04:40.670631-04:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-10-29",
-    "doy": 302,
+    "date": "2026-10-30",
+    "doy": 303,
     "is_weekend": false,
     "observation": {
       "count": 7,
       "severity": "low",
-      "contributors": "PINE, ELM"
+      "contributors": "PINE"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 5,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 64°F, winds up to 7 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, accumulated heat and warm and calm conditions. Working against that: time of year, yesterday's count. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 65°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and unusually warm temperatures. Working against that: time of year, yesterday's count. The actual count came in 40% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 302,
+      "doy": 303,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 75.7,
-      "temp_min": 54.5,
-      "temp_mean": 64.4,
+      "temp_max": 79.7,
+      "temp_min": 51.8,
+      "temp_mean": 64.9,
       "precipitation": 0.0,
-      "wind_max": 7.1,
-      "solar_radiation": 14.25,
+      "wind_max": 8.5,
+      "solar_radiation": 16.18,
       "regime": "warm_calm"
     }
   },
   "tomorrow": {
-    "date": "2026-10-30",
-    "doy": 303,
+    "date": "2026-10-31",
+    "doy": 304,
     "forecast": {
-      "count": 3,
+      "count": 5,
       "severity": "low",
-      "explanation": "With 66°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and unusually warm temperatures. Working against that: time of year, late-season warmth."
+      "explanation": "With 65°F, winds up to 15 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, how far into the season we are and wind speed. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 303,
+      "doy": 304,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 79.5,
-      "temp_min": 52.7,
-      "temp_mean": 65.7,
+      "temp_max": 72.3,
+      "temp_min": 59.2,
+      "temp_mean": 64.8,
       "precipitation": 0.0,
-      "wind_max": 8.3,
-      "regime": "hot_calm"
+      "wind_max": 15.1,
+      "regime": "warm_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-10-29",
-    "as_of_doy": 302,
-    "cumulative_burden": 74140,
+    "as_of_date": "2026-10-30",
+    "as_of_doy": 303,
+    "cumulative_burden": 74147,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11111.7,
+    "gdd_cumulative": 11126.1,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -116,7 +116,7 @@
       },
       {
         "year": 2012,
-        "similarity": 0.805,
+        "similarity": 0.804,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 62018
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-08-28",
-      "count": null,
-      "severity": null,
-      "predicted": 1
-    },
     {
       "date": "2026-08-31",
       "count": null,
@@ -396,6 +390,12 @@
     },
     {
       "date": "2026-10-29",
+      "count": 7,
+      "severity": "low",
+      "predicted": 5
+    },
+    {
+      "date": "2026-10-30",
       "count": 7,
       "severity": "low",
       "predicted": 5
@@ -1249,6 +1249,10 @@
     [
       302,
       74140
+    ],
+    [
+      303,
+      74147
     ]
   ]
 }
