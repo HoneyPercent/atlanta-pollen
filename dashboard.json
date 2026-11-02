@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-10-30T19:29:02.367487-04:00",
+    "generated_at": "2026-11-02T17:39:50.675649-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-10-30",
-    "doy": 303,
+    "date": "2026-11-02",
+    "doy": 306,
     "is_weekend": false,
     "observation": {
-      "count": 7,
+      "count": 8,
       "severity": "low",
-      "contributors": "PINE"
+      "contributors": "SWEET GUM, ELM"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 4,
+      "count": 6,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 66°F, winds up to 6 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and unusually warm temperatures. Working against that: time of year, yesterday's count. The actual count came in 75% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 62°F, winds up to 11 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, accumulated heat and warm and breezy conditions. Working against that: time of year, yesterday's count. The actual count came in 33% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 303,
+      "doy": 306,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 81.3,
-      "temp_min": 51.8,
-      "temp_mean": 65.5,
+      "temp_max": 70.3,
+      "temp_min": 55.4,
+      "temp_mean": 62.4,
       "precipitation": 0.0,
-      "wind_max": 6.5,
-      "solar_radiation": 16.14,
-      "regime": "hot_calm"
+      "wind_max": 11.0,
+      "solar_radiation": 10.89,
+      "regime": "warm_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-10-31",
-    "doy": 304,
+    "date": "2026-11-03",
+    "doy": 307,
     "forecast": {
-      "count": 1,
+      "count": 2,
       "severity": "low",
-      "explanation": "With 65°F, winds up to 16 mph, no rain. Key factors pushing counts up: how far into the season we are, wind speed and unusually warm temperatures. Working against that: time of year, the 5-day peak."
+      "explanation": "With 66°F, winds up to 14 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, how far into the season we are and unusually warm temperatures. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
-      "doy": 304,
+      "doy": 307,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 72.1,
-      "temp_min": 60.4,
-      "temp_mean": 65.3,
+      "temp_max": 73.9,
+      "temp_min": 58.3,
+      "temp_mean": 65.5,
       "precipitation": 0.0,
-      "wind_max": 15.7,
+      "wind_max": 14.1,
       "regime": "hot_windy"
     }
   },
   "season": {
-    "as_of_date": "2026-10-30",
-    "as_of_doy": 303,
-    "cumulative_burden": 74161,
+    "as_of_date": "2026-11-02",
+    "as_of_doy": 306,
+    "cumulative_burden": 74169,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11156.3,
+    "gdd_cumulative": 11171.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-08-31",
-      "count": null,
-      "severity": null,
-      "predicted": 5
-    },
     {
       "date": "2026-09-01",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 7,
       "severity": "low",
       "predicted": 4
+    },
+    {
+      "date": "2026-11-02",
+      "count": 8,
+      "severity": "low",
+      "predicted": 6
     }
   ],
   "current_year_scurve": [
@@ -1253,6 +1253,10 @@
     [
       303,
       74161
+    ],
+    [
+      306,
+      74169
     ]
   ]
 }
