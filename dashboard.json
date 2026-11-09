@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-11-06T18:57:51.930165-05:00",
+    "generated_at": "2026-11-09T18:19:35.068610-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-11-06",
-    "doy": 310,
+    "date": "2026-11-09",
+    "doy": 313,
     "is_weekend": false,
     "observation": {
-      "count": 2,
+      "count": 3,
       "severity": "low",
-      "contributors": "ELM, MAPLE, MULBERRY, OAK"
+      "contributors": "JUNIPER, PINE, HACKBERRY"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 1,
+      "count": 3,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 65°F, winds up to 11 mph, no rain. Key factors pushing counts up: accumulated heat, temperature stability and unusually warm temperatures. Working against that: time of year, yesterday's count. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 57°F, winds up to 11 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and yesterday's rain. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 310,
+      "doy": 313,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 76.3,
-      "temp_min": 53.4,
-      "temp_mean": 64.8,
+      "temp_max": 74.3,
+      "temp_min": 44.8,
+      "temp_mean": 57.4,
       "precipitation": 0.0,
-      "wind_max": 11.1,
-      "solar_radiation": 15.31,
+      "wind_max": 11.4,
+      "solar_radiation": 15.37,
       "regime": "warm_windy"
     }
   },
   "tomorrow": {
-    "date": "2026-11-07",
-    "doy": 311,
+    "date": "2026-11-10",
+    "doy": 314,
     "forecast": {
       "count": 1,
       "severity": "low",
-      "explanation": "With 55°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, temperature stability and how far into the season we are. Working against that: time of year, yesterday's count."
+      "explanation": "With 60°F, winds up to 9 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, how far into the season we are and warm and calm conditions. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
-      "doy": 311,
+      "doy": 314,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 67.3,
-      "temp_min": 46.8,
-      "temp_mean": 55.0,
+      "temp_max": 72.7,
+      "temp_min": 48.4,
+      "temp_mean": 59.5,
       "precipitation": 0.0,
-      "wind_max": 10.0,
-      "regime": "warm_windy"
+      "wind_max": 9.4,
+      "regime": "warm_calm"
     }
   },
   "season": {
-    "as_of_date": "2026-11-06",
-    "as_of_doy": 310,
-    "cumulative_burden": 74224,
+    "as_of_date": "2026-11-09",
+    "as_of_doy": 313,
+    "cumulative_burden": 74227,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11391.4,
+    "gdd_cumulative": 11406.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -109,7 +109,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.955,
+        "similarity": 0.954,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-09-07",
-      "count": null,
-      "severity": null,
-      "predicted": null
-    },
     {
       "date": "2026-09-08",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 2,
       "severity": "low",
       "predicted": 1
+    },
+    {
+      "date": "2026-11-09",
+      "count": 3,
+      "severity": "low",
+      "predicted": 3
     }
   ],
   "current_year_scurve": [
@@ -1273,6 +1273,10 @@
     [
       310,
       74224
+    ],
+    [
+      313,
+      74227
     ]
   ]
 }
