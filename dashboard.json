@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-10T15:44:17.328499-05:00",
+    "generated_at": "2026-11-10T16:59:58.837799-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 3,
+      "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 58°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak. The actual count came in 67% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 58°F, winds up to 8 mph, no rain. Key factors pushing counts up: yesterday being warm and breezy, accumulated heat and warm and calm conditions. Working against that: time of year, yesterday's count. The actual count came in 50% lower than predicted — possibly localized rain or wind patterns."
     },
     "climatology": {
       "doy": 314,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 73.4,
+      "temp_max": 73.8,
       "temp_min": 44.4,
-      "temp_mean": 57.6,
+      "temp_mean": 57.7,
       "precipitation": 0.0,
       "wind_max": 8.1,
-      "solar_radiation": 14.84,
+      "solar_radiation": 14.85,
       "regime": "warm_calm"
     }
   },
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 70.7,
-      "temp_min": 48.2,
-      "temp_mean": 59.5,
+      "temp_min": 49.6,
+      "temp_mean": 59.9,
       "precipitation": 0.0,
       "wind_max": 11.7,
       "regime": "warm_windy"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-11-10",
     "as_of_doy": 314,
-    "cumulative_burden": 74234,
+    "cumulative_burden": 74235,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11428.2,
+    "gdd_cumulative": 11435.8,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-11-10",
       "count": 1,
       "severity": "low",
-      "predicted": 3
+      "predicted": 2
     }
   ],
   "current_year_scurve": [
@@ -1280,7 +1280,7 @@
     ],
     [
       314,
-      74234
+      74235
     ]
   ]
 }
