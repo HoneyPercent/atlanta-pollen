@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-11T16:09:56.713113-05:00",
+    "generated_at": "2026-11-11T18:11:03.318487-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 57°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, yesterday's count."
+      "explanation": "With 57°F, winds up to 10 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and warm and calm conditions. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 315,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 69.1,
+      "temp_max": 68.7,
       "temp_min": 46.0,
       "temp_mean": 57.0,
       "precipitation": 0.0,
-      "wind_max": 9.7,
-      "solar_radiation": 14.04,
+      "wind_max": 9.5,
+      "solar_radiation": 13.97,
       "regime": "warm_calm"
     }
   },
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-11-11",
     "as_of_doy": 315,
-    "cumulative_burden": 74238,
+    "cumulative_burden": 74240,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11451.4,
+    "gdd_cumulative": 11458.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -1284,7 +1284,7 @@
     ],
     [
       315,
-      74238
+      74240
     ]
   ]
 }
