@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-12T16:22:36.732043-05:00",
+    "generated_at": "2026-11-12T17:28:49.522159-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 3,
+      "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 58°F, winds up to 16 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and wind speed. Working against that: time of year, the 5-day peak. The actual count came in 33% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 58°F, winds up to 15 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and wind speed. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 316,
@@ -35,11 +35,11 @@
     },
     "weather": {
       "temp_max": 65.1,
-      "temp_min": 49.1,
-      "temp_mean": 57.9,
+      "temp_min": 49.8,
+      "temp_mean": 58.1,
       "precipitation": 0.0,
-      "wind_max": 16.2,
-      "solar_radiation": 13.57,
+      "wind_max": 15.2,
+      "solar_radiation": 13.45,
       "regime": "warm_windy"
     }
   },
@@ -60,7 +60,7 @@
     "weather_forecast": {
       "temp_max": 51.6,
       "temp_min": 37.6,
-      "temp_mean": 45.0,
+      "temp_mean": 45.1,
       "precipitation": 0.0,
       "wind_max": 13.5,
       "regime": "cool"
@@ -69,10 +69,10 @@
   "season": {
     "as_of_date": "2026-11-12",
     "as_of_doy": 316,
-    "cumulative_burden": 74244,
+    "cumulative_burden": 74246,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11472.8,
+    "gdd_cumulative": 11480.7,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -398,7 +398,7 @@
       "date": "2026-11-12",
       "count": 2,
       "severity": "low",
-      "predicted": 3
+      "predicted": 2
     }
   ],
   "current_year_scurve": [
@@ -1288,7 +1288,7 @@
     ],
     [
       316,
-      74244
+      74246
     ]
   ]
 }
