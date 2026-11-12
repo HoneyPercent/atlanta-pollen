@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-11T18:11:03.318487-05:00",
+    "generated_at": "2026-11-11T20:48:35.574477-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -36,9 +36,9 @@
     "weather": {
       "temp_max": 68.7,
       "temp_min": 46.0,
-      "temp_mean": 57.0,
+      "temp_mean": 57.4,
       "precipitation": 0.0,
-      "wind_max": 9.5,
+      "wind_max": 9.8,
       "solar_radiation": 13.97,
       "regime": "warm_calm"
     }
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 2,
       "severity": "low",
-      "explanation": "With 55°F, winds up to 16 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, wind speed and how far into the season we are. Working against that: time of year, the 5-day peak."
+      "explanation": "With 56°F, winds up to 16 mph, 0.1\" of rain. Key factors pushing counts up: yesterday being warm and calm, wind speed and how far into the season we are. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 316,
@@ -58,21 +58,21 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 60.3,
+      "temp_max": 60.4,
       "temp_min": 47.1,
-      "temp_mean": 55.4,
-      "precipitation": 0.016,
+      "temp_mean": 55.8,
+      "precipitation": 0.142,
       "wind_max": 16.3,
-      "regime": "warm_windy"
+      "regime": "drizzle"
     }
   },
   "season": {
     "as_of_date": "2026-11-11",
     "as_of_doy": 315,
-    "cumulative_burden": 74240,
+    "cumulative_burden": 74242,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11458.4,
+    "gdd_cumulative": 11465.4,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -1284,7 +1284,7 @@
     ],
     [
       315,
-      74240
+      74242
     ]
   ]
 }
