@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-13T15:48:10.547297-05:00",
+    "generated_at": "2026-11-13T17:16:16.736038-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 45°F, winds up to 14 mph, no rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and temperature stability. Working against that: time of year, the 5-day peak. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 45°F, winds up to 13 mph, no rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and temperature stability. Working against that: time of year, the 5-day peak. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 317,
@@ -34,12 +34,12 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 50.0,
-      "temp_min": 37.0,
-      "temp_mean": 45.1,
+      "temp_max": 51.3,
+      "temp_min": 37.4,
+      "temp_mean": 45.3,
       "precipitation": 0.0,
-      "wind_max": 13.5,
-      "solar_radiation": 11.76,
+      "wind_max": 13.1,
+      "solar_radiation": 11.74,
       "regime": "cool"
     }
   },
@@ -47,7 +47,7 @@
     "date": "2026-11-14",
     "doy": 318,
     "forecast": {
-      "count": 0,
+      "count": 1,
       "severity": "low",
       "explanation": "With 41°F, winds up to 12 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and temperature stability. Working against that: time of year, the 5-day peak."
     },
@@ -59,8 +59,8 @@
     },
     "weather_forecast": {
       "temp_max": 51.6,
-      "temp_min": 32.7,
-      "temp_mean": 41.2,
+      "temp_min": 33.1,
+      "temp_mean": 41.4,
       "precipitation": 0.0,
       "wind_max": 12.2,
       "regime": "cool"
@@ -69,7 +69,7 @@
   "season": {
     "as_of_date": "2026-11-13",
     "as_of_doy": 317,
-    "cumulative_burden": 74250,
+    "cumulative_burden": 74254,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
     "gdd_cumulative": 11488.8,
@@ -1292,7 +1292,7 @@
     ],
     [
       317,
-      74250
+      74254
     ]
   ]
 }
