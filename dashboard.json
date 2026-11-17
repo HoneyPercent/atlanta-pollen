@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-11-13T17:16:16.736038-05:00",
+    "generated_at": "2026-11-16T19:32:06.366488-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-11-13",
-    "doy": 317,
+    "date": "2026-11-16",
+    "doy": 320,
     "is_weekend": false,
     "observation": {
-      "count": 4,
+      "count": 1,
       "severity": "low",
-      "contributors": "JUNIPER, ELM, HICKORY, PINE"
+      "contributors": "PINE"
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 2,
+      "count": 1,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 45°F, winds up to 13 mph, no rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and temperature stability. Working against that: time of year, the 5-day peak. The actual count came in 100% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 46°F, winds up to 9 mph, no rain. Key factors pushing counts up: late-season warmth, accumulated heat and the day-over-day trend. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
-      "doy": 317,
+      "doy": 320,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,42 +34,42 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 51.3,
-      "temp_min": 37.4,
-      "temp_mean": 45.3,
+      "temp_max": 58.6,
+      "temp_min": 36.5,
+      "temp_mean": 45.9,
       "precipitation": 0.0,
-      "wind_max": 13.1,
-      "solar_radiation": 11.74,
+      "wind_max": 8.6,
+      "solar_radiation": 14.37,
       "regime": "cool"
     }
   },
   "tomorrow": {
-    "date": "2026-11-14",
-    "doy": 318,
+    "date": "2026-11-17",
+    "doy": 321,
     "forecast": {
-      "count": 1,
+      "count": 0,
       "severity": "low",
-      "explanation": "With 41°F, winds up to 12 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and temperature stability. Working against that: time of year, the 5-day peak."
+      "explanation": "With 48°F, winds up to 12 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and yesterday's rain. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 318,
+      "doy": 321,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 51.6,
-      "temp_min": 33.1,
-      "temp_mean": 41.4,
+      "temp_max": 61.0,
+      "temp_min": 37.8,
+      "temp_mean": 48.4,
       "precipitation": 0.0,
-      "wind_max": 12.2,
+      "wind_max": 12.3,
       "regime": "cool"
     }
   },
   "season": {
-    "as_of_date": "2026-11-13",
-    "as_of_doy": 317,
-    "cumulative_burden": 74254,
+    "as_of_date": "2026-11-16",
+    "as_of_doy": 320,
+    "cumulative_burden": 74255,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
     "gdd_cumulative": 11488.8,
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-09-14",
-      "count": null,
-      "severity": null,
-      "predicted": null
-    },
     {
       "date": "2026-09-15",
       "count": null,
@@ -399,6 +393,12 @@
       "count": 4,
       "severity": "low",
       "predicted": 2
+    },
+    {
+      "date": "2026-11-16",
+      "count": 1,
+      "severity": "low",
+      "predicted": 1
     }
   ],
   "current_year_scurve": [
@@ -1293,6 +1293,10 @@
     [
       317,
       74254
+    ],
+    [
+      320,
+      74255
     ]
   ]
 }
