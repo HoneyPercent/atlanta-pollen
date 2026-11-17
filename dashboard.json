@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-16T19:32:06.366488-05:00",
+    "generated_at": "2026-11-16T21:47:38.833340-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -18,7 +18,7 @@
       "count": 1,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 46°F, winds up to 9 mph, no rain. Key factors pushing counts up: late-season warmth, accumulated heat and the day-over-day trend. Working against that: time of year, the 5-day peak."
+      "explanation": "With 46°F, winds up to 9 mph, no rain. Key factors pushing counts up: late-season warmth, accumulated heat and yesterday's rain. Working against that: time of year, yesterday's count."
     },
     "climatology": {
       "doy": 320,
@@ -58,18 +58,18 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 61.0,
-      "temp_min": 37.8,
-      "temp_mean": 48.4,
+      "temp_max": 61.5,
+      "temp_min": 37.2,
+      "temp_mean": 47.8,
       "precipitation": 0.0,
-      "wind_max": 12.3,
+      "wind_max": 12.1,
       "regime": "cool"
     }
   },
   "season": {
     "as_of_date": "2026-11-16",
     "as_of_doy": 320,
-    "cumulative_burden": 74255,
+    "cumulative_burden": 74256,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
     "gdd_cumulative": 11488.8,
@@ -1296,7 +1296,7 @@
     ],
     [
       320,
-      74255
+      74256
     ]
   ]
 }
