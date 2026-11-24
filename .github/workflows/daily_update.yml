@@ -2,8 +2,9 @@ name: Daily Pollen Update
 
 on:
   schedule:
-    # Multiple retry windows (weekdays only)
-    - cron: '0 14 * * 1-5'   # 10am ET (UTC-4 summer)
+    # Daily morning run and two weekday retries.
+    - cron: '17 6 * * *'
+      timezone: America/New_York
     - cron: '0 17 * * 1-5'   # 1pm ET
     - cron: '0 20 * * 1-5'   # 4pm ET
   workflow_dispatch:           # Manual trigger for testing
