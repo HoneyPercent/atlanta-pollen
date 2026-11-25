@@ -1,27 +1,27 @@
 {
   "_meta": {
-    "generated_at": "2026-11-24T22:23:17.564127-05:00",
+    "generated_at": "2026-11-25T15:28:24.042684-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-11-24",
-    "doy": 328,
+    "date": "2026-11-25",
+    "doy": 329,
     "is_weekend": false,
     "observation": {
-      "count": 1,
+      "count": 6,
       "severity": "low",
-      "contributors": "PINE, JUNIPER"
+      "contributors": "ELM, PINE"
     },
     "observation_status": "posted",
     "forecast": {
       "count": 2,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 54°F, winds up to 16 mph, no rain. Key factors pushing counts up: yesterday being warm and calm, accumulated heat and temperature stability. Working against that: time of year, yesterday's count. The actual count came in 50% lower than predicted — possibly localized rain or wind patterns."
+      "explanation": "With 47°F, winds up to 16 mph, 0.4\" of rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and accumulated heat. Working against that: time of year, yesterday's count. The actual count came in 200% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
-      "doy": 328,
+      "doy": 329,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -34,45 +34,45 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 64.0,
-      "temp_min": 44.2,
-      "temp_mean": 54.1,
-      "precipitation": 0.0,
-      "wind_max": 16.1,
-      "solar_radiation": 4.33,
-      "regime": "warm_windy"
+      "temp_max": 53.8,
+      "temp_min": 44.1,
+      "temp_mean": 47.3,
+      "precipitation": 0.354,
+      "wind_max": 15.5,
+      "solar_radiation": 2.13,
+      "regime": "rainy"
     }
   },
   "tomorrow": {
-    "date": "2026-11-25",
-    "doy": 329,
+    "date": "2026-11-26",
+    "doy": 330,
     "forecast": {
-      "count": 2,
+      "count": 0,
       "severity": "low",
-      "explanation": "With 47°F, winds up to 18 mph, 1.2\" of rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and wind speed. Working against that: time of year, yesterday's count."
+      "explanation": "With 45°F, winds up to 16 mph, 0.3\" of rain. Key factors pushing counts up: late-season warmth, the day-over-day trend and wind speed. Working against that: time of year, the day before's count."
     },
     "climatology": {
-      "doy": 329,
+      "doy": 330,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 52.0,
-      "temp_min": 43.7,
-      "temp_mean": 47.1,
-      "precipitation": 1.181,
-      "wind_max": 17.7,
+      "temp_max": 50.0,
+      "temp_min": 37.0,
+      "temp_mean": 44.6,
+      "precipitation": 0.295,
+      "wind_max": 16.2,
       "regime": "rainy"
     }
   },
   "season": {
-    "as_of_date": "2026-11-24",
-    "as_of_doy": 328,
-    "cumulative_burden": 74292,
+    "as_of_date": "2026-11-25",
+    "as_of_doy": 329,
+    "cumulative_burden": 74298,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
-    "gdd_cumulative": 11587.1,
+    "gdd_cumulative": 11591.2,
     "season_progress_pct": 100.0,
     "remaining_extreme_days": {
       "weighted_avg": 0.0,
@@ -109,7 +109,7 @@
       },
       {
         "year": 2018,
-        "similarity": 0.954,
+        "similarity": 0.953,
         "remaining_extreme_days": 0,
         "last_extreme_doy": 181,
         "total_season_burden": 70996
@@ -130,12 +130,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-09-23",
-      "count": null,
-      "severity": null,
-      "predicted": null
-    },
     {
       "date": "2026-09-24",
       "count": null,
@@ -397,6 +391,12 @@
     {
       "date": "2026-11-24",
       "count": 1,
+      "severity": "low",
+      "predicted": 2
+    },
+    {
+      "date": "2026-11-25",
+      "count": 6,
       "severity": "low",
       "predicted": 2
     }
@@ -1321,6 +1321,10 @@
     [
       328,
       74292
+    ],
+    [
+      329,
+      74298
     ]
   ]
 }
