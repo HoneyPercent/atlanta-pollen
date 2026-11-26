@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-25T15:28:24.042684-05:00",
+    "generated_at": "2026-11-25T19:45:01.651406-05:00",
     "data_status": "observation_posted",
     "stale_hours": 0
   },
@@ -15,10 +15,10 @@
     },
     "observation_status": "posted",
     "forecast": {
-      "count": 2,
+      "count": 4,
       "severity": "low",
       "data_source": "observation",
-      "explanation": "With 47°F, winds up to 16 mph, 0.4\" of rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and accumulated heat. Working against that: time of year, yesterday's count. The actual count came in 200% higher than the model expected — a sign of factors beyond what weather alone explains."
+      "explanation": "With 47°F, winds up to 16 mph, 0.7\" of rain. Key factors pushing counts up: late-season warmth, yesterday being warm and breezy and the day-over-day trend. Working against that: time of year, the day before's count. The actual count came in 50% higher than the model expected — a sign of factors beyond what weather alone explains."
     },
     "climatology": {
       "doy": 329,
@@ -37,9 +37,9 @@
       "temp_max": 53.8,
       "temp_min": 44.1,
       "temp_mean": 47.3,
-      "precipitation": 0.354,
+      "precipitation": 0.697,
       "wind_max": 15.5,
-      "solar_radiation": 2.13,
+      "solar_radiation": 2.26,
       "regime": "rainy"
     }
   },
@@ -49,7 +49,7 @@
     "forecast": {
       "count": 0,
       "severity": "low",
-      "explanation": "With 45°F, winds up to 16 mph, 0.3\" of rain. Key factors pushing counts up: late-season warmth, the day-over-day trend and wind speed. Working against that: time of year, the day before's count."
+      "explanation": "With 44°F, winds up to 16 mph, 0.3\" of rain. Key factors pushing counts up: late-season warmth, wind speed and how far into the season we are. Working against that: time of year, the 5-day peak."
     },
     "climatology": {
       "doy": 330,
@@ -58,10 +58,10 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 50.0,
+      "temp_max": 49.3,
       "temp_min": 37.0,
-      "temp_mean": 44.6,
-      "precipitation": 0.295,
+      "temp_mean": 44.2,
+      "precipitation": 0.327,
       "wind_max": 16.2,
       "regime": "rainy"
     }
@@ -69,7 +69,7 @@
   "season": {
     "as_of_date": "2026-11-25",
     "as_of_doy": 329,
-    "cumulative_burden": 74298,
+    "cumulative_burden": 74304,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
     "gdd_cumulative": 11591.2,
@@ -398,7 +398,7 @@
       "date": "2026-11-25",
       "count": 6,
       "severity": "low",
-      "predicted": 2
+      "predicted": 4
     }
   ],
   "current_year_scurve": [
@@ -1324,7 +1324,7 @@
     ],
     [
       329,
-      74298
+      74304
     ]
   ]
 }
