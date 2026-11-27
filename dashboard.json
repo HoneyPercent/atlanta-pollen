@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-26T19:51:16.332555-05:00",
+    "generated_at": "2026-11-26T21:40:36.551917-05:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -31,8 +31,8 @@
     },
     "weather": {
       "temp_max": 48.6,
-      "temp_min": 36.3,
-      "temp_mean": 43.9,
+      "temp_min": 36.1,
+      "temp_mean": 44.1,
       "precipitation": 0.224,
       "wind_max": 14.8,
       "solar_radiation": 1.98,
@@ -45,7 +45,7 @@
     "forecast": {
       "count": 0,
       "severity": "low",
-      "explanation": "With 38°F, winds up to 14 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and temperature stability. Working against that: time of year, yesterday's count."
+      "explanation": "With 39°F, winds up to 14 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and temperature stability. Working against that: time of year, yesterday's count."
     },
     "climatology": {
       "doy": 331,
@@ -54,11 +54,11 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 41.2,
-      "temp_min": 36.3,
-      "temp_mean": 38.3,
+      "temp_max": 43.0,
+      "temp_min": 36.5,
+      "temp_mean": 39.4,
       "precipitation": 0.0,
-      "wind_max": 14.4,
+      "wind_max": 14.0,
       "regime": "cool"
     }
   },
