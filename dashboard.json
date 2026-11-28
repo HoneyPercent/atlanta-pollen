@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-11-27T19:16:10.970137-05:00",
+    "generated_at": "2026-11-27T21:30:14.733727-05:00",
     "data_status": "awaiting_observation",
     "stale_hours": 0
   },
@@ -45,7 +45,7 @@
     "forecast": {
       "count": 0,
       "severity": "low",
-      "explanation": "With 45°F, winds up to 9 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and yesterday's rain. Working against that: time of year, yesterday's count."
+      "explanation": "With 46°F, winds up to 8 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and yesterday's rain. Working against that: time of year, yesterday's count."
     },
     "climatology": {
       "doy": 332,
@@ -54,11 +54,11 @@
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 57.2,
+      "temp_max": 58.3,
       "temp_min": 35.4,
-      "temp_mean": 44.8,
+      "temp_mean": 45.5,
       "precipitation": 0.0,
-      "wind_max": 9.1,
+      "wind_max": 7.9,
       "regime": "cool"
     }
   },
