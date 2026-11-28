@@ -1,23 +1,23 @@
 {
   "_meta": {
-    "generated_at": "2026-11-27T21:30:14.733727-05:00",
-    "data_status": "awaiting_observation",
+    "generated_at": "2026-11-28T13:55:28.922547-05:00",
+    "data_status": "weekend_no_data",
     "stale_hours": 0
   },
   "today": {
-    "date": "2026-11-27",
-    "doy": 331,
-    "is_weekend": false,
+    "date": "2026-11-28",
+    "doy": 332,
+    "is_weekend": true,
     "observation": null,
-    "observation_status": "not_posted",
+    "observation_status": "weekend",
     "forecast": {
-      "count": 1,
+      "count": 2,
       "severity": "low",
       "data_source": "prior_prediction",
-      "explanation": "With 42°F, winds up to 12 mph, no rain. Key factors pushing counts up: late-season warmth, the day-over-day trend and accumulated heat. Working against that: time of year, the day before's count."
+      "explanation": "With 45°F, winds up to 9 mph, no rain. Key factors pushing counts up: late-season warmth, the day-over-day trend and accumulated heat. Working against that: time of year, the day before's count."
     },
     "climatology": {
-      "doy": 331,
+      "doy": 332,
       "n_years": 0,
       "mean": 0,
       "median": 0,
@@ -30,41 +30,41 @@
       "percentile_rank": 99
     },
     "weather": {
-      "temp_max": 49.1,
-      "temp_min": 37.6,
-      "temp_mean": 41.7,
+      "temp_max": 57.9,
+      "temp_min": 34.0,
+      "temp_mean": 45.1,
       "precipitation": 0.0,
-      "wind_max": 11.6,
-      "solar_radiation": 6.03,
+      "wind_max": 8.6,
+      "solar_radiation": 13.12,
       "regime": "cool"
     }
   },
   "tomorrow": {
-    "date": "2026-11-28",
-    "doy": 332,
+    "date": "2026-11-29",
+    "doy": 333,
     "forecast": {
-      "count": 0,
+      "count": 1,
       "severity": "low",
-      "explanation": "With 46°F, winds up to 8 mph, no rain. Key factors pushing counts up: late-season warmth, how far into the season we are and yesterday's rain. Working against that: time of year, yesterday's count."
+      "explanation": "With 51°F, winds up to 20 mph, 0.3\" of rain. Key factors pushing counts up: wind speed, late-season warmth and how far into the season we are. Working against that: time of year, yesterday's count."
     },
     "climatology": {
-      "doy": 332,
+      "doy": 333,
       "median": 0,
       "p75": 0,
       "p90": 0
     },
     "weather_forecast": {
-      "temp_max": 58.3,
-      "temp_min": 35.4,
-      "temp_mean": 45.5,
-      "precipitation": 0.0,
-      "wind_max": 7.9,
-      "regime": "cool"
+      "temp_max": 59.9,
+      "temp_min": 40.6,
+      "temp_mean": 51.1,
+      "precipitation": 0.256,
+      "wind_max": 20.1,
+      "regime": "rainy"
     }
   },
   "season": {
-    "as_of_date": "2026-11-27",
-    "as_of_doy": 331,
+    "as_of_date": "2026-11-28",
+    "as_of_doy": 332,
     "cumulative_burden": 74304,
     "extreme_days_ytd": 7,
     "high_days_ytd": 40,
@@ -126,12 +126,6 @@
     }
   },
   "recent_history": [
-    {
-      "date": "2026-09-28",
-      "count": null,
-      "severity": null,
-      "predicted": null
-    },
     {
       "date": "2026-09-29",
       "count": null,
@@ -395,6 +389,12 @@
       "count": null,
       "severity": null,
       "predicted": 1
+    },
+    {
+      "date": "2026-11-28",
+      "count": null,
+      "severity": null,
+      "predicted": 2
     }
   ],
   "current_year_scurve": [
@@ -1328,6 +1328,10 @@
     ],
     [
       331,
+      74304
+    ],
+    [
+      332,
       74304
     ]
   ]
